@@ -1,21 +1,15 @@
 <template>
-    <div class="containerr d-flex justify-content-between align-items-center" ref="topnav"
-        :style="`background:rgb(0,0,0, ${backgroundOpacity});`">
-        <div class="d-flex align-items-center gap-3">
-            <router-link to="/" :class="{ 'hide-on-scroll': hideOnScroll }"
+         <div class="d-flex align-items-center gap-3 position-fixed top-0 py-2 bg-light w-100 border-bottom" style="z-index: 99;">
+            <router-link to="/" 
                 class="text-decoration-none text-dark d-flex align-items-center">
-                <img :src="`${publicPath}${img}`" style="width: 50px;object-fit: contain;filter: invert(1);">
-                <span class="text-uppercase text-white fs-3">fameset</span>
+                <img :src="`${publicPath}${img}`" style="width: 50px;object-fit: contain;">
+                <div class="d-flex flex-column  ms-2">
+                    <span class="text-uppercase text-dark fs-4 fw-bold">sky travel expertz</span>
+                    <!-- <small class="text-end text-uppercase fw-bold smaller">The world to see</small> -->
+                </div>
             </router-link>
         </div>
-        <div class="d-flex justify-content-center align-items-center gap-3" :class="{ 'hide-on-scroll': hideOnScroll }">
-            <router-link to="/registration-page" class="btn btn-danger rounded-pill">Register</router-link>
-             <router-link to="/product-list" class="text-white">
-                <i class="bi bi-person-circle fs-1"></i>
-            </router-link>
-        </div>
-    </div>
-</template>
+ </template>
 
 <script>
 export default {
@@ -23,7 +17,7 @@ export default {
     data() {
         return {
             publicPath: process.env.BASE_URL,
-            img: "img/logo.svg",
+            img: "img/logo.png",
             backgroundOpacity: 0,
             hideOnScroll: true,
         };
@@ -32,31 +26,12 @@ export default {
         window.addEventListener('scroll', this.handleScroll);
     },
     methods: {
-        handleScroll() {
-            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            const scrollPercentage = (scrollTop / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            // console.log(scrollTop)
-            // console.log(scrollPercentage)
-            if (scrollPercentage >= 5 && scrollPercentage <= 6) {
-                this.backgroundOpacity = 0.5;
-                this.hideOnScroll = true;
-            } else if (scrollPercentage > 5) {
-                this.backgroundOpacity = 1;
-                this.hideOnScroll = false;
-            } else {
-                this.backgroundOpacity = 0;
-                this.hideOnScroll = true;
-            }
-        },
+       
     }
 };
 </script>
 
-<style scoped>
-.hide-on-scroll {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
-}
+<style scoped> 
 
 .containerr {
     position: fixed;

@@ -13,41 +13,102 @@
             Immigration, Appeals and Administrative Review matters to our clients globally. Our services include
             complete documentation in following areas - Study Visa | Settle Visa | Travel Visa | Jobs Visa</p>
 
-        <div class="row g-1">
-
-            <div class="col-3" v-for="(visa, index) in visas" :key="index">
-                <img :src="visa.image" class="position-relative" alt="" style="height:350px ;">
-                <p class="text-center mb-0 position-absolute bottom-0 text-white" style="z-index: 9;">{{ visa.name }}</p>
+        <div class="row">
+            <div v-for="(item, index) in abroadOptions" :key="index" class="col-md-3 mb-4">
+                <div class="card">
+                    <img :src="item.image" class="card-img-top" :alt="item.title">
+                    <div class="card-img-overlay d-flex align-items-end">
+                        <h5 class="card-title text-white mb-0">{{ item.title }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center">
+                <div class="col">
+                    <h2>
+                        <AutoCounter :data="30" />
+                    </h2>
+                    <p class="fw-bold">Countries</p>
+                </div>
+                <div class="col">
+                    <h2>
+                        <AutoCounter :data="1000" />
+                    </h2>
+                    <p class="fw-bold">Satisfied Clients</p>
+                </div>
+                <div class="col">
+                    <h2>
+                        <AutoCounter :data="500" />
+                    </h2>
+                    <p class="fw-bold">Colleges & Universities</p>
+                </div>
+                <div class="col">
+                    <h2>
+                        <AutoCounter :data="15" />
+                    </h2>
+                    <p class="fw-bold">Years Of Experience</p>
+                </div>
             </div>
         </div>
     </div>
 </template>
 <script>
+import AutoCounter from "@/components/AutoCounter.vue"
 export default {
+    components: {
+        AutoCounter
+    },
     data() {
         return {
-            visas: [
-                {
-                    name: 'Study Aboard',
-                    image: 'https://utourizmo.com/images/studyvisaservice.webp',
-                },
-                {
-                    name: 'Settle Aboard',
-                    image: 'https://utourizmo.com/images/workvisaservice.webp',
-                },
-                {
-                    name: 'Travel Aboard',
-                    image: 'https://utourizmo.com/images/touristvisaservices.webp',
-                },
-                {
-                    name: 'Jobs Aboard',
-                    image: 'https://utourizmo.com/images/businessvisaservices.webp',
-                },
+            abroadOptions: [
+                { title: 'Study Abroad', image: 'https://utourizmo.com/images/studyvisaservice.webp' },
+                { title: 'Settle Abroad', image: 'https://utourizmo.com/images/workvisaservice.webp', },
+                { title: 'Travel Abroad', image: 'https://utourizmo.com/images/touristvisaservices.webp', },
+                { title: 'Jobs Abroad', image: 'https://utourizmo.com/images/businessvisaservices.webp', },
             ]
         }
     }
 }
 </script>
-<style lang="">
+<style scoped>
+.card {
+    position: relative;
+    overflow: hidden;
+}
 
+.card-img-top {
+    /* height: 200px; */
+    object-fit: cover;
+}
+
+.card-img-overlay {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+ 
+
+@media (min-width: 576px) and (max-width: 991.98px) {
+    .col:nth-child(odd) {
+        border-right: 1px solid white;
+    }
+
+    .col:nth-child(-n+2) {
+        border-bottom: 1px solid white;
+        padding-bottom: 1rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .col:not(:last-child) {
+        border-right: 1px solid white;
+    }
+}
 </style>

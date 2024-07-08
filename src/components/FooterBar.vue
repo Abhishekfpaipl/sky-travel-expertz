@@ -9,8 +9,8 @@
 
             <div class=" col-12 col-md-4 mb-3 text-center">
                 <p class="mb-2 fw-bold">Contact Us</p>
-                <p class="mb-2">Email : support@fameset.com</p>
-                <p class="mb-2">Mob no. : 91 8860012001</p>
+                <p class="mb-2">Email : support@skytravelexpertz.com</p>
+                <p class="mb-2">Mob no. : 91 8318599577</p>
                 <p class="mb-2">Address : 2nd Floor, Block B1/632, <br> Janakpuri, 110058, Delhi, India</p>
                 <div class="d-flex gap-2 justify-content-center">
                     <p class="fw-bold">Follow Us :</p>
@@ -39,19 +39,19 @@
             </div>
         </div>
     </div>
-    <FameFoot />
+    <!-- <FameFoot /> -->
 </template>
 
 <script>
-import FameFoot from '@/components/FameFoot.vue'
+// import FameFoot from '@/components/FameFoot.vue'
 export default {
     name: 'FooterBar',
     components: {
-        FameFoot,
+        // FameFoot,
     },
     data() {
         return {
-            img: '/img/logo.svg',
+            img: '/img/logo.png',
             company: [
                 {
                     id: 4,
@@ -62,22 +62,7 @@ export default {
                     id: 42,
                     name: 'About Us',
                     link: '/about-us'
-                },
-                {
-                    id: 3,
-                    name: 'Patnership',
-                    link: '/reseller-program'
-                },
-                {
-                    id: 9,
-                    name: 'Career',
-                    link: '/career'
-                },
-                {
-                    id: 9,
-                    name: 'List your business',
-                    link: '/list-your-business'
-                },
+                }, 
             ],
             links: [
                 {
@@ -98,8 +83,8 @@ export default {
 
                 {
                     id: 3,
-                    name: 'Business',
-                    link: '/business'
+                    name: 'Login',
+                    link: '/product-list'
                 },
 
             ],

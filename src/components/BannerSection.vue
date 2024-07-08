@@ -1,5 +1,5 @@
 <template>
-    <div style="background: linear-gradient(90deg, rgba(254,242,159,1) 0%, rgba(210,163,73,1) 50%, rgba(254,242,159,1) 100%);">
+    <div class="min-vh-100" style="background-image: url('/img/homeBanner1.jpg'); background-repeat: no-repeat;background-size: cover;">
         <div class="pt-5">
             <div class="d-md-flex d-none justify-content-evenly align-items-center w-100">
                 <div class="d-flex align-items-center">
@@ -60,6 +60,6 @@ export default {
 
 }
 </script>
-<style lang="">
+<style>
 
 </style>

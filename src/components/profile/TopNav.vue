@@ -3,9 +3,9 @@
         <div class="position-fixed top-0 w-100 bg-dark text-white" style="z-index: 99;">
             <div class="d-flex justify-content-between align-items-center p-2">
                 <router-link to="/" class="d-flex align-items-center text-decoration-none text-white">
-                    <img src="/img/logo.svg" alt="logo"
+                    <img src="/img/logo.png" alt="logo"
                         style="width: 40px; height: 40px;object-fit: contain; filter: invert(1);">
-                    <span class="ms-1 fs-3">Fameset</span>
+                    <span class="ms-1 fs-3 text-capitalize">sky travel expertz</span>
                     <!-- <i class="bi bi-chevron-left fs-3" @click=goback()></i> -->
                 </router-link>
                 <div class="">

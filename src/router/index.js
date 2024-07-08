@@ -217,6 +217,16 @@ const routes = [
     name: "OfferPage",
     component: () => import('@/pages/OfferPage.vue')
   },
+  {
+    path: "/trade-fair/:id",
+    name: "TradeFairPage",
+    component: () => import('@/pages/TradeFairPage.vue')
+  },
+  {
+    path: "/itinerary",
+    name: "ItineraryPage",
+    component: () => import('@/pages/ItineraryPage.vue')
+  },
 
 ];
 

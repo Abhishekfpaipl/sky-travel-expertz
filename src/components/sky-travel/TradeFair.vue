@@ -8,7 +8,7 @@
             industry insights with RCTRIPS.</small>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <div class="my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
+                <router-link to="/itinerary" class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
                             style="object-fit: fill; height: 13rem;">
@@ -19,20 +19,30 @@
                         <p class="card-text mb-0"><strong>₹ {{ fair.price }}</strong></p>
                     </div>
                     <div class="btn-group gap-2 p-3">
-                        <button class="btn btn-warning rounded-start-5 px-1">Read More</button>
-                        <button class="btn btn-outline-warning rounded-end-5 px-1" @click="enquiry(fair)">Enquire Now</button>
+                        <router-link :to="'/trade-fair/' + fair.id" class="btn btn-warning rounded-start-5 px-1"
+                            data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
+                            aria-controls="offcanvasExample"> Read
+                            More
+                        </router-link>
+                        <button class="btn btn-outline-warning rounded-end-5 px-1" @click="enquiry(fair)">Enquire
+                            Now</button>
                     </div>
-                    <div class="position-absolute text-center top-0 start-0 ms-0">
+                    <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-warning p-1 pt-0 rounded-end-3">tag here</span>
                     </div>
-                </div>
+                </router-link>
             </div>
         </div>
+        <DigitalCardOffcanvas />
     </div>
 </template>
 
 <script>
+import DigitalCardOffcanvas from "@/components/DigitalCardOffcanvas.vue";
 export default {
+    components: {
+        DigitalCardOffcanvas,
+    },
     name: "TradeFair",
     computed: {
         trades() {
@@ -42,7 +52,7 @@ export default {
     methods: {
         enquiry(fair) {
             console.log(fair.title)
-            const phoneNumber = '918826658501';
+            const phoneNumber = '918318599577';
             const message = `Hello, I'm interested in ${fair.title}. Please confirm`;
             const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
             window.open(url, '_blank');

@@ -1,13 +1,16 @@
 <template>
-  <div class="home">
+  <div class="home" style="padding-top: 68px;">
     <div class="">
       <BannerSection />
     </div>
-    <div class="">
+    <div class="my-2">
       <TradeFair />
     </div>
     <div class="">
       <VisaComponent />
+    </div>
+    <div class="">
+      <VisaCountry />
     </div>
     <!-- <div class="">
       <SecondSection />
@@ -28,6 +31,7 @@ import BannerSection from "@/components/BannerSection.vue";
 // import GeneralCollection from "@/components/GeneralCollection.vue";
 import TradeFair from "@/components/sky-travel/TradeFair.vue";
 import VisaComponent from "@/components/sky-travel/VisaComponent.vue";
+import VisaCountry from "@/components/sky-travel/VisaCountry.vue";
 export default {
   name: "HomeView",
   components: {
@@ -37,6 +41,7 @@ export default {
     // GeneralCollection,
     TradeFair,
     VisaComponent,
+    VisaCountry,
   },
 };
 </script>
