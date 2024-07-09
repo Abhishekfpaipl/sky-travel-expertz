@@ -4,7 +4,7 @@
             <div class="col-12 col-md-4 mb-3">
                 <router-link to="/">
                     <img :src="img" style="width: 100px;object-fit: contain;">
-                </router-link> 
+                </router-link>
             </div>
 
             <div class=" col-12 col-md-4 mb-3 text-center">
@@ -23,11 +23,7 @@
             </div>
             <div class="col-12 col-md-4 d-flex justify-content-around">
                 <div class="mb-3 text-start">
-                    <p class="mb-2 fw-bold">Company</p>
-                    <div class="d-flex flex-column">
-                        <router-link :to="link.link" class="text-decoration-none my-1 text-dark"
-                            v-for="(link, index) in company" :key="index">{{ link.name }}</router-link>
-                    </div>
+                    
                 </div>
                 <div class="mb-3 text-start">
                     <p class="mb-2 fw-bold">Resources</p>
@@ -53,16 +49,7 @@ export default {
         return {
             img: '/img/logo.png',
             company: [
-                {
-                    id: 4,
-                    name: 'Contact Us',
-                    link: '/contact-us'
-                },
-                {
-                    id: 42,
-                    name: 'About Us',
-                    link: '/about-us'
-                }, 
+
             ],
             links: [
                 {
@@ -76,7 +63,7 @@ export default {
                     link: '/privacy-policy'
                 },
                 {
-                    id: 1,
+                    id: 12,
                     name: 'Terms Of Use',
                     link: '/term-of-use'
                 },
@@ -85,6 +72,16 @@ export default {
                     id: 3,
                     name: 'Login',
                     link: '/product-list'
+                },
+                {
+                    id: 4,
+                    name: 'Contact Us',
+                    link: '/contact-us'
+                },
+                {
+                    id: 42,
+                    name: 'About Us',
+                    link: '/about-us'
                 },
 
             ],

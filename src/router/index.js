@@ -147,6 +147,46 @@ const routes = [
     name: "TradeFairPage",
     component: () => import('@/pages/TradeFairPage.vue')
   },
+  {
+    path: "/trade-detail",
+    name: "TradeFairDetailPage",
+    component: () => import('@/pages/TradeFairDetailPage.vue')
+  },
+  {
+    path: "/honeymoon-tour",
+    name: "HoneymoonTour",
+    component: () => import('@/pages/HoneymoonTour.vue')
+  },
+  {
+    path: "/domestic-tour",
+    name: "DomesticTour",
+    component: () => import('@/pages/DomesticTour.vue')
+  },
+  {
+    path: "/international-tour",
+    name: "InternationalTour",
+    component: () => import('@/pages/InternationalTour.vue')
+  },
+  {
+    path: "/educational-tour",
+    name: "EducationalTour",
+    component: () => import('@/pages/EducationalTour.vue')
+  },
+  {
+    path: "/flight-services",
+    name: "FlightServices",
+    component: () => import('@/pages/FlightServices.vue')
+  },
+  {
+    path: "/visa-services",
+    name: "VisaServices",
+    component: () => import('@/pages/VisaServices.vue')
+  },
+  {
+    path: "/other-services",
+    name: "OtherServices",
+    component: () => import('@/pages/OtherServices.vue')
+  },
 ];
 
 const router = createRouter({

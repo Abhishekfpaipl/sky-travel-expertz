@@ -3,7 +3,8 @@
         <div class="position-relative" style="width: 100%; overflow: hidden;">
             <img src="/img/tradeFair.jpg" alt="" style="width: 100%;">
             <div class="overlay"></div>
-            <p class="position-absolute fw-bold text-white" style="top: 40%; left: 5%; z-index: 2;">{{ pageName }}
+            <p class="position-absolute fw-bold text-white fs-1 centered-text">
+                {{ pageName }}
             </p>
         </div>
         <div class="my-3">
@@ -37,9 +38,11 @@
                                             Day {{ index + 1 }}
                                         </div>
                                         <div class="card-body">
-                                            <div class="row d-flex align-items-center" :class="{ 'flex-row-reverse': index % 2 !== 0 }">
+                                            <div class="row d-flex align-items-center"
+                                                :class="{ 'flex-row-reverse': index % 2 !== 0 }">
                                                 <div class="col-md-4 mb-3 mb-md-0">
-                                                    <img :src="day.image" class="img-fluid rounded" style="width:250px; height:160px;object-fit: fill;"
+                                                    <img :src="day.image" class="img-fluid rounded"
+                                                        style="width:250px; height:160px;object-fit: fill;"
                                                         :alt="'Day ' + (index + 1)">
                                                 </div>
                                                 <div class="col-md-8">
@@ -312,5 +315,15 @@ export default {
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+}
+
+.centered-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    /* Optional: for multi-line text */
 }
 </style>

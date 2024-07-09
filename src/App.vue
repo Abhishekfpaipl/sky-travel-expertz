@@ -1,10 +1,12 @@
 <template>
+  <!-- <DashboardNav v-if="!hide" /> -->
   <DashboardNav v-if="!hide" />
   <router-view />
   <FooterBar v-if="!hidden" />
 </template>
 <script>
-import DashboardNav from "@/components/DashboardNav.vue";
+// import DashboardNav from "@/components/DashboardNav.vue";
+import DashboardNav from "@/components/TopNav.vue";
 import FooterBar from "@/components/FooterBar.vue";
 export default {
   name: "App",
