@@ -1,6 +1,6 @@
 <template>
   <div class="container py-3">
-    <h1 class="px-2 text-center mb-0">About Us</h1>
+    <h1 class="px-2 text-center mb-0">About Us</h1> 
     <div class="position-relative">
       <div class="d-flex gap-3 overflow-x-scroll" id="scroll" ref="scrollContainer">
         <div class="" v-for="(custom, index) in customFields" :key="index">

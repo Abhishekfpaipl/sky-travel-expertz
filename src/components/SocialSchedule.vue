@@ -1,6 +1,6 @@
 <template>
-    <div class="container my-3 py-3">
-        <p class="px-2 py-3 text-center mb-0 bill"><span class="fs-2">~ Schedule ~</span></p>
+    <div class="container py-3"> 
+        <h1 class="px-2 py-3 text-center mb-0"> Schedule </h1>
         <div class="d-flex justify-content-center">
             <div class="container row ">
                 <div class="col-md-3 m-1 col-1 card card-body bg-light text-secondary">
@@ -71,6 +71,28 @@ export default {
     name: 'SocialSchedule',
     data() {
         return {
+            folows: [
+                {
+                    icon: 'bi bi-facebook fs-3',
+                    name: 'Facebook',
+                    url: 'https://www.facebook.com/yourpage'
+                },
+                {
+                    icon: 'bi bi-instagram fs-3',
+                    name: 'Instagram',
+                    url: 'https://www.instagram.com/yourprofile'
+                },
+                {
+                    icon: 'bi bi-youtube fs-3',
+                    name: 'YouTube',
+                    url: 'https://www.youtube.com/'
+                },
+                {
+                    icon: 'bi bi-linkedin fs-3',
+                    name: 'LinkedIn',
+                    url: 'https://www.linkedin.com/in/yourprofile'
+                },
+            ],
             weeks: [
                 { day: 'Mon' },
                 { day: 'Tue' },

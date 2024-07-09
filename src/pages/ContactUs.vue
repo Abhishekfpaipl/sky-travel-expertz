@@ -1,6 +1,6 @@
 <template>
-    <div class="bg-dark" style="padding-top:66px">
-        <!-- <div class="text-white py-5" style=" background-color:var(--bg-primary) ;padding-bottom: 6rem !important;"
+    <div class="" style="padding-top: 66px;">
+        <div class="text-white py-5" style=" background-color:var(--brand-color) ;padding-bottom: 6rem !important;"
             v-observe>
             <h1 class="text-center mb-0 fw-bold">Contact Page</h1>
             <p class="small mb-0 text-capitalize text-center">The secret of getting ahead, is getting started</p>
@@ -34,7 +34,7 @@
                             </label>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-danger py-2 fs-5 w-100 rounded-0 text-white" type="submit">Submit</button>
+                            <button class="btn btn-warning py-2 fs-5 w-100 rounded-0 text-white" type="submit">Submit</button>
                         </div>
                     </form>
 
@@ -92,67 +92,23 @@
         </div>
         <div class="my-3">
             <SocialSchedule v-observe />
-        </div> -->
-        <h5 class="fw-bold brandText">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quis voluptatem assumenda nisi nihil
-            expedita
-            quas dolore explicabo architecto deserunt maiores, quaerat, corrupti vero reprehenderit magni nobis tempore.
-            Voluptatum odio optio eum ratione alias sapiente ipsam rem corporis, numquam ipsum, dicta facilis
-            consectetur
-            repellat nesciunt natus accusantium ab officiis delectus? Quia hic non consequuntur numquam alias maiores
-            inventore voluptate beatae perspiciatis asperiores. Porro, ut at? Repellat, harum. In dolorum mollitia
-            aspernatur consectetur consequatur obcaecati assumenda quo quaerat officia dolor pariatur molestiae sit
-            tempora
-            sed dolorem beatae excepturi inventore fugit labore similique neque atque, expedita ut et! Repellendus
-            officia
-            aut nulla veritatis vitae odit est voluptates odio blanditiis at, similique necessitatibus quam quae quia
-            animi
-            recusandae accusantium fuga aspernatur cumque iusto dolores ut! Voluptatibus officia, molestias laborum
-            itaque
-            perferendis aut quod, voluptate nostrum, qui neque fugit debitis ea consequatur suscipit illum laboriosam
-            odit
-            nam nesciunt deleniti. Laudantium sit quasi nihil quidem, maiores velit eius enim odio, neque deleniti vel
-            voluptates. Quos accusantium quis odio alias animi quaerat eveniet accusamus nesciunt! Impedit quasi hic
-            eligendi facilis error facere voluptas eaque ipsum nobis atque consequatur provident laborum nulla, ipsa
-            veritatis recusandae? Facere illo unde excepturi porro quae consequatur? Rem saepe iusto nihil id.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quidem quis voluptatem assumenda nisi nihil
-            expedita
-            quas dolore explicabo architecto deserunt maiores, quaerat, corrupti vero reprehenderit magni nobis tempore.
-            Voluptatum odio optio eum ratione alias sapiente ipsam rem corporis, numquam ipsum, dicta facilis
-            consectetur
-            repellat nesciunt natus accusantium ab officiis delectus? Quia hic non consequuntur numquam alias maiores
-            inventore voluptate beatae perspiciatis asperiores. Porro, ut at? Repellat, harum. In dolorum mollitia
-            aspernatur consectetur consequatur obcaecati assumenda quo quaerat officia dolor pariatur molestiae sit
-            tempora
-            sed dolorem beatae excepturi inventore fugit labore similique neque atque, expedita ut et! Repellendus
-            officia
-            aut nulla veritatis vitae odit est voluptates odio blanditiis at, similique necessitatibus quam quae quia
-            animi
-            recusandae accusantium fuga aspernatur cumque iusto dolores ut! Voluptatibus officia, molestias laborum
-            itaque
-            perferendis aut quod, voluptate nostrum, qui neque fugit debitis ea consequatur suscipit illum laboriosam
-            odit
-            nam nesciunt deleniti. Laudantium sit quasi nihil quidem, maiores velit eius enim odio, neque deleniti vel
-            voluptates. Quos accusantium quis odio alias animi quaerat eveniet accusamus nesciunt! Impedit quasi hic
-            eligendi facilis error facere voluptas eaque ipsum nobis atque consequatur provident laborum nulla, ipsa
-            veritatis recusandae? Facere illo unde excepturi porro quae consequatur? Rem saepe iusto nihil id.
-        </h5>
+        </div>
     </div>
 </template>
 
 <script>
-// import SocialSchedule from "@/components/SocialSchedule.vue";
+import SocialSchedule from "@/components/SocialSchedule.vue";
 export default {
     name: "ContactPage",
     components: {
-        // SocialSchedule,
+        SocialSchedule,
     },
     data() {
         return {
             contact: [
-                { name: 'support@saleswik.com', icon: 'bi-envelope fs-3', color: 'red', action: 'openEmail' },
-                { name: '918860012001', icon: 'bi-telephone-fill fs-3', color: 'black', action: 'openDialer' },
-                { name: '918860012001', icon: 'bi-whatsapp fs-3', color: 'green', action: 'openWhatsapp' },
+                { name: 'support@skytravelexpertz.com', icon: 'bi-envelope fs-3', color: 'red', action: 'openEmail' },
+                { name: '918318599577', icon: 'bi-telephone-fill fs-3', color: 'black', action: 'openDialer' },
+                { name: '918318599577', icon: 'bi-whatsapp fs-3', color: 'green', action: 'openWhatsapp' },
                 { name: 'Block B1/632, Janakpuri, Delhi', icon: 'bi-geo-fill fs-3', color: 'black', action: 'openMaps' },
             ],
             folows: [
@@ -197,36 +153,36 @@ export default {
 
 <style scoped>
 .cutout {
-    overflow: hidden;
-    text-align: center;
+  overflow: hidden;
+  text-align: center;
 }
 
 .cutout>span {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .cutout>span:before,
 .cutout>span:after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    width: 900px;
-    /* Adjust width as needed */
-    margin: 0 20px;
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 900px;
+  /* Adjust width as needed */
+  margin: 0 20px;
 }
 
 .cutout>span:before {
-    right: 100%;
-    border-bottom: 2px solid;
-    border-color: red;
-    border-image-slice: 1;
+  right: 100%;
+  border-bottom: 2px solid;
+  border-color: red;
+  border-image-slice: 1;
 }
 
 .cutout>span:after {
-    left: 100%;
-    border-bottom: 2px solid;
-    border-color: red;
-    border-image-slice: 1;
+  left: 100%;
+  border-bottom: 2px solid;
+  border-color: red;
+  border-image-slice: 1;
 }
 </style>

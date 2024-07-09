@@ -25,7 +25,7 @@
 </template>
 <script>
 export default {
-    name: "LeadManagement",
+    name: "OurTeam",
     props: ['values', 'title'],
 }
 </script>
