@@ -139,6 +139,7 @@ export default createStore({
       {
         id: 1,
         title: "SIGN & LED China 2024",
+        slug: "SIGN-&-LED-China-2024",
         date: "19-21 September 2024",
         price: "1,09,000",
         image: "https://rctrips.com/assets/sign-china-thumb.jpg",
@@ -146,6 +147,7 @@ export default createStore({
       {
         id: 2,
         title: "RubberTech China 2024",
+        slug: "RubberTech-China-2024",
         date: "19-21 September 2024",
         price: "1,09,000",
         image: "https://rctrips.com/assets/rubbertech-thumb.jpg",
@@ -153,6 +155,7 @@ export default createStore({
       {
         id: 3,
         title: "Wire & Tube China 2024",
+        slug: "Wire-&-Tube-China-2024",
         date: "25-28 September 2024",
         price: "1,20,000",
         image: "https://rctrips.com/assets/wire-tube-thumb.jpg",
@@ -160,6 +163,7 @@ export default createStore({
       {
         id: 4,
         title: "CPHI Milan 2024",
+        slug: "CPHI-Milan-2024",
         date: "8-10 October 2024",
         price: "1,13,000",
         image: "https://rctrips.com/assets/cphi-milan-thumb.jpg",
@@ -167,6 +171,7 @@ export default createStore({
       {
         id: 5,
         title: "CMEF China 2024",
+        slug: "CMEF-China-2024",
         date: "12-15 October 2024",
         price: "1,00,000",
         image: "https://rctrips.com/assets/cmef-healtcare.jpg",
@@ -174,6 +179,7 @@ export default createStore({
       {
         id: 6,
         title: "ITMA ASIA & CITME 2024",
+        slug: "ITMA-ASIA-&-CITME-2024",
         date: "14-18 October 2024",
         price: "1,06,000",
         image: "https://rctrips.com/assets/cphi-milan-thumb.jpg",
@@ -181,6 +187,7 @@ export default createStore({
       {
         id: 7,
         title: "Canton Fair China 2024",
+        slug: "Canton-Fair-China-2024",
         date: "15-19 23-27 October 2024",
         price: "1,15,000",
         image: "https://rctrips.com/assets/canton-fair.jpg",
@@ -188,6 +195,7 @@ export default createStore({
       {
         id: 8,
         title: "Fenestration Bau 2024",
+        slug: "Fenestration-Bau-2024",
         date: "16-19 October 2024",
         price: "1,07,000",
         image: "https://rctrips.com/assets/fenestration-thumb.jpg",
@@ -195,6 +203,7 @@ export default createStore({
       {
         id: 9,
         title: "Glasstec Dusseldorf 2024",
+        slug: "Glasstec-Dusseldorf-2024",
         date: "22-24 October 2024",
         price: "1,06,000",
         image: "https://rctrips.com/assets/glasstec-3.jpg",
@@ -202,15 +211,51 @@ export default createStore({
       {
         id: 10,
         title: "Medica Düsseldorf 2024",
+        slug: "Medica-Düsseldorf-2024",
         date: "10-15 10-17 November 2024",
         price: " 2,10,000",
         image: "https://rctrips.com/assets/medica-thumb.jpg",
       },
-     ],
+    ],
+    itinerary: [
+      {
+        name: "Itninerary",
+        description: "",
+      },
+      {
+        name: "Facts & Figures",
+        description: "",
+      },
+      {
+        name: "Hotel",
+        description: "",
+      },
+      {
+        name: "Flight",
+        description: "",
+      },
+      {
+        name: "Visa",
+        description: "",
+      },
+      {
+        name: "Inclusion",
+        description: "",
+      },
+      {
+        name: "Exclusion",
+        description: "",
+      },
+      {
+        name: "Term & Conditions",
+        description: "",
+      },
+    ],
   },
   getters: {
     getProducts: state => state.products,
-    getTrades:state => state.tradeFairs,
+    getTrades: state => state.tradeFairs,
+    getItinerary: state => state.itinerary
   },
   mutations: {
     createProduct(state, product) {

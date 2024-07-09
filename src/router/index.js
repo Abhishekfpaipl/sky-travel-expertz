@@ -222,12 +222,6 @@ const routes = [
     name: "TradeFairPage",
     component: () => import('@/pages/TradeFairPage.vue')
   },
-  {
-    path: "/itinerary",
-    name: "ItineraryPage",
-    component: () => import('@/pages/ItineraryPage.vue')
-  },
-
 ];
 
 const router = createRouter({

@@ -17,7 +17,7 @@
         <div class="offcanvas-body p-0">
             <InfoSection />
             <TopSection />
-            <InformationSection />
+            <!-- <InformationSection /> -->
             <FameFoot />
             <div class="d-flex justify-content-center align-items-center">
                 <div class="text-center position-fixed bottom-0 px-2 py-1 m-2 rounded text-white"
@@ -34,7 +34,7 @@
 
 import TopSection from '@/components/digitalcard/TopSection.vue'
 import InfoSection from '@/components/digitalcard/InfoSection.vue';
-import InformationSection from '@/components/InformationSection.vue';
+// import InformationSection from '@/components/InformationSection.vue';
 import FameFoot from '@/components/FameFoot.vue';
 
 export default {
@@ -42,7 +42,7 @@ export default {
     components: {
         TopSection,
         InfoSection,
-        InformationSection,
+        // InformationSection,
         FameFoot,
     },
 

@@ -8,7 +8,7 @@
             industry insights with RCTRIPS.</small>
         <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 g-3 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link to="/itinerary" class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
+                <router-link :to="'/trade-fair/' + fair.slug" class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
                             style="object-fit: fill; height: 13rem;">
@@ -19,9 +19,7 @@
                         <p class="card-text mb-0"><strong>₹ {{ fair.price }}</strong></p>
                     </div>
                     <div class="btn-group gap-2 p-3">
-                        <router-link :to="'/trade-fair/' + fair.id" class="btn btn-warning rounded-start-5 px-1"
-                            data-bs-toggle="offcanvas" href="#offcanvasExample" role="button"
-                            aria-controls="offcanvasExample"> Read
+                        <router-link to="" class="btn btn-warning rounded-start-5 px-1"> Read
                             More
                         </router-link>
                         <button class="btn btn-outline-warning rounded-end-5 px-1" @click="enquiry(fair)">Enquire
@@ -33,16 +31,11 @@
                 </router-link>
             </div>
         </div>
-        <DigitalCardOffcanvas />
     </div>
 </template>
 
 <script>
-import DigitalCardOffcanvas from "@/components/DigitalCardOffcanvas.vue";
 export default {
-    components: {
-        DigitalCardOffcanvas,
-    },
     name: "TradeFair",
     computed: {
         trades() {
