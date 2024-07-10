@@ -7,47 +7,49 @@
                 {{ pageName }}
             </p>
         </div>
-        <div class="my-3">
+        <div class="container my-3">
             <p class="p-2 text-center mt-3 mb-0 bill text-style">
                 <span class="fs-5">WHAT ARE YOU LOOKING FOR?</span>
             </p>
-            <div>
-                <ul class="nav nav-pills justify-content-start align-items-center sticky-nav" id="pills-tab"
-                    role="tablist">
-                    <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
-                        <li class="nav-item" role="presentation" v-for="(price, index) in itinerary" :key="index"
-                            style="">
-                            <button class="nav-link d-inline-flex align-items-center justify-content-center px-2"
-                                :class="{ 'active': index === activeTabIndex }" :id="'tab-' + index"
-                                data-bs-toggle="pill" :data-bs-target="'#content-' + index" type="button" role="tab"
-                                :aria-controls="'content-' + index" :aria-selected="index === activeTabIndex"
-                                @click="onTabClick(index)">{{ price.name
-                                }}</button>
-                        </li>
-                    </div>
-                </ul>
-                <div class="tab-content pb-5" id="pills-tabContent">
-                    <div class="tab-pane fade" :class="{ 'show active': index === activeTabIndex }"
-                        v-for="(price, index) in itinerary" :key="index" :id="'content-' + index" role="tabpanel"
-                        :aria-labelledby="'tab-' + index" tabindex="0">
-                        <div class="container">
-                            <div class="row" v-for="(day, index) in test" :key="index">
-                                <div class="col-12 mb-4">
-                                    <div class="card">
-                                        <div class="card-header text-bg-warning">
-                                            Day {{ index + 1 }}
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row d-flex align-items-center"
-                                                :class="{ 'flex-row-reverse': index % 2 !== 0 }">
-                                                <div class="col-md-4 mb-3 mb-md-0">
-                                                    <img :src="day.image" class="img-fluid rounded"
-                                                        style="width:250px; height:160px;object-fit: fill;"
-                                                        :alt="'Day ' + (index + 1)">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h5 class="card-title text-start">{{ day.date }}</h5>
-                                                    <p class="card-text text-start">{{ day.description }}</p>
+            <div class="row">
+                <div class="col-12 col-md-8">
+                    <ul class="nav nav-pills justify-content-start align-items-center sticky-nav" id="pills-tab"
+                        role="tablist">
+                        <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
+                            <li class="nav-item" role="presentation" v-for="(price, index) in itinerary" :key="index"
+                                style="">
+                                <button class="nav-link d-inline-flex align-items-center justify-content-center px-2"
+                                    :class="{ 'active': index === activeTabIndex }" :id="'tab-' + index"
+                                    data-bs-toggle="pill" :data-bs-target="'#content-' + index" type="button" role="tab"
+                                    :aria-controls="'content-' + index" :aria-selected="index === activeTabIndex"
+                                    @click="onTabClick(index)">{{ price.name
+                                    }}</button>
+                            </li>
+                        </div>
+                    </ul>
+                    <div class="tab-content pb-5" id="pills-tabContent">
+                        <div class="tab-pane fade" :class="{ 'show active': index === activeTabIndex }"
+                            v-for="(price, index) in itinerary" :key="index" :id="'content-' + index" role="tabpanel"
+                            :aria-labelledby="'tab-' + index" tabindex="0">
+                            <div class="container">
+                                <div class="row" v-for="(day, index) in test" :key="index">
+                                    <div class="col-12 mb-4">
+                                        <div class="card">
+                                            <div class="card-header text-bg-warning">
+                                                Day {{ index + 1 }}
+                                            </div>
+                                            <div class="card-body">
+                                                <div class="row d-flex align-items-center"
+                                                    :class="{ 'flex-row-reverse': index % 2 !== 0 }">
+                                                    <div class="col-md-4 mb-3 mb-md-0">
+                                                        <img :src="day.image" class="img-fluid rounded"
+                                                            style="width:250px; height:160px;object-fit: fill;"
+                                                            :alt="'Day ' + (index + 1)">
+                                                    </div>
+                                                    <div class="col-md-8">
+                                                        <h5 class="card-title text-start">{{ day.date }}</h5>
+                                                        <p class="card-text text-start">{{ day.description }}</p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -57,147 +59,148 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-12 col-md-4 mt-5">
+                    <div class="col-12 my-2">
+                        <button class="btn btn-outline-dark py-2 fs-5 w-100 rounded-0" type="submit">Enquire
+                            Now</button>
+                        <div class="fs-1 my-3">----or----</div>
+                        <button class="btn btn-outline-dark py-2 fs-5 w-100 rounded-0" type="submit">Book
+                            package</button>
+                    </div>
+                    <form @submit.prevent="submitEnquiry()" class="mt-4 row g-3 needs-validation" novalidate>
+                        <div class="w-100 form-floating my-2">
+                            <input type="text" class="form-control" placeholder="" v-model="name" required>
+                            <label for="floatingInput" class="text-muted ms-2">Name</label>
+                        </div>
+                        <div class="w-100 form-floating my-2">
+                            <input type="email" class="form-control" placeholder="" v-model="email" required>
+                            <label for="floatingInput" class="text-muted ms-2">Email</label>
+                        </div>
+                        <div class="w-100 form-floating my-2">
+                            <input type="tel" class="form-control" placeholder="Mobile" v-model="number" required>
+                            <label class="ms-2 text-muted">Mobile No</label>
+                        </div>
+                        <div class="form-floating my-2 ">
+                            <select v-model="destination" class="form-select">
+                                <option value="Amazing Dubai">
+                                    Amazing Dubai </option>
+                                <option value="Automechanika Shanghai 2024">
+                                    Automechanika Shanghai 2024 </option>
+                                <option value="Ayodhya Ram Mandir">
+                                    Ayodhya Ram Mandir </option>
+                                <option value="Bali With Nusa Lembongan">
+                                    Bali With Nusa Lembongan </option>
+                                <option value="Bangkok Phuket Special">
+                                    Bangkok Phuket Special </option>
+                                <option value="Bauma China 2024">
+                                    Bauma China 2024 </option>
+                                <option value="Bearing Expo 2024">
+                                    Bearing Expo 2024 </option>
+                                <option value="Best Of Bali">
+                                    Best Of Bali </option>
+                                <option value="Canton Fair Phase 1">
+                                    Canton Fair Phase 1 </option>
+                                <option value="Canton Fair Phase 2">
+                                    Canton Fair Phase 2 </option>
+                                <option value="CHINACOAT 2024">
+                                    CHINACOAT 2024 </option>
+                                <option value="CMEF China 2024">
+                                    CMEF China 2024 </option>
+                                <option value="CPHI Milan Exhibitor Package">
+                                    CPHI Milan Exhibitor Package </option>
+                                <option value="CPHI Milan Visitor Package">
+                                    CPHI Milan Visitor Package </option>
+                                <option value="Dreamland Singapore">
+                                    Dreamland Singapore </option>
+                                <option value="Exotic Andaman">
+                                    Exotic Andaman </option>
+                                <option value="Fenestration Bau 2024">
+                                    Fenestration Bau 2024 </option>
+                                <option value="Glasstec Dusseldorf Package 1">
+                                    Glasstec Dusseldorf Package 1 </option>
+                                <option value="Glasstec Dusseldorf Package 2">
+                                    Glasstec Dusseldorf Package 2 </option>
+                                <option value="Goa">
+                                    Goa </option>
+                                <option value="Golden Temple">
+                                    Golden Temple </option>
+                                <option value="Greece">
+                                    Greece </option>
+                                <option value="Hong Kong">
+                                    Hong Kong </option>
+                                <option value="ITMA ASIA &amp; CITME 2024">
+                                    ITMA ASIA &amp; CITME 2024 </option>
+                                <option value="Kashmir And Vaishno Devi">
+                                    Kashmir And Vaishno Devi </option>
+                                <option value="Kedarnath &amp; Badrinath">
+                                    Kedarnath &amp; Badrinath </option>
+                                <option value="Leh Ladakh">
+                                    Leh Ladakh </option>
+                                <option value="Mauritius">
+                                    Mauritius </option>
+                                <option value="Medica Düsseldorf 2024 Package 2">
+                                    Medica Düsseldorf 2024 Package 2 </option>
+                                <option value="Medica Extension Package with Paris">
+                                    Medica Extension Package with Paris </option>
+                                <option value="Paradise Kashmir">
+                                    Paradise Kashmir </option>
+                                <option value="RubberTech China 2024">
+                                    RubberTech China 2024 </option>
+                                <option value="SIGN &amp; LED China 2024" selected="">
+                                    SIGN &amp; LED China 2024 </option>
+                                <option value="Special South Africa">
+                                    Special South Africa </option>
+                                <option value="Spectacular Kerala">
+                                    Spectacular Kerala </option>
+                                <option value="Spectacular South Africa">
+                                    Spectacular South Africa </option>
+                                <option value="Swiss And Paris">
+                                    Swiss And Paris </option>
+                                <option value="Turkey">
+                                    Turkey </option>
+                                <option value="Vibrant Vietnam">
+                                    Vibrant Vietnam </option>
+                                <option value="Wire &amp; Tube China-2024">
+                                    Wire &amp; Tube China-2024 </option>
+                            </select>
+                            <label class="form-label ms-2">
+                                Select your destination
+                            </label>
+                        </div>
+                        <div class="w-100 form-floating my-2">
+                            <input type="date" class="form-control" placeholder="Mobile" v-model="number" required>
+                            <label class="ms-2 text-muted"></label>
+                        </div>
+                        <div class="form-floating my-2 ">
+                            <select v-model="selectedVisitor" class="form-select">
+                                <option value="1-2">1-2</option>
+                                <option value="3-4">3-4</option>
+                                <option value="5-6">5-6</option>
+                                <option value="7-8">7-8</option>
+                                <option value="9-10">9-10</option>
+                                <option value=">-10">>-10</option>
+                            </select>
+                            <label class="form-label ms-2">
+                                Select Visiter/Exhibiter
+                            </label>
+                        </div>
+                        <div class="w-100 form-floating my-2">
+                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                v-model="note"></textarea>
+                            <label for="floatingTextarea" class="ms-2 text-muted">Customise Package...</label>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
 
-
-
+        <div class="position-fixed bottom-0 w-100 d-flex d-md-none" style="z-index:10">
+            <button class="btn btn-warning w-100 rounded-0">Enquiry</button>
+        </div>
+        <!-- 
         <div class="container">
-            <form @submit.prevent="submitEnquiry()" class="mt-4 row g-3 needs-validation" novalidate>
-                <div class="w-100 form-floating my-2">
-                    <input type="text" class="form-control" placeholder="" v-model="name" required>
-                    <label for="floatingInput" class="text-muted ms-2">Name</label>
-                </div>
-                <div class="w-100 form-floating my-2">
-                    <input type="email" class="form-control" placeholder="" v-model="email" required>
-                    <label for="floatingInput" class="text-muted ms-2">Email</label>
-                </div>
-                <div class="w-100 form-floating my-2">
-                    <input type="tel" class="form-control" placeholder="Mobile" v-model="number" required>
-                    <label class="ms-2 text-muted">Mobile No</label>
-                </div>
-                <div class="form-floating my-2 ">
-                    <select v-model="destination" class="form-select">
-                        <option value="Amazing Dubai">
-                            Amazing Dubai </option>
-                        <option value="Automechanika Shanghai 2024">
-                            Automechanika Shanghai 2024 </option>
-                        <option value="Ayodhya Ram Mandir">
-                            Ayodhya Ram Mandir </option>
-                        <option value="Bali With Nusa Lembongan">
-                            Bali With Nusa Lembongan </option>
-                        <option value="Bangkok Phuket Special">
-                            Bangkok Phuket Special </option>
-                        <option value="Bauma China 2024">
-                            Bauma China 2024 </option>
-                        <option value="Bearing Expo 2024">
-                            Bearing Expo 2024 </option>
-                        <option value="Best Of Bali">
-                            Best Of Bali </option>
-                        <option value="Canton Fair Phase 1">
-                            Canton Fair Phase 1 </option>
-                        <option value="Canton Fair Phase 2">
-                            Canton Fair Phase 2 </option>
-                        <option value="CHINACOAT 2024">
-                            CHINACOAT 2024 </option>
-                        <option value="CMEF China 2024">
-                            CMEF China 2024 </option>
-                        <option value="CPHI Milan Exhibitor Package">
-                            CPHI Milan Exhibitor Package </option>
-                        <option value="CPHI Milan Visitor Package">
-                            CPHI Milan Visitor Package </option>
-                        <option value="Dreamland Singapore">
-                            Dreamland Singapore </option>
-                        <option value="Exotic Andaman">
-                            Exotic Andaman </option>
-                        <option value="Fenestration Bau 2024">
-                            Fenestration Bau 2024 </option>
-                        <option value="Glasstec Dusseldorf Package 1">
-                            Glasstec Dusseldorf Package 1 </option>
-                        <option value="Glasstec Dusseldorf Package 2">
-                            Glasstec Dusseldorf Package 2 </option>
-                        <option value="Goa">
-                            Goa </option>
-                        <option value="Golden Temple">
-                            Golden Temple </option>
-                        <option value="Greece">
-                            Greece </option>
-                        <option value="Hong Kong">
-                            Hong Kong </option>
-                        <option value="ITMA ASIA &amp; CITME 2024">
-                            ITMA ASIA &amp; CITME 2024 </option>
-                        <option value="Kashmir And Vaishno Devi">
-                            Kashmir And Vaishno Devi </option>
-                        <option value="Kedarnath &amp; Badrinath">
-                            Kedarnath &amp; Badrinath </option>
-                        <option value="Leh Ladakh">
-                            Leh Ladakh </option>
-                        <option value="Mauritius">
-                            Mauritius </option>
-                        <option value="Medica Düsseldorf 2024 Package 2">
-                            Medica Düsseldorf 2024 Package 2 </option>
-                        <option value="Medica Extension Package with Paris">
-                            Medica Extension Package with Paris </option>
-                        <option value="Paradise Kashmir">
-                            Paradise Kashmir </option>
-                        <option value="RubberTech China 2024">
-                            RubberTech China 2024 </option>
-                        <option value="SIGN &amp; LED China 2024" selected="">
-                            SIGN &amp; LED China 2024 </option>
-                        <option value="Special South Africa">
-                            Special South Africa </option>
-                        <option value="Spectacular Kerala">
-                            Spectacular Kerala </option>
-                        <option value="Spectacular South Africa">
-                            Spectacular South Africa </option>
-                        <option value="Swiss And Paris">
-                            Swiss And Paris </option>
-                        <option value="Turkey">
-                            Turkey </option>
-                        <option value="Vibrant Vietnam">
-                            Vibrant Vietnam </option>
-                        <option value="Wire &amp; Tube China-2024">
-                            Wire &amp; Tube China-2024 </option>
-                    </select>
-                    <label class="form-label ms-2">
-                        Select your destination
-                    </label>
-                </div>
-                <div class="w-100 form-floating my-2">
-                    <input type="date" class="form-control" placeholder="Mobile" v-model="number" required>
-                    <label class="ms-2 text-muted"></label>
-                </div>
-                <div class="form-floating my-2 ">
-                    <select v-model="selectedVisitor" class="form-select">
-                        <option value="1-2">1-2</option>
-                        <option value="3-4">3-4</option>
-                        <option value="5-6">5-6</option>
-                        <option value="7-8">7-8</option>
-                        <option value="9-10">9-10</option>
-                        <option value=">-10">>-10</option>
-                    </select>
-                    <label class="form-label ms-2">
-                        Select Visiter/Exhibiter
-                    </label>
-                </div>
-                <div class="w-100 form-floating my-2">
-                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                        v-model="note"></textarea>
-                    <label for="floatingTextarea" class="ms-2 text-muted">Customise Package...</label>
-                </div>
 
-                <!-- <div class="form-check text-start ms-2">
-                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" v-model="agree">
-                    <label class="form-check-label small" for="flexCheckDefault">
-                        I agree to share my contact details
-                    </label>
-                </div> -->
-                <div class="col-12 my-2">
-                    <button class="btn btn-outline-dark py-2 fs-5 w-100 rounded-0" type="submit">Enquire Now</button>
-                    <div class="fs-1 my-3">----or----</div>
-                    <button class="btn btn-outline-dark py-2 fs-5 w-100 rounded-0" type="submit">Book package</button>
-                </div>
-            </form>
         </div>
         <div class="container my-3">
             <p class="fw-bold mb-0 text-center text-danger text-capitalize fs-4">contact details</p>
@@ -213,7 +216,7 @@
                 <i class="bi bi-envelope bg-warning wh-40 rounded-circle px-2 py-1"></i>
                 <span> support@skytravelexpertz.com</span>
             </div>
-        </div>
+        </div> -->
 
     </div>
 </template>
