@@ -1,7 +1,7 @@
 <template>
     <div class="container">
-        <div class="d-flex justify-content-between align-items-center">
-            <h1 class="text-start text-capitalize">~ trade fair ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center">
+            <h1 class="text-start text-capitalize"> trade fair </h1>
             <router-link to="/trade-detail" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -30,14 +30,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group ">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -52,8 +51,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center">
-            <h1 class="text-center text-capitalize">~ Honeymoon tour ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center">
+            <h1 class="text-center text-capitalize"> Honeymoon tour </h1>
             <router-link to="/honeymoon-tour" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -82,14 +81,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -104,8 +102,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center"> 
-            <h1 class="text-center text-capitalize">~ domestic tour ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center"> 
+            <h1 class="text-center text-capitalize"> domestic tour </h1>
             <router-link to="/domestic-tour" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -134,14 +132,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -156,8 +153,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center"> 
-            <h1 class="text-center text-capitalize">~ international tour ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center"> 
+            <h1 class="text-center text-capitalize"> international tour </h1>
             <router-link to="/international-tour" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -186,14 +183,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -208,8 +204,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center"> 
-            <h1 class="text-center text-capitalize">~ eductional tour ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center"> 
+            <h1 class="text-center text-capitalize"> eductional tour </h1>
             <router-link to="/educational-tour" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -238,14 +234,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -260,8 +255,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center"> 
-            <h1 class="text-center text-capitalize">~ flight services ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center"> 
+            <h1 class="text-center text-capitalize"> flight services </h1>
             <router-link to="/flight-services" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -290,14 +285,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -312,8 +306,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center"> 
-            <h1 class="text-center text-capitalize">~ visa services ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center"> 
+            <h1 class="text-center text-capitalize"> visa services </h1>
             <router-link to="/visa-services" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -342,14 +336,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -364,8 +357,8 @@
         </div>
     </div>
     <div class="container my-5">
-        <div class="d-flex justify-content-between align-items-center"> 
-            <h1 class="text-center text-capitalize">~ other services ~</h1>
+        <div class="d-flex justify-content-between justify-content-md-center align-items-center"> 
+            <h1 class="text-center text-capitalize"> other services </h1>
             <router-link to="/other-services" class="text-decoration-none text-dark d-flex d-md-none flex-column align-items-center">
                 <span>See More</span>
                 <img src="/img/travel/right-arrow.svg" style="width:20px;">
@@ -394,14 +387,13 @@
                             </div>
                         </div>
                     </div>
-                    <div class="btn-group">
+                    <!-- <div class="btn-group">
                         <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-                            <!-- <i class="bi bi-whatsapp"></i> -->
-                            Enquire
+                             Enquire
                         </button>
                         <router-link to=""
                             class="btn text-dark border-secondary btn-outline-warning px-1 rounded-0">Details</router-link>
-                    </div>
+                    </div> -->
                     <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                         <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                     </div>
@@ -464,7 +456,7 @@ export default {
 }
 
 .dummy-card {
-    height: 321px
+    height: 289px
 }
 
 @media(max-width:768px) {

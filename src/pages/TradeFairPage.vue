@@ -302,8 +302,8 @@ export default {
 
 .sticky-nav {
     position: sticky;
-    top: 0 !important;
-    z-index: 1000;
+    top: 65px !important;
+    z-index: 2;
     background-color: white;
 }
 

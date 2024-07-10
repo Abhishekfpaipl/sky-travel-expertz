@@ -20,9 +20,8 @@
                                         <li v-for="(subCat, index) in cat.subCat" :key="index"
                                             class="py-2 px-3 text-capitalize">
                                             <router-link :to="subCat.path" class="text-decoration-none ">
-                                                <a :href="subCat.path"
-                                                    class="fw-bold text-decoration-none text-dark">{{
-                                                        subCat.name }}</a>
+                                                <a :href="subCat.path" class="fw-bold text-decoration-none text-dark">{{
+                                                    subCat.name }}</a>
                                             </router-link>
                                         </li>
                                     </ul>
@@ -36,15 +35,16 @@
     </div>
 
     <!-- Mobile version -->
-    <div class="d-flex justify-content-between d-lg-none p-2 position-fixed top-0 w-100 bg-light" style="z-index: 8;">
-        <router-link to="/">
+    <div class="d-flex justify-content-between d-lg-none p-2 position-fixed top-0 w-100 bg-light py-3" style="z-index: 8;">
+        <router-link to="/" class="text-decoration-none ">
             <img src="/img/logo.png" style="height: 40px;">
+            <span class="ms-2 text-dark">Sky Travel Expertz</span>
         </router-link>
         <i class="bi bi-list fs-1 text-end" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
             aria-controls="offcanvasExample"></i>
 
         <div class="offcanvas offcanvas-end bg-light" tabindex="-1" id="offcanvasExample"
-            aria-labelledby="offcanvasExampleLabel">
+            aria-labelledby="offcanvasExampleLabel" style="">
             <div class="offcanvas-header border-bottom">
                 <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>

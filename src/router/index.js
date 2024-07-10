@@ -187,6 +187,11 @@ const routes = [
     name: "OtherServices",
     component: () => import('@/pages/OtherServices.vue')
   },
+  {
+    path: "/faqs-page",
+    name: "faqs-page",
+    component: () => import('@/pages/faqs-page.vue')
+  },
 ];
 
 const router = createRouter({
