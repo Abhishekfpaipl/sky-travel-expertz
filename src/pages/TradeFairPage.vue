@@ -2,70 +2,29 @@
     <div style="padding-top: 68px;">
         <div class="position-relative" style="width: 100%; overflow: hidden;">
             <img src="/img/tradeFair.jpg" alt="" style="width: 100%;">
-            <div class="overlay"></div>
+            <!-- <div class="overlay"></div>
             <p class="position-absolute fw-bold text-white fs-1 centered-text">
                 {{ pageName }}
-            </p>
+            </p> -->
         </div>
-        
+
+        <div class="container p-4 rounded-4 bg-white shadow position-relative" style="top: -40px;">
+             <div class="d-flex justify-content-md-between justify-content-center">
+                <div class="fs-3">{{ pageName }}</div>
+                <div class="d-none d-md-flex gap-3">
+                   <button class="btn btn-dark">Download</button>
+                   <button class="btn btn-dark">Enquiry</button>
+                </div>
+             </div>
+
+        </div>
+
         <div class="container my-4">
             <p class="p-2 text-center mt-3 mb-0 bill text-style">
                 <span class="fs-5">WHAT ARE YOU LOOKING FOR?</span>
             </p>
             <div class="row">
-                <div class="col-12 col-md-8">
-                    <!-- <div class="col-12 col-md-8"> -->
-                    <ul class="nav nav-pills justify-content-start align-items-center sticky-nav" id="pills-tab"
-                        role="tablist">
-                        <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
-                            <li class="nav-item" role="presentation" v-for="(price, index) in itinerary" :key="index"
-                                style="">
-                                <button class="nav-link d-inline-flex align-items-center justify-content-center px-2"
-                                    :class="{ 'active': index === activeTabIndex }" :id="'tab-' + index"
-                                    data-bs-toggle="pill" :data-bs-target="'#content-' + index" type="button" role="tab"
-                                    :aria-controls="'content-' + index" :aria-selected="index === activeTabIndex"
-                                    @click="onTabClick(index)">{{
-                                        price.name
-                                    }}</button>
-                            </li>
-                        </div>
-                    </ul>
-                    <div class="tab-content pb-5" id="pills-tabContent">
-                        <div class="tab-pane fade" :class="{ 'show active': index === activeTabIndex }"
-                            v-for="(price, index) in itinerary" :key="index" :id="'content-' + index" role="tabpanel"
-                            :aria-labelledby="'tab-' + index" tabindex="0">
-                            <div class="container">
-                                <div class="row" v-for="(day, index) in test" :key="index">
-                                    <div class="col-12 mb-4">
-                                        <div class="card">
-                                            <div class="card-header text-bg-warning">
-                                                Day {{ index + 1 }}
-                                            </div>
-                                            <div class="card-body">
-                                                <div class="row d-flex align-items-center"
-                                                    :class="{ 'flex-row-reverse': index % 2 !== 0 }">
-                                                    <div class="col-md-4 mb-3 mb-md-0">
-                                                        <img :src="day.image" class="img-fluid rounded"
-                                                            style="width:250px; height:160px;object-fit: fill;"
-                                                            :alt="'Day ' + (index + 1)">
-                                                    </div>
-                                                    <div class="col-md-8">
-                                                        <h5 class="card-title text-start">{{ day.date }}</h5>
-                                                        <p class="card-text text-start">{{ day.description }}</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- </div> -->
-                </div>
-
-
-                <div class="col-12 col-md-4 bg-light" style="top:62px">
+                <div class="col-12 bg-light" style="top:62px">
                     <form @submit.prevent="sendToWhatsApp()" class="mt-4 row g-3 needs-validation" novalidate>
                         <div class="w-100 form-floating my-2">
                             <input type="text" class="form-control" placeholder="" v-model="name" required>
@@ -180,21 +139,153 @@
                                 v-model="note"></textarea>
                             <label for="floatingTextarea" class="ms-2 text-muted">Notes...</label>
                         </div>
-                        <button class="btn btn-dark rounded-0">submit</button>
+                        <button class="btn btn-dark rounded-0"><i class="bi bi-whatsapp"></i> submit</button>
                     </form>
+                </div>
+
+                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                    <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="pills-itinerary-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-itinerary" type="button" role="tab"
+                                aria-controls="pills-itinerary" aria-selected="true">
+                                Itinerary
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-fact&figure-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-fact&figure" type="button" role="tab"
+                                aria-controls="pills-fact&figure" aria-selected="false">Fact & Figure</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-hotel-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-hotel" type="button" role="tab" aria-controls="pills-hotel"
+                                aria-selected="false">Hotel</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-flight-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-flight" type="button" role="tab" aria-controls="pills-flight"
+                                aria-selected="false">Flight</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-visa-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-visa" type="button" role="tab" aria-controls="pills-visa"
+                                aria-selected="false">Visa</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-Inclusion-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-Inclusion" type="button" role="tab"
+                                aria-controls="pills-Inclusion" aria-selected="false">Inclusion</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-Exclusion-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-Exclusion" type="button" role="tab"
+                                aria-controls="pills-Exclusion" aria-selected="false">Exclusion</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="pills-Term&Condition-tab" data-bs-toggle="pill"
+                                data-bs-target="#pills-Term&Condition" type="button" role="tab"
+                                aria-controls="pills-Term&Condition" aria-selected="false">Term & Condition</button>
+                        </li>
+
+                    </div>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active" id="pills-itinerary" role="tabpanel"
+                        aria-labelledby="pills-itinerary-tab" tabindex="0">
+                        <div class="container">
+                            <div class="row" v-for="(day, index) in test" :key="index">
+                                <div class="col-12 mb-4">
+                                    <div class="card">
+                                        <div class="card-header text-bg-warning">
+                                            Day {{ index + 1 }}
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="row d-flex align-items-center"
+                                                :class="{ 'flex-row-reverse': index % 2 !== 0 }">
+                                                <div class="col-md-4 mb-3 mb-md-0">
+                                                    <img :src="day.image" class="img-fluid rounded"
+                                                        style="width:250px; height:160px;object-fit: fill;"
+                                                        :alt="'Day ' + (index + 1)">
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <h5 class="card-title text-start">{{ day.date }}</h5>
+                                                    <p class="card-text text-start">{{ day.description }}</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-fact&figure" role="tabpanel"
+                        aria-labelledby="pills-fact&figure-tab" tabindex="0">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-dark rounded-0">Visitors</button>
+                            <button class="btn btn-dark rounded-0">Exhibitors</button>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-hotel" role="tabpanel" aria-labelledby="pills-hotel-tab"
+                        tabindex="0">
+                        <TradeFairFGallerySection />
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-flight" role="tabpanel" aria-labelledby="pills-flight-tab"
+                        tabindex="0">
+                        <TradeFairTableSection />
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-visa" role="tabpanel" aria-labelledby="pills-visa-tab"
+                        tabindex="0">
+                        <TradeFairVisaSection />
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-Inclusion" role="tabpanel"
+                        aria-labelledby="pills-Inclusion-tab" tabindex="0">
+                        <TradeFairInclusionSection />
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-Exclusion" role="tabpanel"
+                        aria-labelledby="pills-Exclusion-tab" tabindex="0">
+                        <TradeFairExclusionSection />
+                    </div>
+
+                    <div class="tab-pane fade" id="pills-Term&Condition" role="tabpanel"
+                        aria-labelledby="pills-Term&Condition-tab" tabindex="0">
+                        <TradeFairTermsSection />
+                    </div>
+
                 </div>
 
             </div>
         </div>
-        <div class="position-fixed bottom-0 w-100 d-flex d-md-none" style="z-index:10">
+        <div class="position-fixed bottom-0 w-100 btn-group d-flex d-md-none" style="z-index:10">
+            <button class="btn btn-dark w-100 rounded-0">Download</button>
             <button class="btn btn-warning w-100 rounded-0">Enquiry</button>
         </div>
     </div>
 </template>
 
 <script>
+import TradeFairFGallerySection from "@/components/TradeFairFGallerySection.vue"
+import TradeFairTableSection from "@/components/TradeFairTableSection.vue"
+import TradeFairTermsSection from "@/components/TradeFairTermsSection.vue"
+import TradeFairVisaSection from "@/components/TradeFairVisaSection.vue"
+import TradeFairExclusionSection from "@/components/TradeFairExclusionSection.vue"
+import TradeFairInclusionSection from "@/components/TradeFairInclusionSection.vue"
 export default {
     name: "TradeFairPage",
+    components: {
+        TradeFairFGallerySection,
+        TradeFairTableSection,
+        TradeFairTermsSection,
+        TradeFairVisaSection,
+        TradeFairExclusionSection,
+        TradeFairInclusionSection,
+    },
     data() {
         return {
             pageName: "",
@@ -202,7 +293,7 @@ export default {
             activeTabIndex: 0,
             selectedVisitor: '1-2',
             destination: 'Amazing Dubai',
-            date:'',
+            date: '',
             test: [
                 {
                     date: '(18 Sep 2024): Arrival in Shanghai',
