@@ -7,12 +7,14 @@
                 {{ pageName }}
             </p>
         </div>
-        <div class="container my-3">
+        
+        <div class="container my-4">
             <p class="p-2 text-center mt-3 mb-0 bill text-style">
                 <span class="fs-5">WHAT ARE YOU LOOKING FOR?</span>
             </p>
             <div class="row">
                 <div class="col-12 col-md-8">
+                    <!-- <div class="col-12 col-md-8"> -->
                     <ul class="nav nav-pills justify-content-start align-items-center sticky-nav" id="pills-tab"
                         role="tablist">
                         <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
@@ -22,7 +24,8 @@
                                     :class="{ 'active': index === activeTabIndex }" :id="'tab-' + index"
                                     data-bs-toggle="pill" :data-bs-target="'#content-' + index" type="button" role="tab"
                                     :aria-controls="'content-' + index" :aria-selected="index === activeTabIndex"
-                                    @click="onTabClick(index)">{{ price.name
+                                    @click="onTabClick(index)">{{
+                                        price.name
                                     }}</button>
                             </li>
                         </div>
@@ -58,27 +61,15 @@
                             </div>
                         </div>
                     </div>
+                    <!-- </div> -->
                 </div>
-                <div class="col-12 col-md-4 mt-5">
-                    <div class="col-12 my-2">
-                        <button class="btn btn-outline-dark py-2 fs-5 w-100 rounded-0" type="submit">Enquire
-                            Now</button>
-                        <div class="fs-1 my-3">----or----</div>
-                        <button class="btn btn-outline-dark py-2 fs-5 w-100 rounded-0" type="submit">Book
-                            package</button>
-                    </div>
-                    <form @submit.prevent="submitEnquiry()" class="mt-4 row g-3 needs-validation" novalidate>
+
+
+                <div class="col-12 col-md-4 bg-light" style="top:62px">
+                    <form @submit.prevent="sendToWhatsApp()" class="mt-4 row g-3 needs-validation" novalidate>
                         <div class="w-100 form-floating my-2">
                             <input type="text" class="form-control" placeholder="" v-model="name" required>
                             <label for="floatingInput" class="text-muted ms-2">Name</label>
-                        </div>
-                        <div class="w-100 form-floating my-2">
-                            <input type="email" class="form-control" placeholder="" v-model="email" required>
-                            <label for="floatingInput" class="text-muted ms-2">Email</label>
-                        </div>
-                        <div class="w-100 form-floating my-2">
-                            <input type="tel" class="form-control" placeholder="Mobile" v-model="number" required>
-                            <label class="ms-2 text-muted">Mobile No</label>
                         </div>
                         <div class="form-floating my-2 ">
                             <select v-model="destination" class="form-select">
@@ -168,8 +159,8 @@
                             </label>
                         </div>
                         <div class="w-100 form-floating my-2">
-                            <input type="date" class="form-control" placeholder="Mobile" v-model="number" required>
-                            <label class="ms-2 text-muted"></label>
+                            <input type="date" class="form-control" placeholder="Mobile" v-model="date" required>
+                            <label class="ms-2 text-muted">Date</label>
                         </div>
                         <div class="form-floating my-2 ">
                             <select v-model="selectedVisitor" class="form-select">
@@ -187,37 +178,17 @@
                         <div class="w-100 form-floating my-2">
                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
                                 v-model="note"></textarea>
-                            <label for="floatingTextarea" class="ms-2 text-muted">Customise Package...</label>
+                            <label for="floatingTextarea" class="ms-2 text-muted">Notes...</label>
                         </div>
-
+                        <button class="btn btn-dark rounded-0">submit</button>
                     </form>
                 </div>
+
             </div>
         </div>
-
         <div class="position-fixed bottom-0 w-100 d-flex d-md-none" style="z-index:10">
             <button class="btn btn-warning w-100 rounded-0">Enquiry</button>
         </div>
-        <!-- 
-        <div class="container">
-
-        </div>
-        <div class="container my-3">
-            <p class="fw-bold mb-0 text-center text-danger text-capitalize fs-4">contact details</p>
-            <div class="my-3">
-                <i class="bi bi-person bg-warning wh-40 rounded-circle px-2 py-1"></i>
-                <span> +918318599577</span>
-            </div>
-            <div class="my-3">
-                <i class="bi bi-telephone bg-warning wh-40  rounded-circle px-2 py-1"></i>
-                <span> +918318599577</span>
-            </div>
-            <div class="my-3">
-                <i class="bi bi-envelope bg-warning wh-40 rounded-circle px-2 py-1"></i>
-                <span> support@skytravelexpertz.com</span>
-            </div>
-        </div> -->
-
     </div>
 </template>
 
@@ -231,6 +202,7 @@ export default {
             activeTabIndex: 0,
             selectedVisitor: '1-2',
             destination: 'Amazing Dubai',
+            date:'',
             test: [
                 {
                     date: '(18 Sep 2024): Arrival in Shanghai',
@@ -279,6 +251,18 @@ export default {
             if (tabElement) {
                 tabElement.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
             }
+        },
+        sendToWhatsApp() {
+            const phoneNumber = '918860012001';
+            const message = `Name: ${this.name}%0A
+            Destination: ${this.destination}%0A
+            Date: ${this.date}%0A
+            Visitors: ${this.selectedVisitor}%0A
+            Package: ${this.pageName}%0A
+            Note: ${this.note}`;
+
+            const url = `https://wa.me/${phoneNumber}?text=${message}`;
+            window.open(url, '_blank');
         }
     }
 }
@@ -328,5 +312,18 @@ export default {
     z-index: 2;
     text-align: center;
     /* Optional: for multi-line text */
+}
+
+#form-container {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    /* Adjust this value as needed */
+}
+
+@media (max-width: 768px) {
+    #form-container {
+        position: static;
+    }
 }
 </style>
