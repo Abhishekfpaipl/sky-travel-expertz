@@ -1,23 +1,44 @@
 <template>
     <div class="container pb-5">
         <div class="row pt-4 ">
-            <div :id="'productImages' + index" class="carousel slide">
+            <div class="  ">
                 <div class="d-flex mt-2 p-2" id="scroll" style="overflow-x: scroll;">
-                    <button type="button" class="rounded-0 p-0 border me-1" :data-bs-target="'#productImages' + index"
-                        :data-bs-slide-to="imgIndex" :class="{ active: imgIndex === 0 }"
-                        :aria-current="imgIndex === 0 ? true : false" v-for="(image, imgIndex) in images"
-                        :key="imgIndex">
+                    <button type="button" class="rounded-0 p-0 border me-1" v-for="(image, imgIndex) in images"
+                        :key="imgIndex" data-bs-toggle="modal" :data-bs-target="'#exampleModal' + imgIndex">
                         <img :src="image.thumbnail" class="" :alt="image.thumbnail"
                             style="height: 100px; object-fit: contain;">
                     </button>
                 </div>
-                <div class="carousel-inner">
+                <div v-for="(image, imgIndex) in images" :key="'modal' + imgIndex" class="modal fade"
+                    :id="'exampleModal' + imgIndex" tabindex="-1" :aria-labelledby="'exampleModalLabel' + imgIndex"
+                    aria-hidden="true">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5" :id="'exampleModalLabel' + imgIndex">{{ image.title }}</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <!-- <div class=" " v-for="(image, imgIndex) in images" :key="imgIndex">
+                                    <img :src="image.thumbnail" class="img-fluid" :alt="image.name"
+                                        style="min-height: 100px; width: 100%; object-fit: cover;">
+                                </div> -->
+                                <img :src="image.thumbnail" class="img-fluid" :alt="image.title">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <!-- <div class="carousel-inner">
                     <div :id="'cardCarousel' + imgIndex" class="carousel-item" :class="{ active: imgIndex === 0 }"
                         v-for="(image, imgIndex) in images" :key="imgIndex">
                         <img :src="image.thumbnail" class="img-fluid" :alt="image.name"
                             style="min-height: 100px; width: 100%; object-fit: cover;">
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
         <p class="text-start">Radisson Collection Hyland Shanghai. Add: China, Shanghai, Huangpu, Nanjing Rd (E), 505CN

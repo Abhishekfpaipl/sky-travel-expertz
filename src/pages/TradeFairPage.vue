@@ -8,12 +8,13 @@
             </p> -->
         </div>
 
-        <div class="container d-flex align-items-center p-4 rounded-4 bg-white shadow position-relative py-5"
-            style="height:250px;top: -100px;">
+        <div class="d-flex align-items-center p-4 mx-2 rounded-4 bg-white shadow position-relative "
+            style="top: -40px;">
             <div class="flex-fill d-flex justify-content-md-between justify-content-center">
                 <div class="d-md-flex gap-4 align-items-center">
-                    <p class="fs-3 ">{{ pageName }}</p>
-                    <p class=""><span class="text-decoration-line-through">MRP: 12000</span> ₹ 9999</p>
+                    <p class="fs-3 mb-0">{{ pageName }}</p>
+                    <p class="fs-5 mb-0"> <span class="text-dark">₹ 9999</span> <span
+                            class="text-decoration-line-through text-muted">12000</span></p>
                 </div>
                 <div class="d-none d-md-flex gap-3">
                     <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark">Download</a>
@@ -25,11 +26,8 @@
         </div>
 
         <div class="container my-4">
-            <p class="p-2 text-center mt-3 mb-0 bill text-style">
-                <span class="fs-5">WHAT ARE YOU LOOKING FOR?</span>
-            </p>
             <div class="row">
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+                <ul class="nav nav-pills mb-3 sticky-nav bg-warning" id="pills-tab" role="tablist">
                     <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
                         <li class="nav-item" role="presentation">
                             <button class="nav-link active" id="pills-itinerary-tab" data-bs-toggle="pill"
@@ -149,13 +147,13 @@
             </div>
         </div>
         <div class="position-fixed bottom-0 w-100 btn-group d-flex d-md-none" style="z-index:10">
-            <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark w-100 rounded-0">Download</a>
-            <button class="btn btn-warning w-100 rounded-0" data-bs-toggle="modal"
-                data-bs-target="#enquirymodal">Enquiry</button>
+            <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark w-100 rounded-0 py-3"><i class="bi bi-download"></i> Download</a>
+            <button class="btn btn-warning w-100 rounded-0 py-3" data-bs-toggle="modal"
+                data-bs-target="#enquirymodal"><i class="bi bi-whatsapp"></i> Enquiry</button>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="enquirymodal" tabindex="-1" aria-labelledby="enquirymodalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog  modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h1 class="modal-title fs-5" id="enquirymodalLabel">Enquiry</h1>
@@ -276,11 +274,9 @@
                                     v-model="note"></textarea>
                                 <label for="floatingTextarea" class="ms-2 text-muted">Notes...</label>
                             </div>
-                            <button class="btn btn-dark rounded-0"><i class="bi bi-whatsapp"></i> submit</button>
+                            <button class="btn btn-warning rounded-0" data-bs-dismiss="modal"><i
+                                    class="bi bi-whatsapp"></i> Enquiry</button>
                         </form>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
@@ -422,18 +418,5 @@ export default {
     z-index: 2;
     text-align: center;
     /* Optional: for multi-line text */
-}
-
-#form-container {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 20px;
-    /* Adjust this value as needed */
-}
-
-@media (max-width: 768px) {
-    #form-container {
-        position: static;
-    }
 }
 </style>

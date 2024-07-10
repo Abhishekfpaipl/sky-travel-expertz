@@ -1,13 +1,16 @@
 <template>
-    <div style="padding-top: 68px;">
-        <div class="position-relative" style="width: 100%; overflow: hidden;">
-            <img src="/img/tradeFair.jpg" alt="" style="width: 100%;">
-            <div class="overlay"></div>
-            <p class="position-absolute fw-bold text-white fs-1 centered-text text-capitalize">
-                {{ pageName }}
-            </p>
-        </div>
+    <div style="padding-top: 68px;"> 
         <div class="container my-3">
+            <div class="row my-4">
+                <div class="col-md-4">
+                    <input type="text" v-model="searchTerm" class="form-control" placeholder="Search...">
+                </div>
+                <div class="col-md-4">
+                    <select v-model="selectedService" class="form-control">
+                        <option v-for="service in services" :key="service" :value="service">{{ service }}</option>
+                    </select>
+                </div>
+            </div>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
                 <div class="col" v-for="(fair, index) in trades" :key="index">
                     <router-link :to="'/trade-fair/' + fair.slug"
@@ -32,7 +35,6 @@
                         </div>
                         <div class="btn-group">
                             <button class="btn btn-success border-secondary px-1 rounded-0" @click="enquiry(fair)">
-
                                 Enquire
                             </button>
                             <router-link to=""
@@ -44,7 +46,6 @@
                     </router-link>
                 </div>
             </div>
-
         </div>
     </div>
 </template>
@@ -56,20 +57,35 @@ export default {
         return {
             pageName: "",
             searchTerm: '',
-            activeTabIndex: 0,
-            selectedVisitor: '1-2',
-            destination: 'Amazing Dubai',
-
+            selectedService: '',
+            services: [
+                "trade fair",
+                "honeymoon tour",
+                "domestic tour",
+                "international tour",
+                "educational tour",
+                "flight services",
+                "visa services",
+                "other services"
+            ]
         }
     },
     computed: {
         trades() {
             return this.$store.getters.getTrades;
-        }
+        },
+        // filteredTrades() {
+        //     return this.trades.filter(fair => {
+        //         const titleMatch = fair.title && fair.title.toLowerCase().includes(this.searchTerm.toLowerCase());
+        //         const serviceMatch = fair.service && fair.service.toLowerCase() === this.selectedService.toLowerCase();
+        //         return titleMatch && serviceMatch;
+        //     });
+        // }
     },
     mounted() {
         let pageName = this.$route.path.split('/').pop();
         this.pageName = pageName.replace(/-/g, ' ');
+        this.selectedService = this.pageName;
     },
     methods: {
 
@@ -94,32 +110,5 @@ export default {
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     border-radius: 0px !important;
     transform: scale(1.2);
-}
-
-.sticky-nav {
-    position: sticky;
-    top: 0 !important;
-    z-index: 2;
-    background-color: white;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    /* Optional: for multi-line text */
-}
+} 
 </style>
