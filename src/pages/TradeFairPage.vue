@@ -8,14 +8,19 @@
             </p> -->
         </div>
 
-        <div class="container p-4 rounded-4 bg-white shadow position-relative" style="top: -40px;">
-             <div class="d-flex justify-content-md-between justify-content-center">
-                <div class="fs-3">{{ pageName }}</div>
-                <div class="d-none d-md-flex gap-3">
-                   <button class="btn btn-dark">Download</button>
-                   <button class="btn btn-dark">Enquiry</button>
+        <div class="container d-flex align-items-center p-4 rounded-4 bg-white shadow position-relative py-5"
+            style="height:250px;top: -100px;">
+            <div class="flex-fill d-flex justify-content-md-between justify-content-center">
+                <div class="d-md-flex gap-4 align-items-center">
+                    <p class="fs-3 ">{{ pageName }}</p>
+                    <p class=""><span class="text-decoration-line-through">MRP: 12000</span> ₹ 9999</p>
                 </div>
-             </div>
+                <div class="d-none d-md-flex gap-3">
+                    <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark">Download</a>
+                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#enquirymodal">Enquiry</button>
+                </div>
+
+            </div>
 
         </div>
 
@@ -24,125 +29,6 @@
                 <span class="fs-5">WHAT ARE YOU LOOKING FOR?</span>
             </p>
             <div class="row">
-                <div class="col-12 bg-light" style="top:62px">
-                    <form @submit.prevent="sendToWhatsApp()" class="mt-4 row g-3 needs-validation" novalidate>
-                        <div class="w-100 form-floating my-2">
-                            <input type="text" class="form-control" placeholder="" v-model="name" required>
-                            <label for="floatingInput" class="text-muted ms-2">Name</label>
-                        </div>
-                        <div class="form-floating my-2 ">
-                            <select v-model="destination" class="form-select">
-                                <option value="Amazing Dubai">
-                                    Amazing Dubai </option>
-                                <option value="Automechanika Shanghai 2024">
-                                    Automechanika Shanghai 2024 </option>
-                                <option value="Ayodhya Ram Mandir">
-                                    Ayodhya Ram Mandir </option>
-                                <option value="Bali With Nusa Lembongan">
-                                    Bali With Nusa Lembongan </option>
-                                <option value="Bangkok Phuket Special">
-                                    Bangkok Phuket Special </option>
-                                <option value="Bauma China 2024">
-                                    Bauma China 2024 </option>
-                                <option value="Bearing Expo 2024">
-                                    Bearing Expo 2024 </option>
-                                <option value="Best Of Bali">
-                                    Best Of Bali </option>
-                                <option value="Canton Fair Phase 1">
-                                    Canton Fair Phase 1 </option>
-                                <option value="Canton Fair Phase 2">
-                                    Canton Fair Phase 2 </option>
-                                <option value="CHINACOAT 2024">
-                                    CHINACOAT 2024 </option>
-                                <option value="CMEF China 2024">
-                                    CMEF China 2024 </option>
-                                <option value="CPHI Milan Exhibitor Package">
-                                    CPHI Milan Exhibitor Package </option>
-                                <option value="CPHI Milan Visitor Package">
-                                    CPHI Milan Visitor Package </option>
-                                <option value="Dreamland Singapore">
-                                    Dreamland Singapore </option>
-                                <option value="Exotic Andaman">
-                                    Exotic Andaman </option>
-                                <option value="Fenestration Bau 2024">
-                                    Fenestration Bau 2024 </option>
-                                <option value="Glasstec Dusseldorf Package 1">
-                                    Glasstec Dusseldorf Package 1 </option>
-                                <option value="Glasstec Dusseldorf Package 2">
-                                    Glasstec Dusseldorf Package 2 </option>
-                                <option value="Goa">
-                                    Goa </option>
-                                <option value="Golden Temple">
-                                    Golden Temple </option>
-                                <option value="Greece">
-                                    Greece </option>
-                                <option value="Hong Kong">
-                                    Hong Kong </option>
-                                <option value="ITMA ASIA &amp; CITME 2024">
-                                    ITMA ASIA &amp; CITME 2024 </option>
-                                <option value="Kashmir And Vaishno Devi">
-                                    Kashmir And Vaishno Devi </option>
-                                <option value="Kedarnath &amp; Badrinath">
-                                    Kedarnath &amp; Badrinath </option>
-                                <option value="Leh Ladakh">
-                                    Leh Ladakh </option>
-                                <option value="Mauritius">
-                                    Mauritius </option>
-                                <option value="Medica Düsseldorf 2024 Package 2">
-                                    Medica Düsseldorf 2024 Package 2 </option>
-                                <option value="Medica Extension Package with Paris">
-                                    Medica Extension Package with Paris </option>
-                                <option value="Paradise Kashmir">
-                                    Paradise Kashmir </option>
-                                <option value="RubberTech China 2024">
-                                    RubberTech China 2024 </option>
-                                <option value="SIGN &amp; LED China 2024" selected="">
-                                    SIGN &amp; LED China 2024 </option>
-                                <option value="Special South Africa">
-                                    Special South Africa </option>
-                                <option value="Spectacular Kerala">
-                                    Spectacular Kerala </option>
-                                <option value="Spectacular South Africa">
-                                    Spectacular South Africa </option>
-                                <option value="Swiss And Paris">
-                                    Swiss And Paris </option>
-                                <option value="Turkey">
-                                    Turkey </option>
-                                <option value="Vibrant Vietnam">
-                                    Vibrant Vietnam </option>
-                                <option value="Wire &amp; Tube China-2024">
-                                    Wire &amp; Tube China-2024 </option>
-                            </select>
-                            <label class="form-label ms-2">
-                                Select your destination
-                            </label>
-                        </div>
-                        <div class="w-100 form-floating my-2">
-                            <input type="date" class="form-control" placeholder="Mobile" v-model="date" required>
-                            <label class="ms-2 text-muted">Date</label>
-                        </div>
-                        <div class="form-floating my-2 ">
-                            <select v-model="selectedVisitor" class="form-select">
-                                <option value="1-2">1-2</option>
-                                <option value="3-4">3-4</option>
-                                <option value="5-6">5-6</option>
-                                <option value="7-8">7-8</option>
-                                <option value="9-10">9-10</option>
-                                <option value=">-10">>-10</option>
-                            </select>
-                            <label class="form-label ms-2">
-                                Select Visiter/Exhibiter
-                            </label>
-                        </div>
-                        <div class="w-100 form-floating my-2">
-                            <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
-                                v-model="note"></textarea>
-                            <label for="floatingTextarea" class="ms-2 text-muted">Notes...</label>
-                        </div>
-                        <button class="btn btn-dark rounded-0"><i class="bi bi-whatsapp"></i> submit</button>
-                    </form>
-                </div>
-
                 <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
                     <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
                         <li class="nav-item" role="presentation">
@@ -263,8 +149,141 @@
             </div>
         </div>
         <div class="position-fixed bottom-0 w-100 btn-group d-flex d-md-none" style="z-index:10">
-            <button class="btn btn-dark w-100 rounded-0">Download</button>
-            <button class="btn btn-warning w-100 rounded-0">Enquiry</button>
+            <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark w-100 rounded-0">Download</a>
+            <button class="btn btn-warning w-100 rounded-0" data-bs-toggle="modal"
+                data-bs-target="#enquirymodal">Enquiry</button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="enquirymodal" tabindex="-1" aria-labelledby="enquirymodalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="enquirymodalLabel">Modal title</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <form @submit.prevent="sendToWhatsApp()" class="mt-4 row g-3 needs-validation" novalidate>
+                            <div class="w-100 form-floating my-2">
+                                <input type="text" class="form-control" placeholder="" v-model="name" required>
+                                <label for="floatingInput" class="text-muted ms-2">Name</label>
+                            </div>
+                            <div class="form-floating my-2 ">
+                                <select v-model="destination" class="form-select">
+                                    <option value="Amazing Dubai">
+                                        Amazing Dubai </option>
+                                    <option value="Automechanika Shanghai 2024">
+                                        Automechanika Shanghai 2024 </option>
+                                    <option value="Ayodhya Ram Mandir">
+                                        Ayodhya Ram Mandir </option>
+                                    <option value="Bali With Nusa Lembongan">
+                                        Bali With Nusa Lembongan </option>
+                                    <option value="Bangkok Phuket Special">
+                                        Bangkok Phuket Special </option>
+                                    <option value="Bauma China 2024">
+                                        Bauma China 2024 </option>
+                                    <option value="Bearing Expo 2024">
+                                        Bearing Expo 2024 </option>
+                                    <option value="Best Of Bali">
+                                        Best Of Bali </option>
+                                    <option value="Canton Fair Phase 1">
+                                        Canton Fair Phase 1 </option>
+                                    <option value="Canton Fair Phase 2">
+                                        Canton Fair Phase 2 </option>
+                                    <option value="CHINACOAT 2024">
+                                        CHINACOAT 2024 </option>
+                                    <option value="CMEF China 2024">
+                                        CMEF China 2024 </option>
+                                    <option value="CPHI Milan Exhibitor Package">
+                                        CPHI Milan Exhibitor Package </option>
+                                    <option value="CPHI Milan Visitor Package">
+                                        CPHI Milan Visitor Package </option>
+                                    <option value="Dreamland Singapore">
+                                        Dreamland Singapore </option>
+                                    <option value="Exotic Andaman">
+                                        Exotic Andaman </option>
+                                    <option value="Fenestration Bau 2024">
+                                        Fenestration Bau 2024 </option>
+                                    <option value="Glasstec Dusseldorf Package 1">
+                                        Glasstec Dusseldorf Package 1 </option>
+                                    <option value="Glasstec Dusseldorf Package 2">
+                                        Glasstec Dusseldorf Package 2 </option>
+                                    <option value="Goa">
+                                        Goa </option>
+                                    <option value="Golden Temple">
+                                        Golden Temple </option>
+                                    <option value="Greece">
+                                        Greece </option>
+                                    <option value="Hong Kong">
+                                        Hong Kong </option>
+                                    <option value="ITMA ASIA &amp; CITME 2024">
+                                        ITMA ASIA &amp; CITME 2024 </option>
+                                    <option value="Kashmir And Vaishno Devi">
+                                        Kashmir And Vaishno Devi </option>
+                                    <option value="Kedarnath &amp; Badrinath">
+                                        Kedarnath &amp; Badrinath </option>
+                                    <option value="Leh Ladakh">
+                                        Leh Ladakh </option>
+                                    <option value="Mauritius">
+                                        Mauritius </option>
+                                    <option value="Medica Düsseldorf 2024 Package 2">
+                                        Medica Düsseldorf 2024 Package 2 </option>
+                                    <option value="Medica Extension Package with Paris">
+                                        Medica Extension Package with Paris </option>
+                                    <option value="Paradise Kashmir">
+                                        Paradise Kashmir </option>
+                                    <option value="RubberTech China 2024">
+                                        RubberTech China 2024 </option>
+                                    <option value="SIGN &amp; LED China 2024" selected="">
+                                        SIGN &amp; LED China 2024 </option>
+                                    <option value="Special South Africa">
+                                        Special South Africa </option>
+                                    <option value="Spectacular Kerala">
+                                        Spectacular Kerala </option>
+                                    <option value="Spectacular South Africa">
+                                        Spectacular South Africa </option>
+                                    <option value="Swiss And Paris">
+                                        Swiss And Paris </option>
+                                    <option value="Turkey">
+                                        Turkey </option>
+                                    <option value="Vibrant Vietnam">
+                                        Vibrant Vietnam </option>
+                                    <option value="Wire &amp; Tube China-2024">
+                                        Wire &amp; Tube China-2024 </option>
+                                </select>
+                                <label class="form-label ms-2">
+                                    Select your destination
+                                </label>
+                            </div>
+                            <div class="w-100 form-floating my-2">
+                                <input type="date" class="form-control" placeholder="Mobile" v-model="date" required>
+                                <label class="ms-2 text-muted">Date</label>
+                            </div>
+                            <div class="form-floating my-2 ">
+                                <select v-model="selectedVisitor" class="form-select">
+                                    <option value="1-2">1-2</option>
+                                    <option value="3-4">3-4</option>
+                                    <option value="5-6">5-6</option>
+                                    <option value="7-8">7-8</option>
+                                    <option value="9-10">9-10</option>
+                                    <option value=">-10">>-10</option>
+                                </select>
+                                <label class="form-label ms-2">
+                                    Select Visiter/Exhibiter
+                                </label>
+                            </div>
+                            <div class="w-100 form-floating my-2">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
+                                    v-model="note"></textarea>
+                                <label for="floatingTextarea" class="ms-2 text-muted">Notes...</label>
+                            </div>
+                            <button class="btn btn-dark rounded-0"><i class="bi bi-whatsapp"></i> submit</button>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
