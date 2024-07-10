@@ -143,12 +143,12 @@ const routes = [
     component: () => import('@/pages/profile/SocialDetails.vue')
   },
   {
-    path: "/trade-fair/:id",
+    path: "/trade-detail/:id",
     name: "TradeFairPage",
     component: () => import('@/pages/TradeFairPage.vue')
   },
   {
-    path: "/trade-detail",
+    path: "/trade-fair",
     name: "TradeFairDetailPage",
     component: () => import('@/pages/TradeFairDetailPage.vue')
   },

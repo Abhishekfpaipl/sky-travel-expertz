@@ -9,7 +9,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -43,7 +43,7 @@
                 </router-link>
             </div>
             <div class="col-md-2 mt-2 d-none d-md-block">
-                <router-link to="/trade-detail" class="dummy-card border d-flex flex-column justify-content-center align-items-center">
+                <router-link to="/trade-fair" class="dummy-card border d-flex flex-column justify-content-center align-items-center">
                     <span class="me-2 text-uppercase fs-4"> see more</span> <img src="/img/travel/right-arrow.svg"
                         style="width:40px;">
                 </router-link>
@@ -60,7 +60,7 @@
         </div> 
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -111,7 +111,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -162,7 +162,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -213,7 +213,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -264,7 +264,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -315,7 +315,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -366,7 +366,7 @@
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
             <div class="col" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-fair/' + fair.slug"
+                <router-link :to="'/trade-detail/' + fair.slug"
                     class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."

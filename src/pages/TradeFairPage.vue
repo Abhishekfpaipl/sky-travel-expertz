@@ -8,7 +8,7 @@
             </p> -->
         </div>
 
-        <div class="d-flex align-items-center p-4 mx-2 rounded-4 bg-white shadow position-relative "
+        <div class="d-flex align-items-center p-md-4 p-2 mx-2 rounded-4 bg-white shadow position-relative "
             style="top: -40px;">
             <div class="flex-fill d-flex justify-content-md-between justify-content-center">
                 <div class="d-md-flex gap-4 align-items-center">
@@ -344,7 +344,7 @@ export default {
         }
     },
     mounted() {
-        let pageName = this.$route.path.split('/trade-fair/').pop();
+        let pageName = this.$route.path.split('/trade-detail/').pop();
         this.pageName = pageName.replace(/-/g, ' ');
     },
     methods: {

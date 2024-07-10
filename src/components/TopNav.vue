@@ -101,7 +101,7 @@ export default {
                     id: 1,
                     title: 'Services',
                     subCat: [
-                        { name: 'trade fair', path: '/trade-fair' },
+                        { name: 'trade fair', path: '/trade-detail' },
                         { name: 'honeymoon tour', path: '/honeymoon-tour' },
                         { name: 'domestic tour', path: '/domestic-tour' },
                         { name: 'international tour', path: '/international-tour' },
