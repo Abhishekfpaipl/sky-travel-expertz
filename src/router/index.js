@@ -23,9 +23,9 @@ const routes = [
     component: () => import("@/pages/ContactUs.vue")
   },
   {
-    path: "/legal-warning",
-    name: "LegalWarning",
-    component: () => import("@/pages/LegalWarning.vue")
+    path: "/return-refund",
+    name: "ReturnRefund",
+    component: () => import("@/pages/ReturnRefund.vue")
   },
   {
     path: "/privacy-policy",

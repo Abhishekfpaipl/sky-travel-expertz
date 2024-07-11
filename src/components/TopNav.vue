@@ -1,6 +1,6 @@
 <template>
     <!-- Desktop version -->
-    <div class="d-lg-block d-none position-fixed top-0 w-100 bg-light" style="z-index: 10;">
+    <div class="d-lg-block d-none position-fixed top-0 w-100 bg-light border-bottom" style="z-index: 10;">
         <nav class="navbar navbar-expand-lg py-3">
             <div class="container-fluid d-flex justify-content-center align-items-center">
                 <router-link to="/" class="d-flex align-items-center w-25 text-decoration-none">
@@ -11,16 +11,18 @@
                 <div class="w-75">
                     <ul class="list-unstyled mb-0 d-flex justify-content-end">
                         <li v-for="(cat, index) in menuCategories" :key="index"
-                            class="category d-inline position-relative" @mouseover="setHoveredCategory(index)"
-                            @mouseout="clearHoveredCategory">
-                            <a href="#" class="title px-2 text-decoration-none text-dark">{{ cat.title }}</a>
-                            <div class="mega-menu " :style="{ backgroundColor: cat.bgColor }">
+                            class="category d-inline position-relative" >
+                            <router-link :to="cat.path" class="title px-2 text-decoration-none text-dark">
+                                {{ cat.title }}
+                            </router-link>
+                              
+                            <div class="mega-menu " style="background-color: #FFF5DD;">
                                 <div v-if="cat.subCat" class="px-4">
                                     <ul class="d-flex  list-unstyled mega-items flex-wrap py-4">
                                         <li v-for="(subCat, index) in cat.subCat" :key="index"
                                             class="py-2 px-3 text-capitalize">
                                             <router-link :to="subCat.path" class="text-decoration-none ">
-                                                <a :href="subCat.path" class="fw-bold text-decoration-none text-dark">{{
+                                                <a :href="subCat.path" class="sub-title fw-bold text-decoration-none text-dark">{{
                                                     subCat.name }}</a>
                                             </router-link>
                                         </li>
@@ -35,7 +37,8 @@
     </div>
 
     <!-- Mobile version -->
-    <div class="d-flex justify-content-between d-lg-none p-2 position-fixed top-0 w-100 bg-light py-3" style="z-index: 8;">
+    <div class="d-flex justify-content-between d-lg-none p-2 position-fixed top-0 w-100 bg-light py-3 border-bottom"
+        style="z-index: 8;">
         <router-link to="/" class="text-decoration-none ">
             <img src="/img/logo.png" style="height: 40px;">
             <span class="ms-2 text-dark">Sky Travel Expertz</span>
@@ -100,6 +103,7 @@ export default {
                 {
                     id: 1,
                     title: 'Services',
+                    path:'',
                     subCat: [
                         { name: 'trade fair', path: '/trade-detail' },
                         { name: 'honeymoon tour', path: '/honeymoon-tour' },
@@ -162,8 +166,12 @@ export default {
 }
 
 .category:hover .title {
-    color: red !important;
-    border-bottom: 2px solid red !important;
+    color: rgb(255, 162, 0) !important;
+    border-bottom: 2px solid rgb(255, 162, 0) !important;
+}
+.sub-title:hover  {
+    color: rgb(255, 162, 0) !important;
+    border-bottom: 2px solid rgb(255, 162, 0) !important;
 }
 
 .category:hover .mega-menu {

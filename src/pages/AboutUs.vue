@@ -1,21 +1,23 @@
 <template>
     <div style="padding-top: 66px;">
-        <div class="text-center fw-bold py-5 text-white" style="background-color: var(--brand-color)" v-observe>
-            <p class="fs-1">About Us</p> 
+        <div class="" style="background-image: url('/img/trade-bg.svg')">
+            <div class="py-5" style="background-color: var(--bg-forth)">
+                <h1 class="fw-bold ">About Us</h1>
+            </div>
         </div>
         <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;">
-            <OurTeam :values="links" v-observe/> 
+            <OurTeam :values="links" v-observe />
             <div class="my-3">
-                <InfoSection :customFields="customFields" v-observe/>
+                <InfoSection :customFields="customFields" v-observe />
             </div>
             <div class="my-3">
-                <TeamBanner v-observe/>
+                <TeamBanner v-observe />
             </div>
         </div>
 
     </div>
 </template>
-<script> 
+<script>
 import OurTeam from "@/components/OurTeam.vue";
 import InfoSection from "@/components/InfoSection.vue";
 import TeamBanner from "@/components/TeamBanner.vue";

@@ -1,15 +1,23 @@
 <template>
     <div class="container-fluid text-dark bg-light pt-3 border-top border-bottom">
         <div class="row">
-            <div class="col-12 col-md-4 mb-3">
-                <router-link to="/">
+            <div class="col-12 col-md-4 mb-3 d-flex flex-column align-items-center justify-content-center">
+                <router-link to="/" class="text-decoration-none text-dark d-flex align-items-center">
                     <img :src="img" style="width: 100px;object-fit: contain;">
+                    <div class="d-flex flex-column">
+                        <span class="fs-5 fw-bold">Sky Travel Expertz</span>
+                        <small class="text-uppercase text-end smaller">the world to see</small>
+                    </div>
                 </router-link>
+                <div class="text-uppercase mt-3">
+                    <span class="smaller">meetings | incentive tours | conferences | events | international exhibitions
+                        | leisure tours</span>
+                </div>
             </div>
 
             <div class=" col-12 col-md-4 mb-3 text-center">
                 <p class="mb-2 fw-bold">Contact Us</p>
-                <p class="mb-2">Email : support@skytravelexpertz.com</p>
+                <p class="mb-2">Email : himanshikukreja123@gmail.com</p>
                 <p class="mb-2">Mob no. : 91 8318599577</p>
                 <p class="mb-2">Address : 2nd Floor, Block B1/632, <br> Janakpuri, 110058, Delhi, India</p>
                 <div class="d-flex gap-2 justify-content-center">
@@ -39,6 +47,11 @@
             </div>
         </div>
     </div>
+    <div class="text-bg-dark py-2 d-flex justify-content-between px-md-4">
+        <p class="mb-0">All rights reserved</p>
+        <a href="https://www.covisor.in" class="text-white text-decoration-none">Copyright &copy; Covisor Infotech Pvt Ltd</a>
+         <!-- <p>Copyright &copy; Covisor.in</p> -->
+    </div>
     <!-- <FameFoot /> -->
 </template>
 
@@ -53,11 +66,11 @@ export default {
         return {
             img: '/img/logo.png',
             company: [
-                {
-                    id: 3,
-                    name: 'Login',
-                    link: '/product-list'
-                },
+                // {
+                //     id: 3,
+                //     name: 'Login',
+                //     link: '/product-list'
+                // },
                 {
                     id: 4,
                     name: 'Contact Us',
@@ -72,8 +85,8 @@ export default {
             links: [
                 {
                     id: 13,
-                    name: 'Legal',
-                    link: '/legal-warning'
+                    name: 'Cancellation & Refund',
+                    link: '/return-refund'
                 },
                 {
                     id: 1,
@@ -82,7 +95,7 @@ export default {
                 },
                 {
                     id: 12,
-                    name: 'Terms Of Use',
+                    name: 'Terms & Conditions',
                     link: '/term-of-use'
                 },
 

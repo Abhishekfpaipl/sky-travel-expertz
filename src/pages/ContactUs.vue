@@ -1,13 +1,14 @@
 <template>
     <div class="" style="padding-top: 66px;">
-        <div class="text-white py-5" style=" background-color:var(--brand-color) ;padding-bottom: 6rem !important;"
-            v-observe>
-            <h1 class="text-center mb-0 fw-bold">Contact Page</h1>
-            <p class="small mb-0 text-capitalize text-center">The secret of getting ahead, is getting started</p>
+
+        <div class="" style="background-image: url('/img/trade-bg.svg')">
+            <div class="py-5" style="background-color: var(--bg-forth)">
+                <h1 class="text-center fw-bold">Contact Us</h1>
+            </div>
         </div>
         <div class="container bg-white rounded-top-5" style="margin-top: -40px;" v-observe>
             <div class="row p-3">
-                <div class="col-12 col-md-6 pt-4 text-center">
+                <div class="col-12 pt-4 text-center">
                     <form @submit.prevent="submitQuery()" class="mt-4 row g-3 needs-validation" novalidate>
                         <div class="w-100 form-floating mt-0">
                             <input type="text" class="form-control" placeholder="" v-model="name" required>
@@ -16,7 +17,7 @@
                         <div class="w-100 form-floating mt-2">
                             <input type="tel" class="form-control" placeholder="Mobile" v-model="number" required>
                             <label class="ms-2 text-muted">Mobile No</label>
-                        </div> 
+                        </div>
                         <div class="w-100 form-floating mt-2">
                             <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea"
                                 v-model="note"></textarea>
@@ -34,22 +35,11 @@
                             </label>
                         </div>
                         <div class="col-12">
-                            <button class="btn btn-warning py-2 fs-5 w-100 rounded-0 text-white" type="submit">Submit</button>
+                            <button class="btn btn-warning py-2 fs-5 w-100 rounded-0 text-white"
+                                type="submit">Submit</button>
                         </div>
                     </form>
-
                 </div>
-                <div class="col-12 col-md-6 mt-5 mt-md-0 pt-4 text-center">
-                    <h1 class="text-uppercase my-3">We Believe</h1>
-                    <p class="text-capitalize fs-5 fw-bold">"If you don't take care of your customers, <br> your
-                        competitors
-                        will do!"</p>
-                    <h1 class="text-uppercase cutout my-3"><span>So Relax </span></h1>
-                    <p class="text-capitalize fs-5 fw-bold">"let's build an awesome business together <br>We will take
-                        care of
-                        you !"</p>
-                </div>
-
             </div>
         </div>
         <div class="container-fluid mt-5 py-5 text-dark" style="background-color: var(--bg-forth)" v-observe>
@@ -153,36 +143,36 @@ export default {
 
 <style scoped>
 .cutout {
-  overflow: hidden;
-  text-align: center;
+    overflow: hidden;
+    text-align: center;
 }
 
 .cutout>span {
-  position: relative;
-  display: inline-block;
+    position: relative;
+    display: inline-block;
 }
 
 .cutout>span:before,
 .cutout>span:after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  width: 900px;
-  /* Adjust width as needed */
-  margin: 0 20px;
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 900px;
+    /* Adjust width as needed */
+    margin: 0 20px;
 }
 
 .cutout>span:before {
-  right: 100%;
-  border-bottom: 2px solid;
-  border-color: red;
-  border-image-slice: 1;
+    right: 100%;
+    border-bottom: 2px solid;
+    border-color: red;
+    border-image-slice: 1;
 }
 
 .cutout>span:after {
-  left: 100%;
-  border-bottom: 2px solid;
-  border-color: red;
-  border-image-slice: 1;
+    left: 100%;
+    border-bottom: 2px solid;
+    border-color: red;
+    border-image-slice: 1;
 }
 </style>

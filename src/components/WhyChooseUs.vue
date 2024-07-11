@@ -1,5 +1,5 @@
 <template>
-    <div style="background-color: var(--bg-forth);">
+    <div >
 
         <div class="container py-4">
             <div class="row align-items-center">
@@ -9,7 +9,7 @@
                 </div>
                 <div class="col-md-6 mt-5 ">
                     <div v-for="(link, index) in description" :key="index" class="text-start my-2 ">
-                        <i class="bi bi-check-circle-fill text-success me-2 ps-4"></i>
+                        <i class="bi bi-check-circle-fill me-2 ps-4" style="color: rgba(255, 206, 86, 1) !important;"></i>
                         <span class="mb-0 ps-3">{{ link.title }}</span>
                     </div>
                  </div>

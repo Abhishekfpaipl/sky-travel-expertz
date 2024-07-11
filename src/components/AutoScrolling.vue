@@ -1,19 +1,18 @@
 <template>
-    <div class="py-5 text-white" style="background-color: var(--bg-primary)">
+    <div class="py-5 text-dark">
+        <h2 class="mb-4">Top Rated Countries</h2>
         <article :class="['wrapper', { 'wrapper--vertical': isVertical }]">
             <div class="marquee" :class="{ 'marquee--vertical': isVertical }">
                 <div class="marquee__group" :style="{ 'animation-direction': isReverse ? 'reverse' : 'normal' }">
                     <div v-for="(link, index) in links" :key="index" class="d-flex flex-column">
-                        <img :src="link.image" style="width:80px;height:80px;object-fit: contain;"
-                            alt="">
+                        <img :src="link.image" class="rounded-circle" style="width:80px;height:80px;object-fit: contain;" alt="">
                         <p class="text-center mb-0">{{ link.name }}</p>
                     </div>
                 </div>
                 <div aria-hidden="true" class="marquee__group"
                     :style="{ 'animation-direction': isReverse ? 'reverse' : 'normal' }">
                     <div v-for="(link, index) in links" :key="index" class="d-flex flex-column">
-                        <img :src="link.image" style="width:80px;height:80px;object-fit: contain;"
-                            alt="">
+                        <img :src="link.image" class="rounded-circle" style="width:80px;height:80px;object-fit: contain;" alt="">
                         <p class="text-center mb-0">{{ link.name }}</p>
                     </div>
                 </div>
@@ -39,43 +38,63 @@ export default {
             links: [
                 {
                     id: 1,
-                    name: 'Amazon',
-                    image: '/img/members/1.png'
+                    name: 'Australia',
+                    image: "https://utourizmo.com/images/australia.webp"
+                    // image: '/img/members/1.png'
                 },
                 {
                     id: 2,
-                    name: 'Apple',
-                    image: "/img/members/2.webp"
+                    name: 'Canada',
+                    image: "https://utourizmo.com/images/canada.webp"
+                    // image: "/img/members/2.webp"
                 },
                 {
                     id: 3,
-                    name: 'Aws',
-                    image: "/img/members/3.png"
+                    name: 'USA',
+                    image: "https://utourizmo.com/images/usa.webp"
+                    // image: "/img/members/3.png"
                 },
                 {
                     id: 4,
-                    name: 'Facebook',
-                    image: "/img/members/4.png"
+                    name: 'UK',
+                    image: "https://utourizmo.com/images/uk.webp"
+                    // image: "/img/members/4.png"
                 },
                 {
                     id: 5,
-                    name: 'Google',
-                    image: "/img/members/5.jpg"
+                    name: 'Germany',
+                    image: "https://utourizmo.com/images/germany.webp"
+                    // image: "/img/members/5.jpg"
                 },
                 {
-                    id: 6,
-                    name: 'Meta',
-                    image: "/img/members/6.webp"
+                    id: 1,
+                    name: 'Australia',
+                    image: "https://utourizmo.com/images/australia.webp"
+                    // image: '/img/members/1.png'
                 },
                 {
-                    id: 7,
-                    name: 'Microsoft',
-                    image: "/img/members/7.jpeg"
+                    id: 2,
+                    name: 'Canada',
+                    image: "https://utourizmo.com/images/canada.webp"
+                    // image: "/img/members/2.webp"
                 },
                 {
-                    id: 11,
-                    name: 'Vodafone',
-                    image: "/img/members/8.png"
+                    id: 3,
+                    name: 'USA',
+                    image: "https://utourizmo.com/images/usa.webp"
+                    // image: "/img/members/3.png"
+                },
+                {
+                    id: 4,
+                    name: 'UK',
+                    image: "https://utourizmo.com/images/uk.webp"
+                    // image: "/img/members/4.png"
+                },
+                {
+                    id: 5,
+                    name: 'Germany',
+                    image: "https://utourizmo.com/images/germany.webp"
+                    // image: "/img/members/5.jpg"
                 },
             ]
         };

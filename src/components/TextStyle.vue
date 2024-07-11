@@ -1,12 +1,12 @@
 <template>
     <div id="TextAnimation" class="text-center w-100">
-        <h2 class="text-dark">Search For
+        <h2 class="text-dark">Explore the world
             <span class="typed-text ">{{ typeValue }}</span>
             <span class="cursor" :class="{ 'typing': typeStatus }">&nbsp;</span>
         </h2>
         <div class=" text-dark">
-            <p class="m-0 fs-5"> At No Cost Now you can Build <br> and Scale with
-                confidence</p>
+            <p class="m-0 fs-5 text-capitalize">Discover the unforgetable journey with
+                us, everywhere every destination becomes a cherished memory</p>
         </div>
     </div>
 </template>
@@ -18,7 +18,7 @@ export default {
         return {
             typeValue: '',
             typeStatus: false,
-            typeArray: ['Categories'],
+            typeArray: ['Australia','Canada','USA', 'Uk', 'Germany',],
             // typeArray: ['Online Retail Shop'],
             typingSpeed: 200,
             erasingSpeed: 100,

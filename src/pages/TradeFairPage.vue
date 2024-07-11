@@ -11,91 +11,96 @@
         <div class="d-flex align-items-center p-md-4 p-2 mx-2 rounded-4 bg-white shadow position-relative "
             style="top: -40px;">
             <div class="flex-fill d-flex justify-content-md-between justify-content-center">
-                <div class="d-md-flex gap-4 align-items-center">
-                    <p class="fs-3 mb-0">{{ pageName }}</p>
-                    <p class="fs-5 mb-0"> <span class="text-dark">₹ 9999</span> <span
-                            class="text-decoration-line-through text-muted">12000</span></p>
-                </div>
+
+                <p class="fs-3 mb-0">{{ pageName }}</p>
+
                 <div class="d-none d-md-flex gap-3">
-                    <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark">Download</a>
-                    <button class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#enquirymodal">Enquiry</button>
+                    <a href="/img/demo.pdf" download="file.pdf" class="btn"
+                        style="border:1px solid rgba(255, 162, 0, 1) !important;">
+                        Download
+                    </a>
+                    <button class="btn d-flex align-items-center"
+                        style="background-color:rgba(255, 206, 86, 1); border:1px solid rgba(255, 162, 0, 1) !important;"
+                        data-bs-toggle="modal" data-bs-target="#enquirymodal">
+                        <span class="text-dark">₹ 9999</span>
+                        <span class="ms-2">Enquiry</span>
+                    </button>
                 </div>
 
             </div>
 
         </div>
 
-        <div class="container my-4">
-            <div class="row">
-                <ul class="nav nav-pills mb-3 sticky-nav bg-warning" id="pills-tab" role="tablist">
-                    <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="pills-itinerary-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-itinerary" type="button" role="tab"
-                                aria-controls="pills-itinerary" aria-selected="true">
-                                Itinerary
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-fact&figure-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-fact&figure" type="button" role="tab"
-                                aria-controls="pills-fact&figure" aria-selected="false">Fact & Figure</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-hotel-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-hotel" type="button" role="tab" aria-controls="pills-hotel"
-                                aria-selected="false">Hotel</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-flight-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-flight" type="button" role="tab" aria-controls="pills-flight"
-                                aria-selected="false">Flight</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-visa-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-visa" type="button" role="tab" aria-controls="pills-visa"
-                                aria-selected="false">Visa</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-Inclusion-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-Inclusion" type="button" role="tab"
-                                aria-controls="pills-Inclusion" aria-selected="false">Inclusion</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-Exclusion-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-Exclusion" type="button" role="tab"
-                                aria-controls="pills-Exclusion" aria-selected="false">Exclusion</button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="pills-Term&Condition-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-Term&Condition" type="button" role="tab"
-                                aria-controls="pills-Term&Condition" aria-selected="false">Term & Condition</button>
-                        </li>
+        <!-- <div class="container my-4"> -->
+        <div class="my-4">
+            <ul class="nav nav-pills mb-3 sticky-nav bg-light border-top border-bottom px-md-5" id="pills-tab"
+                role="tablist">
+                <div class="d-flex overflow-x-scroll gap-3 p-2 px-3 rounded" id="scroll">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-itinerary-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-itinerary" type="button" role="tab" aria-controls="pills-itinerary"
+                            aria-selected="true">
+                            Itinerary
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-fact&figure-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-fact&figure" type="button" role="tab"
+                            aria-controls="pills-fact&figure" aria-selected="false">Fact & Figure</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-hotel-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-hotel" type="button" role="tab" aria-controls="pills-hotel"
+                            aria-selected="false">Hotel</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-flight-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-flight" type="button" role="tab" aria-controls="pills-flight"
+                            aria-selected="false">Flight</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-visa-tab" data-bs-toggle="pill" data-bs-target="#pills-visa"
+                            type="button" role="tab" aria-controls="pills-visa" aria-selected="false">Visa</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-Inclusion-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-Inclusion" type="button" role="tab" aria-controls="pills-Inclusion"
+                            aria-selected="false">Inclusion</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-Exclusion-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-Exclusion" type="button" role="tab" aria-controls="pills-Exclusion"
+                            aria-selected="false">Exclusion</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" id="pills-Term&Condition-tab" data-bs-toggle="pill"
+                            data-bs-target="#pills-Term&Condition" type="button" role="tab"
+                            aria-controls="pills-Term&Condition" aria-selected="false">Term & Condition</button>
+                    </li>
 
-                    </div>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-itinerary" role="tabpanel"
-                        aria-labelledby="pills-itinerary-tab" tabindex="0">
-                        <div class="container">
-                            <div class="row" v-for="(day, index) in test" :key="index">
-                                <div class="col-12 mb-4">
-                                    <div class="card">
-                                        <div class="card-header text-bg-warning">
-                                            Day {{ index + 1 }}
-                                        </div>
-                                        <div class="card-body">
-                                            <div class="row d-flex align-items-center"
-                                                :class="{ 'flex-row-reverse': index % 2 !== 0 }">
-                                                <div class="col-md-4 mb-3 mb-md-0">
-                                                    <img :src="day.image" class="img-fluid rounded"
-                                                        style="width:250px; height:160px;object-fit: fill;"
-                                                        :alt="'Day ' + (index + 1)">
-                                                </div>
-                                                <div class="col-md-8">
-                                                    <h5 class="card-title text-start">{{ day.date }}</h5>
-                                                    <p class="card-text text-start">{{ day.description }}</p>
-                                                </div>
+                </div>
+            </ul>
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-itinerary" role="tabpanel"
+                    aria-labelledby="pills-itinerary-tab" tabindex="0">
+                    <div class="container">
+                        <div class="row" v-for="(day, index) in test" :key="index">
+                            <div class="col-12 mb-4">
+                                <div class="card">
+                                    <div class="card-header text-bg-light">
+                                        Day {{ index + 1 }}
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="row d-flex align-items-center"
+                                            :class="{ 'flex-row-reverse': index % 2 !== 0 }">
+                                            <div class="col-md-4 mb-3 mb-md-0">
+                                                <img :src="day.image" class="img-fluid rounded"
+                                                    style="width:250px; height:160px;object-fit: fill;"
+                                                    :alt="'Day ' + (index + 1)">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h5 class="card-title text-start">{{ day.date }}</h5>
+                                                <p class="card-text text-start">{{ day.description }}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -103,64 +108,74 @@
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <div class="tab-pane fade" id="pills-fact&figure" role="tabpanel"
-                        aria-labelledby="pills-fact&figure-tab" tabindex="0">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <button class="btn btn-dark rounded-0">Visitors</button>
-                            <button class="btn btn-dark rounded-0">Exhibitors</button>
-                        </div>
+                <div class="tab-pane fade" id="pills-fact&figure" role="tabpanel"
+                    aria-labelledby="pills-fact&figure-tab" tabindex="0">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-dark rounded-0">Visitors</button>
+                        <button class="btn btn-dark rounded-0">Exhibitors</button>
                     </div>
+                </div>
 
-                    <div class="tab-pane fade" id="pills-hotel" role="tabpanel" aria-labelledby="pills-hotel-tab"
-                        tabindex="0">
-                        <TradeFairFGallerySection />
-                    </div>
+                <div class="tab-pane fade" id="pills-hotel" role="tabpanel" aria-labelledby="pills-hotel-tab"
+                    tabindex="0">
+                    <TradeFairFGallerySection />
+                </div>
 
-                    <div class="tab-pane fade" id="pills-flight" role="tabpanel" aria-labelledby="pills-flight-tab"
-                        tabindex="0">
-                        <TradeFairTableSection />
-                    </div>
+                <div class="tab-pane fade" id="pills-flight" role="tabpanel" aria-labelledby="pills-flight-tab"
+                    tabindex="0">
+                    <TradeFairTableSection />
+                </div>
 
-                    <div class="tab-pane fade" id="pills-visa" role="tabpanel" aria-labelledby="pills-visa-tab"
-                        tabindex="0">
-                        <TradeFairVisaSection />
-                    </div>
+                <div class="tab-pane fade" id="pills-visa" role="tabpanel" aria-labelledby="pills-visa-tab"
+                    tabindex="0">
+                    <TradeFairVisaSection />
+                </div>
 
-                    <div class="tab-pane fade" id="pills-Inclusion" role="tabpanel"
-                        aria-labelledby="pills-Inclusion-tab" tabindex="0">
-                        <TradeFairInclusionSection />
-                    </div>
+                <div class="tab-pane fade" id="pills-Inclusion" role="tabpanel" aria-labelledby="pills-Inclusion-tab"
+                    tabindex="0">
+                    <TradeFairInclusionSection />
+                </div>
 
-                    <div class="tab-pane fade" id="pills-Exclusion" role="tabpanel"
-                        aria-labelledby="pills-Exclusion-tab" tabindex="0">
-                        <TradeFairExclusionSection />
-                    </div>
+                <div class="tab-pane fade" id="pills-Exclusion" role="tabpanel" aria-labelledby="pills-Exclusion-tab"
+                    tabindex="0">
+                    <TradeFairExclusionSection />
+                </div>
 
-                    <div class="tab-pane fade" id="pills-Term&Condition" role="tabpanel"
-                        aria-labelledby="pills-Term&Condition-tab" tabindex="0">
-                        <TradeFairTermsSection />
-                    </div>
-
+                <div class="tab-pane fade" id="pills-Term&Condition" role="tabpanel"
+                    aria-labelledby="pills-Term&Condition-tab" tabindex="0">
+                    <TradeFairTermsSection />
                 </div>
 
             </div>
         </div>
+        <!-- </div> -->
         <div class="position-fixed bottom-0 w-100 btn-group d-flex d-md-none" style="z-index:10">
-            <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark w-100 rounded-0 py-3"><i class="bi bi-download"></i> Download</a>
-            <button class="btn btn-warning w-100 rounded-0 py-3" data-bs-toggle="modal"
-                data-bs-target="#enquirymodal"><i class="bi bi-whatsapp"></i> Enquiry</button>
+            <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark w-25 rounded-0"><i
+                    class="bi bi-download fs-2"></i></a>
+            <button class="btn btn-warning w-75 rounded-0 d-flex align-items-center justify-content-center"
+                data-bs-toggle="modal" data-bs-target="#enquirymodal">
+                <span class="text-dark fs-5">₹ 9999</span>
+                <span class="ms-2 fs-5">Enquiry</span>
+                <i class="bi bi-arrow-right ms-2 fs-1"></i>
+            </button>
         </div>
         <!-- Modal -->
         <div class="modal fade" id="enquirymodal" tabindex="-1" aria-labelledby="enquirymodalLabel" aria-hidden="true">
             <div class="modal-dialog  modal-dialog-centered">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="enquirymodalLabel">Enquiry</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <div class="modal-content position-relative">
+                    <div class="modal-header border-0 pt-4">
+                        <h1 class="modal-title fs-5" id="enquirymodalLabel">{{ pageName }}</h1>
                     </div>
+                    <div class="position-absolute rounded-circle wh-40 bg-danger text-white px-2 p-1 end-0"
+                        data-bs-dismiss="modal" style="top: -3%;">
+                        <i class="bi bi-x fs-5"></i>
+                    </div>
+                    <!-- <button type="button" class="btn-close position-absolute end-0 border rounded-circle p-2 bg-danger"
+                        style="top: -2%"  aria-label="Close"></button> -->
                     <div class="modal-body">
-                        <form @submit.prevent="sendToWhatsApp()" class="mt-4 row g-3 needs-validation" novalidate>
+                        <form @submit.prevent="sendToWhatsApp()" class="row g-3 needs-validation" novalidate>
                             <div class="w-100 form-floating my-2">
                                 <input type="text" class="form-control" placeholder="" v-model="name" required>
                                 <label for="floatingInput" class="text-muted ms-2">Name</label>
@@ -274,8 +289,11 @@
                                     v-model="note"></textarea>
                                 <label for="floatingTextarea" class="ms-2 text-muted">Notes...</label>
                             </div>
-                            <button class="btn btn-warning rounded-0" data-bs-dismiss="modal"><i
-                                    class="bi bi-whatsapp"></i> Enquiry</button>
+                            <button
+                                class="d-flex justify-content-center align-items-center btn btn-success text-uppercase p-0 py-1"
+                                data-bs-dismiss="modal"><i class="bi bi-whatsapp fs-5 me-4"></i> <span class="fs-5">
+                                    Enquiry Now</span></button>
+
                         </form>
                     </div>
                 </div>
@@ -386,7 +404,7 @@ export default {
 
 .nav-link.active {
     background-color: transparent !important;
-    border-bottom: 3px solid black !important;
+    border-bottom: 1px solid rgba(255, 162, 0, 1) !important;
     color: black !important;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     border-radius: 0px !important;

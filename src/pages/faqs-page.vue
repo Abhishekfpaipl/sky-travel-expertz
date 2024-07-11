@@ -1,7 +1,9 @@
 <template>
     <div style="padding-top: 70px;">
-        <div class="text-center fw-bold py-5 text-white" style="background-color: var(--bg-primary);">
-            <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+        <div class="" style="background-image: url('/img/trade-bg.svg')">
+            <div class="py-5 text-center fw-bold py-5 text-dark" style="background-color: var(--bg-forth)">
+                <h1 class="text-center mb-4">Frequently Asked Questions</h1>
+            </div>
         </div>
         <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;">
             <div>
@@ -10,10 +12,11 @@
                     <div class="d-flex overflow-x-scroll gap-3 my-3 p-2 px-3 rounded" id="scroll">
                         <li class="nav-item border rounded" role="presentation" v-for="(price, index) in pricing"
                             :key="index">
-                            <button class="nav-link" :class="{ 'active': index === activeTabIndex }"
+                            <button class="nav-link text-dark" :class="{ 'active': index === activeTabIndex }"
                                 :id="'tab-' + index" data-bs-toggle="pill" :data-bs-target="'#content-' + index"
                                 type="button" role="tab" :aria-controls="'content-' + index"
-                                :aria-selected="index === activeTabIndex" @click="activeTabIndex = index">{{ price.name
+                                :aria-selected="index === activeTabIndex" @click="activeTabIndex = index">{{
+                                    price.name
                                 }}</button>
                         </li>
                     </div>
@@ -38,7 +41,7 @@
                                                 type="button" data-bs-toggle="collapse"
                                                 :data-bs-target="'#flush-collapseOne' + index" aria-expanded="false"
                                                 :aria-controls="'flush-collapseOne' + index"
-                                                style="border-color: var(--bg-primary) !important;">
+                                                style="border-color:rgb(255,162,0) !important">
                                                 <span class="me-2">Q{{ index + 1 }}.</span> {{ faq.question }}
                                             </button>
                                         </h2>
@@ -69,177 +72,155 @@ export default {
             pricing: [
                 {
                     id: 622,
-                    name: "All",
+                    name: "All Questions",
                     plans: [
                         {
-                            question: " Can i make whatsApp communication from saleswik CRM?",
-                            answer: "Yes, you can do trasactional whatsapp messaging through saleswik CRM. You can also select automated messages and send to the buyers."
+                            question: "Can you accommodate special dietary needs or accessibility requirements?",
+                            answer: "Yes, we strive to accommodate special requests. Please inform us of any dietary needs or accessibility requirements at the time of booking."
                         },
                         {
-                            question: "Is Saleswik CRM gives alert of timely followups?",
-                            answer: "Yes, It gives peding follow-up alerts on dashboard saleswik and sms so that you should not miss any followup"
+                            question: "Do you offer group travel packages?",
+                            answer: "Yes, we offer customized group travel packages for families, corporate teams, schools, and other groups. Contact us for more details."
                         },
                         {
-                            question: "Can I sync my call log leads to saleswik CRM?",
-                            answer: "Yes, you can sync all your calls in saleswik CRM and convert them into leads."
+                            question: "What services do you offer?",
+                            answer: "We offer a wide range of travel services including flight bookings, hotel reservations, tour packages, car rentals, travel insurance, and more."
                         },
                         {
-                            question: "Is my data secured at saleswik CRM?",
-                            answer: "Yes, your data is completely safe, and important credentails are encripted."
+                            question: "How can I book a trip with your company?",
+                            answer: "You can book a trip through our website, mobile app, or by contacting our customer service team via phone or email."
+                        },
+                        {
+                            question: "What payment methods do you accept?",
+                            answer: "We accept major credit cards, debit cards, PayPal, and bank transfers. Some packages may also offer installment payment options."
+                        },
+                        {
+                            question: "Can I make changes to my booking after it's been confirmed?",
+                            answer: "Yes, you can make changes to your booking, but please note that changes may be subject to availability and additional fees."
+                        },
+                        {
+                            question: "Is my payment information secure?",
+                            answer: "Absolutely. We use industry-standard encryption and security measures to protect your payment information."
+                        },
+                        {
+                            question: "What is your cancellation policy?",
+                            answer: "Our cancellation policy varies depending on the service and the terms and conditions of the provider. Please refer to the specific policy provided at the time of booking."
+                        },
+                        {
+                            question: "How do I request a refund?",
+                            answer: "To request a refund, please contact our customer service team. Refund eligibility and processing times may vary based on the service and provider."
+                        },
+                        {
+                            question: "Do I need travel insurance?",
+                            answer: "While travel insurance is not mandatory, we highly recommend it to protect against unforeseen events such as trip cancellations, medical emergencies, and lost luggage."
+                        },
+                        {
+                            question: "What documents do I need for international travel?",
+                            answer: "For international travel, you will need a valid passport and possibly a visa, depending on the destination. Always check entry requirements for your specific destination."
+                        },
+                        {
+                            question: "Can you assist with visa applications?",
+                            answer: "Yes, we offer assistance with visa applications for many destinations. Please contact our team for more information."
+                        },
+                        {
+                            question: "What should I do if I encounter an issue during my trip?",
+                            answer: "If you encounter any issues during your trip, please contact our 24/7 customer support line for immediate assistance."
+                        },
+                        {
+                            question: "How can I access my travel itinerary?",
+                            answer: "You can access your travel itinerary through our mobile app or by logging into your account on our website. We also email a copy of your itinerary once your booking is confirmed."
                         },
                     ]
                 },
                 {
                     id: 62,
-                    name: "About",
+                    name: "General Questions",
                     plans: [
                         {
-                            question: " Can i make whatsApp communication from saleswik CRM?",
-                            answer: "Yes, you can do trasactional whatsapp messaging through saleswik CRM. You can also select automated messages and send to the buyers."
+                            question: "What services do you offer?",
+                            answer: "We offer a wide range of travel services including flight bookings, hotel reservations, tour packages, car rentals, travel insurance, and more."
                         },
                         {
-                            question: "Is Saleswik CRM gives alert of timely followups?",
-                            answer: "Yes, It gives peding follow-up alerts on dashboard saleswik and sms so that you should not miss any followup"
-                        },
-                        {
-                            question: "Can I sync my call log leads to saleswik CRM?",
-                            answer: "Yes, you can sync all your calls in saleswik CRM and convert them into leads."
-                        },
-                        {
-                            question: "Is my data secured at saleswik CRM?",
-                            answer: "Yes, your data is completely safe, and important credentails are encripted."
+                            question: "How can I book a trip with your company?",
+                            answer: "You can book a trip through our website, mobile app, or by contacting our customer service team via phone or email."
                         },
                     ]
                 },
                 {
                     id: 1,
-                    name: "Function",
+                    name: "Booking and Payment",
                     plans: [
                         {
-                            question: "What does a CRM system do ?",
-                            answer: "At its core, the CRM system is designed to manage communications with customers and align all stakeholders involved in interactions with them. However, CRM systems have evolved to perform complex tasks like automating processes, setting up workflows, tracking all conversations and using all the sales and marketing data to derive meaningful reports."
+                            question: "What payment methods do you accept?",
+                            answer: "We accept major credit cards, debit cards, PayPal, and bank transfers. Some packages may also offer installment payment options."
                         },
                         {
-                            question: "Why is CRM important for marketers?",
-                            answer: "With CRM, marketers can check the performance of their marketing sources, evaluate touchpoints, and more. A CRM helps marketers better understand customers and tune their messaging accordingly. Marketers can also personalize their messages using lead details captured in the CRM platform."
+                            question: "Can I make changes to my booking after it's been confirmed?",
+                            answer: "Yes, you can make changes to your booking, but please note that changes may be subject to availability and additional fees."
                         },
                         {
-                            question: "What is CRM software used for?",
-                            answer: "Aligning teams and automating customer-facing processes. Standardizing sales processes and automating them. Managing customer tickets. Tracking the performance of various marketing sources. Reporting and analytics"
-                        },
-                        {
-                            question: "Why is CRM important in sales?",
-                            answer: "Because sales reps pursue many leads, CRM plays a significant role in organizing them as per their stages in the sales pipeline. It also helps them keep track of interactions with prospects, schedule meetings, set reminders, and more."
+                            question: "Is my payment information secure?",
+                            answer: "Absolutely. We use industry-standard encryption and security measures to protect your payment information."
                         },
                     ]
                 },
                 {
                     id: 6,
-                    name: "Features",
+                    name: "Cancellations and Refunds",
                     plans: [
                         {
-                            question: " Can i make whatsApp communication from saleswik CRM?",
-                            answer: "Yes, you can do trasactional whatsapp messaging through saleswik CRM. You can also select automated messages and send to the buyers."
+                            question: "What is your cancellation policy?",
+                            answer: "Our cancellation policy varies depending on the service and the terms and conditions of the provider. Please refer to the specific policy provided at the time of booking."
                         },
                         {
-                            question: "Is Saleswik CRM gives alert of timely followups?",
-                            answer: "Yes, It gives peding follow-up alerts on dashboard saleswik and sms so that you should not miss any followup"
-                        },
-                        {
-                            question: "Can I sync my call log leads to saleswik CRM?",
-                            answer: "Yes, you can sync all your calls in saleswik CRM and convert them into leads."
-                        },
-                        {
-                            question: "Is my data secured at saleswik CRM?",
-                            answer: "Yes, your data is completely safe, and important credentails are encripted."
+                            question: "How do I request a refund?",
+                            answer: "To request a refund, please contact our customer service team. Refund eligibility and processing times may vary based on the service and provider."
                         },
                     ]
                 },
                 {
                     id: 5,
-                    name: "Account",
+                    name: "Travel Preparations",
                     plans: [
                         {
-                            question: " Can i make whatsApp communication from saleswik CRM?",
-                            answer: "Yes, you can do trasactional whatsapp messaging through saleswik CRM. You can also select automated messages and send to the buyers."
+                            question: "Do I need travel insurance?",
+                            answer: "While travel insurance is not mandatory, we highly recommend it to protect against unforeseen events such as trip cancellations, medical emergencies, and lost luggage."
                         },
                         {
-                            question: "Is Saleswik CRM gives alert of timely followups?",
-                            answer: "Yes, It gives peding follow-up alerts on dashboard saleswik and sms so that you should not miss any followup"
+                            question: "What documents do I need for international travel?",
+                            answer: "For international travel, you will need a valid passport and possibly a visa, depending on the destination. Always check entry requirements for your specific destination."
                         },
                         {
-                            question: "Can I sync my call log leads to saleswik CRM?",
-                            answer: "Yes, you can sync all your calls in saleswik CRM and convert them into leads."
-                        },
-                        {
-                            question: "Is my data secured at saleswik CRM?",
-                            answer: "Yes, your data is completely safe, and important credentails are encripted."
+                            question: "Can you assist with visa applications?",
+                            answer: "Yes, we offer assistance with visa applications for many destinations. Please contact our team for more information."
                         },
                     ]
                 },
                 {
                     id: 4,
-                    name: "Refund",
+                    name: "During the Trip",
                     plans: [
                         {
-                            question: " Can i make whatsApp communication from saleswik CRM?",
-                            answer: "Yes, you can do trasactional whatsapp messaging through saleswik CRM. You can also select automated messages and send to the buyers."
+                            question: "What should I do if I encounter an issue during my trip?",
+                            answer: "If you encounter any issues during your trip, please contact our 24/7 customer support line for immediate assistance."
                         },
                         {
-                            question: "Is Saleswik CRM gives alert of timely followups?",
-                            answer: "Yes, It gives peding follow-up alerts on dashboard saleswik and sms so that you should not miss any followup"
-                        },
-                        {
-                            question: "Can I sync my call log leads to saleswik CRM?",
-                            answer: "Yes, you can sync all your calls in saleswik CRM and convert them into leads."
-                        },
-                        {
-                            question: "Is my data secured at saleswik CRM?",
-                            answer: "Yes, your data is completely safe, and important credentails are encripted."
+                            question: "How can I access my travel itinerary?",
+                            answer: "You can access your travel itinerary through our mobile app or by logging into your account on our website. We also email a copy of your itinerary once your booking is confirmed."
                         },
                     ]
                 },
                 {
-                    id: 3,
-                    name: "Career",
+                    id: 4,
+                    name: "Special Requests",
                     plans: [
                         {
-                            question: "Why is CRM important for marketers?",
-                            answer: "With CRM, marketers can check the performance of their marketing sources, evaluate touchpoints, and more. A CRM helps marketers better understand customers and tune their messaging accordingly. Marketers can also personalize their messages using lead details captured in the CRM platform."
+                            question: "Can you accommodate special dietary needs or accessibility requirements?",
+                            answer: "Yes, we strive to accommodate special requests. Please inform us of any dietary needs or accessibility requirements at the time of booking."
                         },
                         {
-                            question: "What is CRM software used for?",
-                            answer: "Aligning teams and automating customer-facing processes. Standardizing sales processes and automating them. Managing customer tickets. Tracking the performance of various marketing sources. Reporting and analytics"
-                        },
-                        {
-                            question: "Why is CRM important in sales?",
-                            answer: "Because sales reps pursue many leads, CRM plays a significant role in organizing them as per their stages in the sales pipeline. It also helps them keep track of interactions with prospects, schedule meetings, set reminders, and more."
-                        },
-                        {
-                            question: "How much does a CRM system cost?",
-                            answer: "Depending on the features, the cost of a CRM system may start from $10-$25 per user per month. CRM companies also offer custom plans for specific features."
-                        },
-                    ]
-                },
-                {
-                    id: 2,
-                    name: "Patnership",
-                    plans: [
-                        {
-                            question: "Can I sync my call log leads to saleswik CRM?",
-                            answer: "Yes, you can sync all your calls in saleswik CRM and convert them into leads."
-                        },
-                        {
-                            question: "Is my data secured at saleswik CRM?",
-                            answer: "Yes, your data is completely safe, and important credentails are encripted."
-                        },
-                        {
-                            question: "Can i sync leads form my website to saleswik?",
-                            answer: "Yes, we have API based solutions for all your lead sources and its sync leads in runtime."
-                        },
-                        {
-                            question: "Can i manage my accounts at saleswik CRM?",
-                            answer: "Yes, you can manage your PO, proforma & Tax invoices. You can also manage your credit payment followups & AMC renewal."
+                            question: "Do you offer group travel packages?",
+                            answer: "Yes, we offer customized group travel packages for families, corporate teams, schools, and other groups. Contact us for more details."
                         },
                     ]
                 },
@@ -273,11 +254,14 @@ export default {
 }
 
 .nav-link.active {
-    background-color: var(--bg-primary) !important;
-    color: white;
+    background-color: var(--bg-light) !important;
+    border: 1px solid rgb(255, 162, 0);
+    color: black;
     transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
     /* border-radius: 2rem; */
     /* transform: scale(1.2); */
 }
-
+.form-control{
+    box-shadow: none !important;
+}
 </style>

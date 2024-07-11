@@ -24,17 +24,15 @@
                 {{ type }}{{ index < visaTypes.length - 1 ? ' | ' : '' }} </span>
         </div>
 
-        <h2 class="mb-4">{{ title }}</h2>
+        <!-- <h2 class="mb-4">{{ title }}</h2>
 
         <div class="countries-grid d-flex justify-content-center gap-4 flex-wrap">
             <div v-for="country in countries" :key="country.name" class="country-item">
-                <!-- <div class="country-image"> -->
-                <img :src="country.image" :alt="country.name" class="rounded-circle shadow overlfow-hidden"
+n                <img :src="country.image" :alt="country.name" class="rounded-circle shadow overlfow-hidden"
                     style="width: 150px;height: 150px; object-fit: cover;">
-                <!-- </div> -->
-                <p class="fw-bold">{{ country.name }} Visa</p>
+                 <p class="fw-bold">{{ country.name }} Visa</p>
             </div>
-        </div>
+        </div> -->
     </div>
 </template>
 

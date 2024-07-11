@@ -57,11 +57,10 @@ nav {
 }
 
 :root {
-  --bg-primary: #014c75;
-  --bg-secondary: #EB5E28;
-  --bg-tertiary: #FEC007;
-  --bg-forth: #FBF4F4;
-  --brand-color: #ffa907 !important
+  --bg-primary: #014c75; 
+  --bg-forth: rgba(255, 206, 86, 0.2);
+  --brand-color: #ffa907 !important;
+  --bg-light:#FFF5DD !important;
 }
 
 .text-ellipsis {

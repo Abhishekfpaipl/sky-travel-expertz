@@ -23,44 +23,10 @@
                 </div>
             </div>
         </div>
-    </div>
-    <div class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-4 g-4 text-center">
-                <div class="col">
-                    <h2>
-                        <AutoCounter :data="30" />
-                    </h2>
-                    <p class="fw-bold">Countries</p>
-                </div>
-                <div class="col">
-                    <h2>
-                        <AutoCounter :data="1000" />
-                    </h2>
-                    <p class="fw-bold">Satisfied Clients</p>
-                </div>
-                <div class="col">
-                    <h2>
-                        <AutoCounter :data="500" />
-                    </h2>
-                    <p class="fw-bold">Colleges & Universities</p>
-                </div>
-                <div class="col">
-                    <h2>
-                        <AutoCounter :data="15" />
-                    </h2>
-                    <p class="fw-bold">Years Of Experience</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    </div> 
 </template>
 <script>
-import AutoCounter from "@/components/AutoCounter.vue"
-export default {
-    components: {
-        AutoCounter
-    },
+ export default { 
     data() {
         return {
             abroadOptions: [

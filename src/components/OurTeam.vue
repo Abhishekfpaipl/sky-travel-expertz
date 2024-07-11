@@ -7,8 +7,7 @@
             <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-3">
                 <div class="col" v-for="(lead, index) in values" :key="index">
                     <div class="position-relative w-100 d-flex justify-content-center align-items-center flex-fill">
-                        <div class="card position-relative w-100 p-3 d-flex flex-column bg-light"
-                            style="color: var(--bg-primary);">
+                        <div class="card position-relative w-100 p-3 d-flex flex-column bg-white" style="border: 1px solid rgb(255,162,0);">
                             <div class="image text-center">
                                 <img :src="lead.img" style="width: 25%;" alt="">
                                 <p class="ms-2 fw-bold text-uppercase">{{ lead.title }}</p>
@@ -31,8 +30,8 @@ export default {
 </script>
 <style scoped>
 .card:hover {
-    background-color: var(--bg-primary) !important;
-    color: white !important;
+    background-color: var(--bg-light) !important;
+    color: black !important;
 }
 
 .card {
@@ -66,7 +65,7 @@ export default {
 
 .container .card .content {
     position: relative;
-    color: #fff;
+    color: #000;
     text-align: center;
     visibility: hidden;
     opacity: 0;

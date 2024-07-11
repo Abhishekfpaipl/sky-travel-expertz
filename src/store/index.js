@@ -169,12 +169,12 @@ export default createStore({
         image: "https://rctrips.com/assets/cphi-milan-thumb.jpg",
       },
       // {
-      //   id: 5,
-      //   title: "CMEF China 2024",
-      //   slug: "CMEF-China-2024",
-      //   date: "12-15 Oct 2024",
-      //   price: "1,00,000",
-      //   image: "https://rctrips.com/assets/cmef-healtcare.jpg",
+        // id: 5,
+        // title: "CMEF China 2024",
+        // slug: "CMEF-China-2024",
+        // date: "12-15 Oct 2024",
+        // price: "1,00,000",
+        // image: "https://rctrips.com/assets/cmef-healtcare.jpg",
       // },
       // {
       //   id: 6,
