@@ -36,7 +36,7 @@
 
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4">
                 <div class="col" v-for="(fair, index) in filteredTrades" :key="index">
-                    <router-link :to="'/trade-fair/' + fair.slug"
+                    <!-- <router-link :to="'/trade-fair/' + fair.slug"
                         class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
                         <div class="card-img-container">
                             <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -66,6 +66,34 @@
                         <div class="position-absolute text-center start-0 ms-0" style="top: -2px;">
                             <span class="text-white bg-danger p-1 pt-0 rounded-end-3">₹ {{ fair.price }}</span>
                         </div>
+                    </router-link> -->
+                    <router-link :to="'/trade-fair/' + fair.slug"
+                        class="text-decoration-none my-2 card shadow-lg position-relative rounded-0 overflow-hidden">
+                        <div class="card-img-container">
+                            <img :src="fair.image" class="card-img-top rounded-0" alt="..."
+                                style="object-fit: fill;height: 150px;">
+
+                        </div>
+                        <div class="card-body p-2">
+                            <div class="d-flex justify-content-center align-items-center fw-bold text-ellipsis2 text-center small"
+                                style="min-height: 50px">{{ fair.title }}</div>
+                            <p class="small my-0 text-ellipsis2">{{ fair.date }}</p>
+
+                            <div class="d-flex justify-content-around align-items-center mt-2 overflow-x-scroll"
+                                id="scroll">
+                                <div class="d-flex flex-column justify-content-center align-items-center "
+                                    v-for="(icon, index) in icons" :key="index">
+                                    <img :src="icon.image" :alt="icon.name"
+                                        style="width:16px; height: 16px;object-fit: contain;">
+                                    <small class="text-capitalize" style="font-size: 9px">{{ icon.name }}</small>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="position-absolute text-center start-0 ms-0" style="top: 0px;">
+                            <span class="text-dark  p-1 pt-0 rounded-end-3"
+                                style="background-color:rgba(255, 206, 86, 1); border:1px solid rgba(255, 162, 0, 1) !important;">₹
+                                {{ fair.price }}</span>
+                        </div>
                     </router-link>
                 </div>
             </div>
@@ -91,6 +119,13 @@ export default {
                 "flight services",
                 "visa services",
                 "other services"
+            ],
+            icons: [
+                { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
+                { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
+                { icon: 'bi-globe', image: "img/travel/hotel.svg", name: 'hotel' },
+                { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
+                { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
             ],
         }
     },

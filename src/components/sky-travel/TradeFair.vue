@@ -9,9 +9,9 @@
             </router-link>
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4 d-flex align-items-center">
-            <div class="col" v-for="(fair, index) in trades" :key="index">
+            <div class="col my-0" v-for="(fair, index) in trades" :key="index">
                 <router-link :to="'/trade-detail/' + fair.slug"
-                    class="text-decoration-none my-2 card border position-relative rounded-0 overflow-hidden">
+                    class="text-decoration-none my-1 card border position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
                             style="object-fit: fill;height: 150px;">

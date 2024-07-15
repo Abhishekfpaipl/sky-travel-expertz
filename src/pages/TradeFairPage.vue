@@ -5,7 +5,7 @@
         </div>
         <div class="container my-3">
             <h1 class="text-center text-capitalize">{{ pageName }}</h1>
-            <p class="text-center fs-4">₹ 9999/- <span class="text-decoration-line-through text-muted">₹
+            <p class="text-center fs-1">₹ 9999/- <span class="text-decoration-line-through text-muted">₹
                     12000</span></p>
             <div class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ea laboriosam corporis
                 aspernatur velit voluptas minus obcaecati fugit ipsum. Iusto ducimus rem iste quibusdam modi atque! Sunt
@@ -26,127 +26,26 @@
             </div>
         </div>
 
-        <div class="container bg-dark sticky-nav my-4">
-            <ul class="nav nav-pills d-flex justify-content-center align-items-center">
-                <div class="d-flex overflow-x-scroll gap-3 p-2 px-3 rounded" id="scroll">
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Details">Details</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Itinerary">Itinerary</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Hotel">Hotel</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Flight">Flight</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Visa">Visa</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Inclusion">Inclusion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#Exclusion">Exclusion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="#TermCondition">Term</a>
-                    </li>
+        <!-- <nav id="navbar" :class="{ 'navbar-dark': navbarDark }"> -->
+        <div class="sticky-nav my-4">
+            <div class="d-flex gap-3 p-3 py-2 overflow-x-scroll" id="scroll"  style="background-color:rgba(255, 206, 86, 0.2); border:1px solid rgba(255, 206, 86, 1) !important;">
+                <div v-for="(section, index) in sections" :key="index">
+                    <a :href="'#' + section.id" class="nav-link text-dark" @click.prevent="scrollToSection(section.id)"
+                        :class="{ active: activeSection === section.id }">
+                        {{ section.name }}
+                    </a>
                 </div>
-            </ul>
+            </div>
         </div>
-        <div data-bs-spy="scroll" data-bs-target="#scroll" data-bs-offset="0" class="scrollspy-example p-3 rounded-2"
-            tabindex="0">
-            <div class="container" style="padding-top:45px" id="Details">
-                <h3 class="p-2 text-center mb-4 cutout">
-                    <span>Details</span>
-                </h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione est culpa natus sed excepturi magni
-                    eos
-                    deleniti error voluptatem maiores voluptatum sunt iste incidunt quasi quia, quam impedit? Ut, modi
-                    rerum
-                    itaque reprehenderit obcaecati sequi, praesentium iure odio iusto accusantium reiciendis odit, nemo
-                    unde
-                    provident veniam? Animi, sed. Repudiandae voluptatibus quibusdam maxime minus ex esse ea consectetur
-                    cupiditate, doloremque perferendis laudantium animi possimus rerum omnis dolore, illum provident
-                    harum
-                    aliquid debitis! Laborum maiores, distinctio quae consequatur et eum accusantium eaque eveniet
-                    laudantium a fugiat blanditiis delectus adipisci impedit dignissimos atque officiis, esse dolores
-                    dolor
-                    iusto, fuga reprehenderit ratione porro? Nisi.</p>
-            </div>
+        <!-- </nav> -->
 
-            <div class="container" style="padding-top:45px" id="Itinerary">
+        <div class="container">
+            <section v-for="(section, index) in sections" :key="index" :id="section.id" class="section" style="padding-top:30px">
                 <h3 class="p-2 text-center my-4 cutout">
-                    <span>Itinerary</span>
+                    <span>{{ section.name }}</span>
                 </h3>
-                <div class="row" v-for="(day, index) in test" :key="index">
-                    <div class="col-12 mb-4">
-                        <div class="card">
-                            <div class="card-header text-bg-light">
-                                Day {{ index + 1 }}
-                            </div>
-                            <div class="card-body">
-                                <div class="row d-flex align-items-center"
-                                    :class="{ 'flex-row-reverse': index % 2 !== 0 }">
-                                    <div class="col-md-4 mb-3 mb-md-0">
-                                        <img :src="day.image" class="img-fluid rounded"
-                                            style="width:250px; height:160px;object-fit: fill;"
-                                            :alt="'Day ' + (index + 1)">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <h5 class="card-title text-start">{{ day.date }}</h5>
-                                        <p class="card-text text-start">{{ day.description }}</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container" style="padding-top:45px" id="Hotel">
-                <h3 class="p-2 text-center my-4 cutout">
-                    <span>Hotel</span>
-                </h3>
-                <TradeFairFGallerySection />
-            </div>
-
-            <div class="container" style="padding-top:45px" id="Flight">
-                <h3 class="p-2 text-center my-4 cutout">
-                    <span>Flight</span>
-                </h3>
-                <TradeFairTableSection />
-            </div>
-
-            <div class="container" style="padding-top:45px" id="Visa">
-                <h3 class="p-2 text-center my-4 cutout">
-                    <span>Visa</span>
-                </h3>
-                <TradeFairVisaSection />
-            </div>
-
-            <div class="container" style="padding-top:45px" id="Inclusion">
-                <h3 class="p-2 text-center my-4 cutout">
-                    <span>Inclusion</span>
-                </h3>
-                <TradeFairInclusionSection />
-            </div>
-
-            <div class="container" style="padding-top:45px" id="Exclusion">
-                <h3 class="p-2 text-center my-4 cutout">
-                    <span>Exclusion</span>
-                </h3>
-                <TradeFairExclusionSection />
-            </div>
-
-            <div class="container" style="padding-top:45px" id="TermCondition">
-                <h3 class="p-2 text-center my-4 cutout">
-                    <span>Term & Condition</span>
-                </h3>
-                <TradeFairTermsSection />
-            </div>
+                <component :is="section.component"></component>
+            </section>
         </div>
 
         <div class="position-fixed bottom-0 w-100 btn-group d-flex d-md-none" style="z-index:10">
@@ -170,8 +69,6 @@
                         data-bs-dismiss="modal" style="top: -3%;">
                         <i class="bi bi-x fs-5"></i>
                     </div>
-                    <!-- <button type="button" class="btn-close position-absolute end-0 border rounded-circle p-2 bg-danger"
-                        style="top: -2%"  aria-label="Close"></button> -->
                     <div class="modal-body">
                         <form @submit.prevent="sendToWhatsApp()" class="row g-3 needs-validation" novalidate>
                             <div class="w-100 form-floating my-2">
@@ -307,6 +204,9 @@ import TradeFairTermsSection from "@/components/TradeFairTermsSection.vue"
 import TradeFairVisaSection from "@/components/TradeFairVisaSection.vue"
 import TradeFairExclusionSection from "@/components/TradeFairExclusionSection.vue"
 import TradeFairInclusionSection from "@/components/TradeFairInclusionSection.vue"
+import ItinerarySection from "@/components/ItinerarySection.vue"
+import TradeDetailsSection from "@/components/TradeDetailsSection.vue"
+// import TestComp from "@/components/TestComp.vue"
 export default {
     name: "TradeFairPage",
     components: {
@@ -316,6 +216,9 @@ export default {
         TradeFairVisaSection,
         TradeFairExclusionSection,
         TradeFairInclusionSection,
+        ItinerarySection,
+        TradeDetailsSection,
+        // TestComp,
     },
     data() {
         return {
@@ -325,33 +228,18 @@ export default {
             selectedVisitor: '1-2',
             destination: 'Amazing Dubai',
             date: '',
-            test: [
-                {
-                    date: '(18 Sep 2024): Arrival in Shanghai',
-                    description: 'Board your flights from Delhi or Mumbai to Shanghai. Upon arrival in Shanghai clear immigration and assemble together for the transfer from airport to hotel in a comfortable coach. Check in at the hotel, settle in and relax after your journey. In the evening, a delicious Indian dinner will be served at an Indian Restaurant. Rest of the evening is at leisure to explore the nearby destination. Enjoy a comfortable overnight stay at your hotel.',
-                    image: 'https://rctrips.com/assets/itinerary/radisson-hyland-hotel-1.jpeg'
-                },
-                {
-                    date: '(19 Sep 2024): Productive Start!',
-                    description: 'Post having delicious breakfast at your hotel, Gear up for Exhibition! Immerse yourself in the future of signage and visual communication. Explore cutting-edge machinery, innovative materials, and groundbreaking technologies. Network with professionals and gain valuable insights that will propel you forward. After a day filled with discovery, unwind and relax at your hotel. In the evening, savor a delightful dinner at an Indian Restaurant, allowing you to reflect and connect with colleagues over delicious food. Rest comfortably, ready to conquer another day at the exhibition.',
-                    image: 'https://rctrips.com/assets/itinerary/led-china-4.jpeg'
-                },
-                {
-                    date: '(20 Sep 2024): Exploring More of Sign & Led China!',
-                    description: 'Another day of exploration with breakfast at your hotel. Today is yours to conquer the exhibition! Here\'s how to make the most of it: Revisit exhibitors: Follow up on promising leads or revisit booths that sparked your interest yesterday. Expand your knowledge: Attend seminars led by industry experts and gain valuable insights into the latest trends and technologies. Network: Connect with peers who share your interests. Unwind and Recharge: After a day of learning and networking, head back to your hotel for some well-deserved relaxation. Enjoy a comforting dinner at an Indian Restaurant. Get a good night\'s sleep, preparing yourself for the final day of the exhibition.',
-                    image: 'https://rctrips.com/assets/itinerary/led-china-2.jpg'
-                },
-                {
-                    date: '(21 Sep 2024): Balancing Business',
-                    description: 'Pleasure Start your day with a breakfast at the hotel. Morning at Exhibition: Deepen your knowledge: Head back to the exhibition and attend targeted seminars, reconnect with key exhibitors, or delve deeper into specific areas that pique your interest. Unwind on the Huangpu River: Embark on a scenic cruise along the Huangpu River. Glide along the majestic Huangpu River, offering breathtaking panoramic views of the city skyline, including iconic landmarks like The Bund and Oriental Pearl Tower. Evening: After your enriching city exploration, return to your hotel and unwind. Enjoy a delicious dinner at an Indian Restaurant. Rest comfortably for your final night in Shanghai.',
-                    image: 'https://rctrips.com/assets/itinerary/led-china-3.jpg'
-                },
-                {
-                    date: ' (22 Sep 2024): Departure from Shanghai! ',
-                    description: 'Savor a final delicious breakfast at your hotel. Check out of the hotel and ensure you have collected all your belongings. Mid-Morning: AP Market Adventure: Immerse yourself in the vibrant atmosphere of the AP Market. Hunt for unique souvenirs and local handicrafts to commemorate your trip. Tantalize your taste buds with a delicious array of Shanghai Street food. Afternoon: Relaxing Transfer: A comfortable coach will take you directly to Shanghai Airport, ensuring a stress-free journey. Enjoy your flight back home, reflecting on the insightful experiences and connections you made at Sign & Led China 2024 and your exploration of Shanghai.',
-                    image: 'https://rctrips.com/assets/itinerary/airport32.jpg'
-                }
-            ]
+            sections: [
+                { id: 'Details', name: 'Details', component: 'TradeDetailsSection' },
+                { id: 'Itinerary', name: 'Itinerary', component: 'ItinerarySection' },
+                { id: 'Hotel', name: 'Hotel', component: 'TradeFairFGallerySection' },
+                { id: 'Flight', name: 'Flight', component: 'TradeFairTableSection' },
+                { id: 'Visa', name: 'Visa', component: 'TradeFairVisaSection' },
+                { id: 'Inclusion', name: 'Inclusion', component: 'TradeFairInclusionSection' },
+                { id: 'Exclusion', name: 'Exclusion', component: 'TradeFairExclusionSection' },
+                { id: 'TermCondition', name: 'Term', component: 'TradeFairTermsSection' }
+            ],
+            activeSection: '',
+            navbarDark: false
         }
     },
     computed: {
@@ -362,17 +250,31 @@ export default {
     mounted() {
         let pageName = this.$route.path.split('/trade-detail/').pop();
         this.pageName = pageName.replace(/-/g, ' ');
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    unmounted() {
+        window.removeEventListener('scroll', this.handleScroll);
     },
     methods: {
-        onTabClick(index) {
-            this.activeTabIndex = index;
-            this.scrollTabIntoView(index);
+        isActive(id) {
+            return this.$route.hash === "#" + id;
         },
-        scrollTabIntoView(index) {
-            const tabElement = document.getElementById(`tab-${index}`);
-            if (tabElement) {
-                tabElement.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+        scrollToSection(id) {
+            const el = document.getElementById(id);
+            if (el) {
+                el.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
+        },
+        handleScroll() {
+            const scrollPosition = window.scrollY;
+            this.sections.forEach(section => {
+                const el = document.getElementById(section.id);
+                if (el && scrollPosition >= el.offsetTop - 200) {
+                    this.activeSection = section.id;
+                }
+            });
+            // Change navbar background color conditionally
+            this.navbarDark = scrollPosition > 50; // Example threshold for changing navbar background
         },
         sendToWhatsApp() {
             const phoneNumber = '918860012001';
@@ -389,12 +291,15 @@ export default {
     }
 }
 </script>
-
 <style scoped>
-.nav-pills .nav-link.active {
-    background-color: transparent !important;
-    border-bottom: 2px solid white !important;
-    border-radius: 0px !important;
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 5px 10px;
+}
+
+.nav-link.active {
+    border-bottom: 2px solid black;
 }
 
 .sticky-nav {
