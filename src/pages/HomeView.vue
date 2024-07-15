@@ -7,11 +7,14 @@
     <div class="my-2">
       <TradeFair />
     </div>
-    <div class="">
-      <WhyChooseUs :description="whychooseUs" title="why choose us" image="/img/whychooseUs.svg" v-observe />
+    <div class="my-2">
+      <AutoScrolling />
     </div>
     <div class="">
       <CounterSection/>
+    </div>
+    <div class="">
+      <WhyChooseUs :description="whychooseUs" title="why choose us" image="/img/whychooseUs.svg" v-observe />
     </div>
     <!-- <div class="">
       <VisaComponent />
@@ -19,9 +22,6 @@
     <!-- <div class="">
       <VisaCountry />
     </div> -->
-    <div class="my-2">
-      <AutoScrolling />
-    </div>
     <div class="">
       <BannerSection />
     </div>

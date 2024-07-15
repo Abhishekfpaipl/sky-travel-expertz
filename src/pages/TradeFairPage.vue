@@ -1,8 +1,10 @@
 <template>
     <div>
         <div class="position-relative" style="width: 100%; overflow: hidden;">
-            <img src="/img/tradeFair.jpg" alt="" style="width: 100%;">
+            <img :src="showPackage.image" class="" alt="" style="width: 100%;">
+            <!-- <img :src="showPackage.image" class="d-md-none" alt="" style="width: 100%;object-fit:contain;object-position: center;"> -->
         </div>
+        <!-- {{showPackage.sid}} -->
         <div class="container my-3">
             <h1 class="text-center text-capitalize">{{ pageName }}</h1>
             <p class="text-center fs-1">₹ 9999/- <span class="text-decoration-line-through text-muted">₹
@@ -28,7 +30,8 @@
 
         <!-- <nav id="navbar" :class="{ 'navbar-dark': navbarDark }"> -->
         <div class="sticky-nav my-4">
-            <div class="d-flex gap-3 p-3 py-2 overflow-x-scroll" id="scroll"  style="background-color:rgba(255, 206, 86, 0.2); border:1px solid rgba(255, 206, 86, 1) !important;">
+            <div class="d-flex gap-3 p-3 py-2 overflow-x-scroll" id="scroll"
+                style="background-color:rgba(255, 206, 86, 0.2); border:1px solid rgba(255, 206, 86, 1) !important;">
                 <div v-for="(section, index) in sections" :key="index">
                     <a :href="'#' + section.id" class="nav-link text-dark" @click.prevent="scrollToSection(section.id)"
                         :class="{ active: activeSection === section.id }">
@@ -40,7 +43,8 @@
         <!-- </nav> -->
 
         <div class="container">
-            <section v-for="(section, index) in sections" :key="index" :id="section.id" class="section" style="padding-top:30px">
+            <section v-for="(section, index) in sections" :key="index" :id="section.id" class="section"
+                style="padding-top:30px">
                 <h3 class="p-2 text-center my-4 cutout">
                     <span>{{ section.name }}</span>
                 </h3>
@@ -243,9 +247,13 @@ export default {
         }
     },
     computed: {
-        itinerary() {
-            return this.$store.getters.getItinerary
-        }
+        showPackage() {
+            let packageId = this.$route.params.sid;
+            return this.$store.getters.getSinglePackage(packageId);
+        },
+        // itinerary() {
+        //     return this.$store.getters.getItinerary
+        // }
     },
     mounted() {
         let pageName = this.$route.path.split('/trade-detail/').pop();

@@ -9,8 +9,8 @@
             </router-link>
         </div>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4 d-flex align-items-center">
-            <div class="col my-0" v-for="(fair, index) in trades" :key="index">
-                <router-link :to="'/trade-detail/' + fair.slug"
+            <div class="col my-0" v-for="(fair, index) in trades.slice(0,4)" :key="index">
+                <router-link :to="'/trade-detail/' + fair.sid"
                     class="text-decoration-none my-1 card border position-relative rounded-0 overflow-hidden">
                     <div class="card-img-container">
                         <img :src="fair.image" class="card-img-top rounded-0" alt="..."
@@ -25,7 +25,7 @@
                         <div class="d-flex justify-content-around align-items-center mt-2 overflow-x-scroll"
                             id="scroll">
                             <div class="d-flex flex-column justify-content-center align-items-center "
-                                v-for="(icon, index) in icons" :key="index">
+                                v-for="(icon, index) in fair.icons" :key="index">
                                 <img :src="icon.image" :alt="icon.name"
                                     style="width:16px; height: 16px;object-fit: contain;">
                                 <small class="text-capitalize" style="font-size: 9px">{{ icon.name }}</small>
@@ -39,7 +39,7 @@
                     </div>
                 </router-link>
             </div>
-            <div class="col-md-2 d-none d-md-block">
+            <div class="col-md-2 d-none d-md-block my-0">
                 <router-link :to="service.route"
                     class="dummy-card text-decoration-none d-flex flex-column justify-content-center align-items-center text-dark"
                     style="background-color:rgba(255, 206, 86, 0.2); border:1px solid rgba(255, 206, 86, 1) !important;">
@@ -56,13 +56,7 @@ export default {
     name: "TradeFair",
     data() {
         return {
-            icons: [
-                { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
-                { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
-                { icon: 'bi-globe', image: "img/travel/hotel.svg", name: 'hotel' },
-                { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
-                { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
-            ],
+           
             services: [
                 { route: "/trade-fair", name: "trade fair", },
                 { route: "/honeymoon-tour", name: "honeymoon tour", },
@@ -77,7 +71,7 @@ export default {
     },
     computed: {
         trades() {
-            return this.$store.getters.getTrades;
+            return this.$store.getters.getPackage;
         }
     },
     methods: {
