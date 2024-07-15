@@ -104,18 +104,18 @@ nav {
   display: none;
 }
 
-.bill {
+.cutout {
   overflow: hidden;
   text-align: center;
 }
 
-.bill>span {
+.cutout>span {
   position: relative;
   display: inline-block;
 }
 
-.bill>span:before,
-.bill>span:after {
+.cutout>span:before,
+.cutout>span:after {
   content: "";
   position: absolute;
   top: 50%;
@@ -124,14 +124,14 @@ nav {
   margin: 0 20px;
 }
 
-.bill>span:before {
+.cutout>span:before {
   right: 100%;
   border-bottom: 2px solid;
   border-image: linear-gradient(to left, black 0, transparent 10%);
   border-image-slice: 1;
 }
 
-.bill>span:after {
+.cutout>span:after {
   left: 100%;
   border-bottom: 2px solid;
   border-image: linear-gradient(to right, black 0, transparent 10%);

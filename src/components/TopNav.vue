@@ -1,6 +1,6 @@
 <template>
     <!-- Desktop version -->
-    <div class="d-lg-block d-none position-fixed top-0 w-100 bg-light border-bottom" style="z-index: 10;">
+    <div class="d-lg-block d-none w-100 bg-light border-bottom" style="z-index: 10;">
         <nav class="navbar navbar-expand-lg py-3">
             <div class="container-fluid d-flex justify-content-center align-items-center">
                 <router-link to="/" class="d-flex align-items-center w-25 text-decoration-none">
@@ -11,19 +11,20 @@
                 <div class="w-75">
                     <ul class="list-unstyled mb-0 d-flex justify-content-end">
                         <li v-for="(cat, index) in menuCategories" :key="index"
-                            class="category d-inline position-relative" >
+                            class="category d-inline position-relative">
                             <router-link :to="cat.path" class="title px-2 text-decoration-none text-dark">
                                 {{ cat.title }}
                             </router-link>
-                              
+
                             <div class="mega-menu " style="background-color: #FFF5DD;">
                                 <div v-if="cat.subCat" class="px-4">
                                     <ul class="d-flex  list-unstyled mega-items flex-wrap py-4">
                                         <li v-for="(subCat, index) in cat.subCat" :key="index"
                                             class="py-2 px-3 text-capitalize">
                                             <router-link :to="subCat.path" class="text-decoration-none ">
-                                                <a :href="subCat.path" class="sub-title fw-bold text-decoration-none text-dark">{{
-                                                    subCat.name }}</a>
+                                                <a :href="subCat.path"
+                                                    class="sub-title fw-bold text-decoration-none text-dark">{{
+                                                        subCat.name }}</a>
                                             </router-link>
                                         </li>
                                     </ul>
@@ -69,7 +70,7 @@
                         <div class="ms-3 ps-3 collapse show" :id="'home-collapse' + index">
                             <ul class="btn-toggle-nav list-unstyled">
                                 <li v-for="(sub, subIndex) in link.subCat" :key="subIndex" class="mt-1">
-                                    <button @click="selectSubMenu(sub.name)" class="btn rounded border-0 w-100">
+                                    <button class="btn rounded border-0 w-100" @click="handleLinkClick">
                                         <router-link :to="sub.path"
                                             class="border-top pt-2 pb-0 d-flex align-items-center text-capitalize text-decoration-none text-dark">
                                             <i class="bi pe-2 fs-5 lh-1 bi-arrow-right"></i>
@@ -103,9 +104,9 @@ export default {
                 {
                     id: 1,
                     title: 'Services',
-                    path:'',
+                    path: '',
                     subCat: [
-                        { name: 'trade fair', path: '/trade-detail' },
+                        { name: 'trade fair', path: '/trade-fair' },
                         { name: 'honeymoon tour', path: '/honeymoon-tour' },
                         { name: 'domestic tour', path: '/domestic-tour' },
                         { name: 'international tour', path: '/international-tour' },
@@ -146,9 +147,11 @@ export default {
         selectMenu(index) {
             this.selectedMenu = index;
         },
-        selectSubMenu(name) {
-            this.selectedSubMenu = name;
-        },
+        // handleLinkClick() { 
+        //     const offcanvasElement = document.querySelector('.offcanvas');
+        //     const offcanvas = new window.bootstrap.Offcanvas(offcanvasElement);
+        //     offcanvas.hide();
+        // },
     },
 }
 </script>
@@ -169,7 +172,8 @@ export default {
     color: rgb(255, 162, 0) !important;
     border-bottom: 2px solid rgb(255, 162, 0) !important;
 }
-.sub-title:hover  {
+
+.sub-title:hover {
     color: rgb(255, 162, 0) !important;
     border-bottom: 2px solid rgb(255, 162, 0) !important;
 }

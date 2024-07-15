@@ -1,6 +1,6 @@
 <template>
   <div class="container mt-4 text-start">
-    <h2>Visa Application Requirements</h2>
+    <h5>Visa Application Requirements</h5>
     <ul class="list-group">
       <li class="list-group-item">
         <h5>(1) Passport</h5>

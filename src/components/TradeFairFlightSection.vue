@@ -1,8 +1,8 @@
 <template>
     <div class="container">
-        <h2 class="mb-4">Flights Option On Economy Class:</h2>
+        <h5 class="mb-4">Flights Option On Economy Class:</h5>
 
-        <h3>(EX-DELHI Singapore Airlines)</h3>
+        <h5>(EX-DELHI Singapore Airlines)</h5>
         <table class="table table-striped mb-5">
             <thead class="table-secondary">
                 <tr>
@@ -24,7 +24,7 @@
             </tbody>
         </table>
 
-        <h3>(EX-MUMBAI Singapore Airlines)</h3>
+        <h5>(EX-MUMBAI Singapore Airlines)</h5>
         <table class="table table-striped mb-5">
             <thead class="table-secondary">
                 <tr>
@@ -47,7 +47,7 @@
         </table>
 
         <div class="alert alert-info">
-            <h4>Points to Remember:</h4>
+            <h5>Points to Remember:</h5>
             <ul>
                 <li>Be mindful on the time and date of departure.</li>
                 <li>China is 2.5 hrs. ahead of India.</li>

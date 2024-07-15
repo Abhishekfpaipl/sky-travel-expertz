@@ -1,156 +1,154 @@
 <template>
-    <div style="padding-top: 68px;">
+    <div>
         <div class="position-relative" style="width: 100%; overflow: hidden;">
             <img src="/img/tradeFair.jpg" alt="" style="width: 100%;">
-            <!-- <div class="overlay"></div>
-            <p class="position-absolute fw-bold text-white fs-1 centered-text">
-                {{ pageName }}
-            </p> -->
         </div>
-
-        <div class="d-flex align-items-center p-md-4 p-2 mx-2 rounded-4 bg-white shadow position-relative "
-            style="top: -40px;">
-            <div class="flex-fill d-flex justify-content-md-between justify-content-center">
-
-                <p class="fs-3 mb-0">{{ pageName }}</p>
-
-                <div class="d-none d-md-flex gap-3">
-                    <a href="/img/demo.pdf" download="file.pdf" class="btn"
-                        style="border:1px solid rgba(255, 162, 0, 1) !important;">
-                        Download
-                    </a>
-                    <button class="btn d-flex align-items-center"
-                        style="background-color:rgba(255, 206, 86, 1); border:1px solid rgba(255, 162, 0, 1) !important;"
-                        data-bs-toggle="modal" data-bs-target="#enquirymodal">
-                        <span class="text-dark">₹ 9999</span>
-                        <span class="ms-2">Enquiry</span>
-                    </button>
-                </div>
-
+        <div class="container my-3">
+            <h1 class="text-center text-capitalize">{{ pageName }}</h1>
+            <p class="text-center fs-4">₹ 9999/- <span class="text-decoration-line-through text-muted">₹
+                    12000</span></p>
+            <div class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ea laboriosam corporis
+                aspernatur velit voluptas minus obcaecati fugit ipsum. Iusto ducimus rem iste quibusdam modi atque! Sunt
+                sint reprehenderit dignissimos illum cumque possimus sit quia odio, officia eum? Exercitationem
+                blanditiis hic quasi, tenetur aliquam aliquid illo non reiciendis perspiciatis soluta!
             </div>
-
+            <div class="d-none d-md-flex justify-content-center align-items-center gap-3">
+                <a href="/img/demo.pdf" download="file.pdf" class="btn w-25"
+                    style="border:1px solid rgba(255, 162, 0, 1) !important;">
+                    <i class="bi bi-download me-2"></i>
+                    <span>Download</span>
+                </a>
+                <button class="btn d-flex justify-content-center align-items-center w-25"
+                    style="background-color:rgba(255, 206, 86, 1); border:1px solid rgba(255, 162, 0, 1) !important;"
+                    data-bs-toggle="modal" data-bs-target="#enquirymodal"><span> Enquiry </span><i
+                        class="bi bi-arrow-right ms-2"></i>
+                </button>
+            </div>
         </div>
 
-        <!-- <div class="container my-4"> -->
-        <div class="my-4">
-            <ul class="nav nav-pills mb-3 sticky-nav bg-light border-top border-bottom px-md-5" id="pills-tab"
-                role="tablist">
+        <div class="container bg-dark sticky-nav my-4">
+            <ul class="nav nav-pills d-flex justify-content-center align-items-center">
                 <div class="d-flex overflow-x-scroll gap-3 p-2 px-3 rounded" id="scroll">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-itinerary-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-itinerary" type="button" role="tab" aria-controls="pills-itinerary"
-                            aria-selected="true">
-                            Itinerary
-                        </button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Details">Details</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-fact&figure-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-fact&figure" type="button" role="tab"
-                            aria-controls="pills-fact&figure" aria-selected="false">Fact & Figure</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Itinerary">Itinerary</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-hotel-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-hotel" type="button" role="tab" aria-controls="pills-hotel"
-                            aria-selected="false">Hotel</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Hotel">Hotel</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-flight-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-flight" type="button" role="tab" aria-controls="pills-flight"
-                            aria-selected="false">Flight</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Flight">Flight</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-visa-tab" data-bs-toggle="pill" data-bs-target="#pills-visa"
-                            type="button" role="tab" aria-controls="pills-visa" aria-selected="false">Visa</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Visa">Visa</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Inclusion-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-Inclusion" type="button" role="tab" aria-controls="pills-Inclusion"
-                            aria-selected="false">Inclusion</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Inclusion">Inclusion</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Exclusion-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-Exclusion" type="button" role="tab" aria-controls="pills-Exclusion"
-                            aria-selected="false">Exclusion</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#Exclusion">Exclusion</a>
                     </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-Term&Condition-tab" data-bs-toggle="pill"
-                            data-bs-target="#pills-Term&Condition" type="button" role="tab"
-                            aria-controls="pills-Term&Condition" aria-selected="false">Term & Condition</button>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#TermCondition">Term</a>
                     </li>
-
                 </div>
             </ul>
-            <div class="tab-content" id="pills-tabContent">
-                <div class="tab-pane fade show active" id="pills-itinerary" role="tabpanel"
-                    aria-labelledby="pills-itinerary-tab" tabindex="0">
-                    <div class="container">
-                        <div class="row" v-for="(day, index) in test" :key="index">
-                            <div class="col-12 mb-4">
-                                <div class="card">
-                                    <div class="card-header text-bg-light">
-                                        Day {{ index + 1 }}
+        </div>
+        <div data-bs-spy="scroll" data-bs-target="#scroll" data-bs-offset="0" class="scrollspy-example p-3 rounded-2"
+            tabindex="0">
+            <div class="container" style="padding-top:45px" id="Details">
+                <h3 class="p-2 text-center mb-4 cutout">
+                    <span>Details</span>
+                </h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione est culpa natus sed excepturi magni
+                    eos
+                    deleniti error voluptatem maiores voluptatum sunt iste incidunt quasi quia, quam impedit? Ut, modi
+                    rerum
+                    itaque reprehenderit obcaecati sequi, praesentium iure odio iusto accusantium reiciendis odit, nemo
+                    unde
+                    provident veniam? Animi, sed. Repudiandae voluptatibus quibusdam maxime minus ex esse ea consectetur
+                    cupiditate, doloremque perferendis laudantium animi possimus rerum omnis dolore, illum provident
+                    harum
+                    aliquid debitis! Laborum maiores, distinctio quae consequatur et eum accusantium eaque eveniet
+                    laudantium a fugiat blanditiis delectus adipisci impedit dignissimos atque officiis, esse dolores
+                    dolor
+                    iusto, fuga reprehenderit ratione porro? Nisi.</p>
+            </div>
+
+            <div class="container" style="padding-top:45px" id="Itinerary">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Itinerary</span>
+                </h3>
+                <div class="row" v-for="(day, index) in test" :key="index">
+                    <div class="col-12 mb-4">
+                        <div class="card">
+                            <div class="card-header text-bg-light">
+                                Day {{ index + 1 }}
+                            </div>
+                            <div class="card-body">
+                                <div class="row d-flex align-items-center"
+                                    :class="{ 'flex-row-reverse': index % 2 !== 0 }">
+                                    <div class="col-md-4 mb-3 mb-md-0">
+                                        <img :src="day.image" class="img-fluid rounded"
+                                            style="width:250px; height:160px;object-fit: fill;"
+                                            :alt="'Day ' + (index + 1)">
                                     </div>
-                                    <div class="card-body">
-                                        <div class="row d-flex align-items-center"
-                                            :class="{ 'flex-row-reverse': index % 2 !== 0 }">
-                                            <div class="col-md-4 mb-3 mb-md-0">
-                                                <img :src="day.image" class="img-fluid rounded"
-                                                    style="width:250px; height:160px;object-fit: fill;"
-                                                    :alt="'Day ' + (index + 1)">
-                                            </div>
-                                            <div class="col-md-8">
-                                                <h5 class="card-title text-start">{{ day.date }}</h5>
-                                                <p class="card-text text-start">{{ day.description }}</p>
-                                            </div>
-                                        </div>
+                                    <div class="col-md-8">
+                                        <h5 class="card-title text-start">{{ day.date }}</h5>
+                                        <p class="card-text text-start">{{ day.description }}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="tab-pane fade" id="pills-fact&figure" role="tabpanel"
-                    aria-labelledby="pills-fact&figure-tab" tabindex="0">
-                    <div class="d-flex justify-content-between align-items-center">
-                        <button class="btn btn-dark rounded-0">Visitors</button>
-                        <button class="btn btn-dark rounded-0">Exhibitors</button>
-                    </div>
-                </div>
+            <div class="container" style="padding-top:45px" id="Hotel">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Hotel</span>
+                </h3>
+                <TradeFairFGallerySection />
+            </div>
 
-                <div class="tab-pane fade" id="pills-hotel" role="tabpanel" aria-labelledby="pills-hotel-tab"
-                    tabindex="0">
-                    <TradeFairFGallerySection />
-                </div>
+            <div class="container" style="padding-top:45px" id="Flight">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Flight</span>
+                </h3>
+                <TradeFairTableSection />
+            </div>
 
-                <div class="tab-pane fade" id="pills-flight" role="tabpanel" aria-labelledby="pills-flight-tab"
-                    tabindex="0">
-                    <TradeFairTableSection />
-                </div>
+            <div class="container" style="padding-top:45px" id="Visa">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Visa</span>
+                </h3>
+                <TradeFairVisaSection />
+            </div>
 
-                <div class="tab-pane fade" id="pills-visa" role="tabpanel" aria-labelledby="pills-visa-tab"
-                    tabindex="0">
-                    <TradeFairVisaSection />
-                </div>
+            <div class="container" style="padding-top:45px" id="Inclusion">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Inclusion</span>
+                </h3>
+                <TradeFairInclusionSection />
+            </div>
 
-                <div class="tab-pane fade" id="pills-Inclusion" role="tabpanel" aria-labelledby="pills-Inclusion-tab"
-                    tabindex="0">
-                    <TradeFairInclusionSection />
-                </div>
+            <div class="container" style="padding-top:45px" id="Exclusion">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Exclusion</span>
+                </h3>
+                <TradeFairExclusionSection />
+            </div>
 
-                <div class="tab-pane fade" id="pills-Exclusion" role="tabpanel" aria-labelledby="pills-Exclusion-tab"
-                    tabindex="0">
-                    <TradeFairExclusionSection />
-                </div>
-
-                <div class="tab-pane fade" id="pills-Term&Condition" role="tabpanel"
-                    aria-labelledby="pills-Term&Condition-tab" tabindex="0">
-                    <TradeFairTermsSection />
-                </div>
-
+            <div class="container" style="padding-top:45px" id="TermCondition">
+                <h3 class="p-2 text-center my-4 cutout">
+                    <span>Term & Condition</span>
+                </h3>
+                <TradeFairTermsSection />
             </div>
         </div>
-        <!-- </div> -->
+
         <div class="position-fixed bottom-0 w-100 btn-group d-flex d-md-none" style="z-index:10">
             <a href="/img/demo.pdf" download="file.pdf" class="btn btn-dark w-25 rounded-0"><i
                     class="bi bi-download fs-2"></i></a>
@@ -304,7 +302,7 @@
 
 <script>
 import TradeFairFGallerySection from "@/components/TradeFairFGallerySection.vue"
-import TradeFairTableSection from "@/components/TradeFairTableSection.vue"
+import TradeFairTableSection from "@/components/TradeFairFlightSection.vue"
 import TradeFairTermsSection from "@/components/TradeFairTermsSection.vue"
 import TradeFairVisaSection from "@/components/TradeFairVisaSection.vue"
 import TradeFairExclusionSection from "@/components/TradeFairExclusionSection.vue"
@@ -393,48 +391,16 @@ export default {
 </script>
 
 <style scoped>
-.nav-link {
-    height: 40px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    color: black !important;
-}
-
-.nav-link.active {
+.nav-pills .nav-link.active {
     background-color: transparent !important;
-    border-bottom: 1px solid rgba(255, 162, 0, 1) !important;
-    color: black !important;
-    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border-bottom: 2px solid white !important;
     border-radius: 0px !important;
-    transform: scale(1.2);
 }
 
 .sticky-nav {
     position: sticky;
-    top: 65px !important;
+    top: 0px !important;
     z-index: 2;
     background-color: white;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-
-.centered-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    text-align: center;
-    /* Optional: for multi-line text */
 }
 </style>

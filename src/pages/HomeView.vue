@@ -1,5 +1,5 @@
 <template>
-  <div class="home" style="padding-top: 68px;">
+  <div class="home">
     <div class="">
       <CarouselBanner />
     </div>
