@@ -73,6 +73,11 @@ export default {
                 // },
                 {
                     id: 4,
+                    name: 'Test',
+                    link: '/test'
+                },
+                {
+                    id: 4,
                     name: 'Contact Us',
                     link: '/contact-us'
                 },
