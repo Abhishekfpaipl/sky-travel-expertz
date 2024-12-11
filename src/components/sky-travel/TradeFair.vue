@@ -56,7 +56,6 @@ export default {
     name: "TradeFair",
     data() {
         return {
-           
             services: [
                 { route: "/trade-fair", name: "trade fair", },
                 { route: "/honeymoon-tour", name: "honeymoon tour", },

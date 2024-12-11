@@ -220,11 +220,12 @@ export default createStore({
     packages: [
       {
         id: 1,
-        title: "SIGN & LED China 2024",
+        title: "Varanasi",
+        type: "Domestic",
         package: 'flight services',
-        sid: "SIGN-&-LED-China-2024",
+        sid: "varanasi",
         date: "19-21 Sept 2024",
-        country: "USA",
+        country: "India",
         price: "1,09,000",
         image: "/img/services/1.jpg",
         icons: [
@@ -234,11 +235,149 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        description: "Varanasi is a city in the northern Indian state of Uttar Pradesh dating to the 11th century B.C. Regarded as the spiritual capital of India, the city draws Hindu pilgrims who bathe in the Ganges River’s sacred waters and perform funeral rites. Along the city's winding streets are some 2,000 temples, including Kashi Vishwanath, the “Golden Temple,” dedicated to the Hindu god Shiva.",
+        inclusions: [
+          {
+            title: "",
+            content: "2 Nights Accommodation in Varanasi",
+          },
+          {
+            title: "",
+            content: "1 Nights Accommodation in Prayagraj",
+          },
+          {
+            title: "",
+            content: "1 Night Accommodation in Ayodhya",
+          },
+          {
+            title: "",
+            content: "4 Breakfast & 4 Dinner",
+          },
+          {
+            title: "",
+            content: "Pick up & Drop Ex – Varanasi",
+          },
+          {
+            title: "",
+            content: "All transfers & Sightseeing by A/c Pvt Vehicle",
+          },
+          {
+            title: "",
+            content: "All toll tax, parking charges, driver charges, fuel cost inclusive",
+          },
+        ],
+        exclusions: [
+          {
+            title: "",
+            content: "Any Airfare / Train Ticket",
+          },
+          {
+            title: "",
+            content: "Monument Entrance fee",
+          },
+          {
+            title: "",
+            content: "Cost for Supplementary service, Up-gradation Charges, Tour Guide, VIP Darshan etc",
+          },
+          {
+            title: "",
+            content: "Cost for personal expenses such as laundry, bottled water, soft drinks, incidentals & porter charges.",
+          },
+          {
+            title: "",
+            content: "Any kind of Tips for Driver",
+          },
+          {
+            title: "",
+            content: "Activity charges, Boat Ride, Tonga Ride, Rickshaw Ride, Auto Ride, etc.",
+          },
+          {
+            title: "",
+            content: "Lunch",
+          },
+          {
+            title: "",
+            content: "Anything not specifically mentioned under the head “Prices included”",
+          },
+          {
+            title: "",
+            content: "Room Heater Charges",
+          },
+          {
+            title: "",
+            content: "Tips, Insurance, Laundry, Phone Calls.",
+          },
+          {
+            title: "",
+            content: "Any Kind of Drinks (Alcoholic, Mineral, Aerated)",
+          },
+        ],
+        itinerary: [
+          {
+            title: "Day 01: Arrival Varanasi & Evening Ganga Aarti",
+            subtitle: " Meal: Dinner",
+            description: "Arrival at Varanasi Airport / Railway Station. Upon arrival transfer to hotel. Kashi is the oldest City in the World, Kashi is also known as Varanasi. Varanasi is so pure that even a dip in the River Ganges, is believed to wash away all the sins. The city is known to be the land of Moksh (Salvation). Evening proceed for Aarti Ceremony at Holy River Ganga. After visit transfer to hotel. Dinner & overnight stay at hotel in Varanasi.",
+          },
+          {
+            title: "Day 02: Varanasi Full Day Sightseeing",
+            subtitle: "Meal: Breakfast | Dinner",
+            description: "Early morning pick up from hotel, take Holy dip bath of the Holy River Ganga. Then we will be taken for a Boat ride(at your own cost) on the Ganges.It is a mystical and spiritual experience as you watch people offering water to the Sun God and devotees taking holy dip in the Ganges.We will visit all the famous Ghats of Varanasi via boat. After that proceed for full day Varanasi sightseeing start from Kalbhairav Temple: It is known as the most ancient temple of Varanasi located near the VishesharGanj.God Kal Bhairav is believed to be the “Kotwal of Sati pind”.Without his permission no one can even touch to the Sati pind.After that visit Kashi Vishwanath Temple: The Kashi Vishwanath temple is one of the 12 Jyotirlingas dedicated to Lord Shiva, and it is the most important temple in Varanasi.Mentioned in Skanda Purana, it is as old as the city and a significant pilgrimage for millions of Hindus.After visit back to hotel for breakfast. After breakfast Tulsi Manas Mandir: Another famous temple in the city, the Tulsi Manas Mandir is known for its historical and cultural importance rather than religious affiliations.After that visit Annapurna Temple: Annapurna temple is dedicated to the Annapurna or Annapoorna Mata, the Goddess of Food or the Goddess of Nourishment (Anna means food and Purna means complete or full), Mata Parvati.Visit Durga Mata Mandir: Dedicated to Goddess Durga, the Durga Mata Mandir is an important temple dedicated to a female goddess.Constructed in the 18th century, it is believed that the goddess idol was not made by humans but appeared on its own.After that visit Sankat Mochan Temple: The second most visited temple in Varanasi after Kashi Vishwanath, the Sankat Mochan Temple is devoted to Lord Hanuman.Situated on the Assi river banks, Goswami Tulsidas established the temple in the early 16th century.Then visit Banaras Hindu University(BHU): The Banaras Hindu University(BHU), a premier educational institute in India, lies in Varanasi.After Visit transfer to hotel.Overnight stay at hotel in Varanasi.",
+
+          },
+          {
+            title: "Day 03: Varanasi – Prayagraj",
+            subtitle: "Meal: Breakfast | Dinner",
+            description: "After Breakfast check-out from hotel & Drive to Prayagraj. Upon arrival transfer to hotel & check in. then proceed to visit Prayagraj sightseeing visit Triveni Sangam (Confluence of 03 Holy Rivers Ganga, Yamuna & inside Saraswati) & take a holy bath at Triveni Sangam. After that visit Hanuman Temple & Akshayavat. Then proceed to visit Anand Bhawan. After visit drive back to hotel & Overnight stay at hotel in Prayagraj.",
+
+          },
+          {
+            title: "Day 04: Prayagraj – Ayodhya ",
+            subtitle: "Meal: Breakfast | Dinner",
+            description: "After Breakfast check out from hotel & Drive to Ayodhya. Upon arrival transfer to hotel & Check in. After Fresh & up Reach Sarayu Ghat (Ram Ki Paidi) for Holy dip & bath. Ram ki Paidi comprises a series of ghats located on the bank of the river Sarayu and is widely used as a bathing ghat by the devotees of Lord Ram. It is believed that the sacred river Sarayu washes away the sins of those taking a dip in it and purifies their soul. Then visit Shri Nageshwar Nath Mandir: the temple of Nageshwarnath is said to have been established by Kush, the son of Rama. Legend is that Kush lost his armlet, while bathing in the Saryu, which was picked up by a Nag-Kanya, who fell in love with him. As she was a devotee of Shiva, Kush erected this temple for her. Then proceed to visit Shri Hanuman Garhi Mandir: Hanuman Garhi is a 10th-century Hindu temple dedicated to Lord Hanuman. It is one of the most important temples in Ayodhya as it is customary to visit Hanuman Garhi before visiting the Ram Temple in Ayodhya. It is believed that Lord Hanuman lived at the temple site guarding Ayodhya. After that Evening Experience the divine Saryu Aarti Ceremony at Ram ki Paidi. After that proceed to visit Dashrath Bhavan: is the original residence of King Dashrath- the ruler of Ayodhya and father to Lord Sri Ram. Popularly known as Bada Asthan or Badi Jagah, Dashrath Mahal houses magnificent shrines of King Ram. It is situated 50m away from Hanuman garhi. Then visit Kanak Bhawan, also meaning Golden Palace, this temple is also known as Sone-ka-Ghar. It is a holy site dedicated to the Hindu deity Lord Rama and his wife, Goddess Sita. It is believed that this shrine was gifted to Rama and Sita by the former’s stepmother, Kaikeyi. After visit back to hotel & Overnight in Ayodhya",
+          },
+          {
+            title: "Day 05: Ayodhya – Varanasi Drop",
+            subtitle: "Meal: Breakfast",
+            description: "Breakfast at hotel, Then Proceed to visit Shri Ram Mandir: (Shri Ram Janmabhoomi) is believed to have been the birthplace of the Hindu deity, Lord Ram, a principal deity of Hinduism. According to the Indian epic Ramayan, Ram, Lord Vishnu’s seventh manifestation, is said to have grown up along Ajodhya’s river Sarayu. The Ram Janmabhoomi is a highly revered site for Hindu devotees. After visit check out from hotel & Drive to Varanasi. Upon arrival transfer to Varanasi Airport /Railway Station.",
+          },
+        ],
+        overview: {
+          columns: [
+            'NO. OF PAX',
+            'DELUXE PACKAGE COST',
+            'SUPER DELUXE PACKAGE COST',
+            'PREMIUM PACKAGE COST',
+            'LUXURY PACKAGE COST',
+            'TYPE OF TRANSPORT',
+          ],
+          data: [
+            ["02 PAX", "21,900", "26,624", "30,118", "39,692", "SADAN"],
+            ["04 PAX", "19,300", "22,816", "27,380", "36,884", "CRYSTA"],
+            ["06 PAX", "17,000", "21,332", "24,896", "34,400", "CRYSTA"],
+            ["08 PAX", "16,900", "21,224", "24,788", "34,292", "TEMPO TRAVELER"],
+            ["10 PAX", "16,000", "20,252", "23,816", "33,320", "TEMPO TRAVELER"],
+          ],
+        },
+        hotel: {
+          columns: [
+            "Category",
+            "Varanasi",
+            "Prayagraj",
+            "Ayodhya"
+          ],
+          data: [
+            ["Standard", "The Elegance // Dev Residency", "Naveen Continental // Prayag Inn // Orchard One", "Avadh Sunshine Palace"],
+            ["Deluxe", "Arcadia", "Hotel Rama // Continental // Hira Inn", "Krinoscco"],
+            ["Deluxe", " Costa Riviera", "Placid // Millennium Inn", " Cygnett Collection KK Hotel"],
+            ["Super Deluxe", "Radisson", "Kanha Shyam // The Legend", "Park Inn by Radisson // The Ramayana "],
+          ]
+        }
       },
       {
         id: 2,
-        title: "RubberTech China 2024",
-        sid: "RubberTech-China-2024",
+        title: "Kashmir",
+        type: "Domestic",
+        sid: "kashmir",
         package: 'flight services',
         date: "19-21 Sept 2024",
         country: "India",
@@ -251,11 +390,164 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        description: "Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term 'Kashmir' denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.",
+        inclusions: [
+          {
+            title: "",
+            content: "03 Night Stay in Srinagar Hotel",
+          },
+          {
+            title: "",
+            content: "01 Night Stay in Houseboat at Dal Lake",
+          },
+          {
+            title: "",
+            content: "Welcome Drink on Arrival",
+          },
+          {
+            title: "",
+            content: "All Tolls, Driver Allowance, Parking and Service charges",
+          },
+          {
+            title: "",
+            content: "All Possible Transfers and Sightseeing as per itinerary on Disposal basis",
+          },
+          {
+            title: "",
+            content: "Cab for 2 Pax (Ac Toyota-Etios) & 4 Pax – 6 Pax (Ac Toyota-Innova)",
+          },
+          {
+            title: "",
+            content: "One Hour Boat/Shikara Ride in Famous Dallake",
+          },
+          {
+            title: "",
+            content: "Pick-up and Drop at Srinagar Airport",
+          },
+          {
+            title: "",
+            content: "Daily Breakfast & Dinner Only",
+          },
+          {
+            title: "",
+            content: "Well Trained, Driver cum Tour Guide",
+          },
+        ],
+        exclusions: [
+          {
+            title: "",
+            content: "Lunch @ INR 450/- (Only Veg-Meals) & INR-650/- (Both Veg & Non-Veg) (Price based on Per Person per Lunch)",
+          },
+          {
+            title: "",
+            content: "Garden and Monument Entry Fee @ Rs 500/P.P.",
+          },
+          {
+            title: "",
+            content: "Baisaran, Kashmir, Dnow & Dabyab Valley at Pahalgam (Pony/Horse) @ Rs 1500/P.P.",
+          },
+          {
+            title: "",
+            content: "Tuliyan Lake at Pahalgam (By Pony/Horse) @ Rs 2500/P.P.",
+          },
+          {
+            title: "",
+            content: "Aru valley, Betaab valley & Chandanwari at Pahalgam (Union Vehicle)@4000/Private-Cab",
+          },
+          {
+            title: "",
+            content: "Gondola ride tickets up to First Phase at Gulmarg @ 1000/P.P",
+          },
+          {
+            title: "",
+            content: "Gondola ride tickets both First & Second Phase at Gulmarg @ 2000/P.P",
+          },
+          {
+            title: "",
+            content: "Thajwas Glacier at Sonmarg (Pony/Horse) @ Rs 1500/P.P.",
+          },
+          {
+            title: "",
+            content: "Drang-Frozen Waterfall Sightseeing at",
+          },
+          {
+            title: "",
+            content: "Tangmarg by Union Vehicle @ INR-2500/- (Private based up to 08 Persons)",
+          },
+          {
+            title: "",
+            content: "Zero Point Sightseeing at Sonmarg by Union Vehicle @ INR-4500/- (Private basis & up to 08 Persons)",
+          },
+          {
+            title: "",
+            content: "Chain Vehicle From Gagangir to Sonmarg Vice Versa by Union Vehicle @ INR-3000/- (Private basis & up to 08 Persons)",
+          },
+          {
+            title: "",
+            content: "During Winter At the time of Heavy snowfally 4*4 jeep required to reach gulmarg from tanmarg , Supplement Cost @ 3000/- Private Cab.",
+          },
+        ],
+        itinerary: [
+          {
+            "title": "DAY 1: Arrival Srinagar Airport & Local Sightseeing of Srinagar",
+            "description": "Pick up from Srinagar airport transfer to houseboat, Dal-Lake. After refresh visit Mughal Gardens, as Nishat Bagh, Shalimar Bagh, Cheshmashahi Garden, Parimahal Garden and Shankaracharya Temple. Then you can enjoy one hour shikara ride at Dal-Lake, Dinner & Overnight stay at Houseboat."
+          },
+          {
+            "title": "DAY 2: Gulmarg Day Excursion",
+            "description": "After breakfast drive to Gulmarg, (56 kms from Srinagar one way). Gulmarg has one of the best ski slopes in the world and highest golf course with 18 holes. You can visit Famous Sightseeing of Gulmarg as Aparwath by Asia's largest cable car (Direct/Supplement Cost) by evening back to Srinagar hotel for Dinner and Overnight stay."
+          },
+          {
+            "title": "DAY 3: Pahalgam Day Excursion",
+            "description": "After breakfast drive to Pahalgam, En-route visiting the saffron fields, Awantipuram Ruins, Apple Tree Garden, Bein Garden and Sun Murtand Temple. You can visit famous Sightseeing of Pahalgam as Aru Valley, Betaab Valley and Chandanwari by Taxi Union Vehicle (Direct/Supplement Cost). By evening back to Srinagar hotel for Dinner and overnight stay."
+          },
+          {
+            "title": "Day 04: Sonmarg Day Excursion",
+            "description": "After breakfast drive to Sonmarg, Sonmarg is also the base for some interesting treks to the high altitude Himalayan Lakes. You can visit Famous Sightseeing of Sonmarg as Thajwas Glacier by Pony/Horse ride (Direct/Supplement Cost). By evening back to Srinagar hotel for Dinner and overnight stay."
+          },
+          {
+            "title": "Day 05: Local City Tour & Srinagar Airport Drop",
+            "description": "After Breakfast, Personal activities like shopping/ local city tour which include Jamia Masjid, Hazratbal Shrine, Badamwari and Hariparbat Fort (If time permits) then Drop at Srinagar airport two hours prior to departure of the flight."
+          }
+        ],
+        overview: {
+          columns: [
+            'Category',
+            'Per Person (Min 2 Pax)',
+            'Per Person (Min 4 Pax)',
+            'Per Person (Min 6 Pax)',
+            'Per Person (Min 6 Pax with Tempo)',
+            'Per Person (Min 8 Pax)',
+            'Per Person (Min 10 Pax)',
+            'Extra Bed',
+          ],
+          data: [
+            ["Deluxe", "14,650", "12,588", "11,442", "12,980", "11,969", "11,405", "7,000"],
+            ["Super Deluxe", "17,400", "15,338", "14,192", "15,658", "14,719", "14,155", "8,700"],
+            ["Superior", "22,075", "20,013", "18,867", "20,333", "19,394", "18,830", "11,000"],
+            ["Premium", "30,075", "31,013", "19,867", "31,333", "30,394", "29,830", "15,500"],
+            ["Luxury", "35,550", "33,488", "32,432", "33,808", "32,869", "32,305", "21,500"],
+          ],
+        },
+        hotel: {
+          columns: [
+            "Category",
+            "Srinagar 3 nights",
+            "srinagar 1 night",
+          ],
+          data: [
+            ["Deluxe", "Mehtab Palace / Grand Zamin", "Deluxe Houseboat at Dallake // Nageen Lake"],
+            ["Super Deluxe", "Saty Villa / Asian Park / Similar", "New Alzira | Yound Morning star | Peer Palace, Dal-lake"],
+            ["Superior", "Solar Residency / Grand Kaisar / Similar", "Prince of Vale, Dal-Lake | Wangnoo Sheraton, Nigeen Lake"],
+            ["Premium", "The Kabo (Deluxe ) / Similar", "The Jewel in Crown"],
+            ["Luxury", "The Vintage / Similar", "The Jewel in Crown"],
+          ]
+        }
       },
       {
         id: 3,
-        title: "Wire & Tube China 2024",
-        sid: "Wire-&-Tube-China-2024",
+        title: "Kerala",
+        type: "Domestic",
+        sid: "kerala",
         package: 'educational tour',
         date: "25-28 Sept 2024",
         country: "Japan",
@@ -268,11 +560,153 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        description:"Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals. Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife. National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers.",
+        inclusions: [
+          {
+            "title": "",
+            "content": "1Nights Accommodation in Cochin"
+          },
+          {
+            "title": "",
+            "content": "2 Nights Accommodation in Munnar"
+          },
+          {
+            "title": "",
+            "content": "1 Night Accommodation in Thekkady"
+          },
+          {
+            "title": "",
+            "content": "1 Night Accommodation in Alleppey"
+          },
+          {
+            "title": "",
+            "content": "Welcome Drink on Arrival"
+          },
+          {
+            "title": "",
+            "content": "Daily Breakfast"
+          },
+          {
+            "title": "",
+            "content": "Pick up & Drop Ex - Cochin"
+          },
+          {
+            "title": "",
+            "content": "All transfers & Sightseeing by A/c Pvt Vehicle"
+          },
+          {
+            "title": "",
+            "content": "All toll tax, parking charges, driver charges, fuel cost inclusive"
+          },
+          {
+            "title": "",
+            "content": "All Taxes Include"
+          }
+        ],
+        itinerary: [
+          {
+            "title": "Day. 1",
+            "description": "Cochin, the confluence point of the alluring Arabian Sea and the silent Backwater, will be your host for the day. With your arrival in this pictorial-perfect city, you will be escorted to a hotel where you can unwind, relax and get refreshed up. Later visit Folklore Museum, Jew Town, Jewish Synagogues and Chinese Fishing Nets, Santa Cruz Basilica, Fort Kochi Beach, Chinese Fishing Nets, Marine Drive, Lulu Mall, Cochin Shopping. Overnight stay at Cochin hotel."
+          },
+          {
+            "title": "Day. 2",
+            "description": "After breakfast, Check out from Kochi & Later we proceed towards the hill station of Munnar. Proceed the hilly ghat winding roads, flanked by captivating hills and mountains, you will be greeted with never-ending tea plantations, Munnar is also known as the 'Nature Lover's Paradise' and will surely hold your captive throughout your stay. On the way also visit Cheeyappara Waterfalls and Valara Waterfalls. Arriving in this hilly retreat, you will be checked-in to a hotel to resort. Overnight stay at Munnar hotel/resort."
+          },
+          {
+            "title": "Day. 3",
+            "description": "Brace the playful morning light and wake up to a beautiful morning at the hotel/resort. Get freshened up and enjoy a hearty breakfast. Post this, you will be escorted for a full day Sightseeing in Munnar. Proceed & explore the important places in Munnar. Start the tour with Echo Point, Kundale Lake, Kundale Dam, Mattupetty Dam, Indo Swiss and High Range Farms, Munnar Tea Museum, Tea Making Factory, Munnar Tea Plantations (Ride on cost), Rajamalai (Eravikulam) National Park entry with Park Jeep tickets (payable at park), where you can enjoy spotting the exotic Nilgiri Thar. Overnight stay will be in Munnar hotel."
+          },
+          {
+            "title": "Day. 4",
+            "description": "Today morning, following your breakfast at the Munnar hotel/resort, pack your bags and check-out from the hotel/resort. Thereafter, you will be driven towards the gorgeous Thekkady, located near to Periyar National Park border. Following your arrival in the town, settle down in hotel/resort and relax for a while. Post this, embark on a rustic tour to the Periyar National Park, a protected reserve forest, where you can spot a variety of flora and fauna. It is bound to wake up your adrenaline and give pleasure to the nature lover in you. The sanctuary is famous for its green lush cover, semi-evergreen, moist deciduous forests and savanna grass lands. This is home to herds of elephants, sambar, tigers, lion-tailed macaques, Nilgiri langur. Head to the Periyar National Park the Periyar Lake, one of the largest artificial lakes in India. Take a boat ride here to truly capture the beauty of the place. Continue back from the tour ride, you can go for local shopping & visit spice plantations. Also, see Kathakali Show, Kalaripayyattu Show, (if time permits, at own cost) Overnight stay in Thekkady hotel/resort."
+          },
+          {
+            "title": "Day. 5",
+            "description": "After Breakfast, Checkout from the hotel and proceed to Alleppey which has an immense natural beauty, also known as the 'Venice of the East'. It is famous for the backwaters, its canals, bridges, beaches, marine drive and coconut groves. After arriving in Alleppey, check into your hotel/houseboat and enjoy the cruise through the backwaters of Alleppey. Overnight stay at the hotel / houseboat."
+          },
+          {
+            "title": "Day. 6",
+            "description": "After breakfast proceed to Cochin airport / railway station and depart. Travel back to your home with wonderful memories of amazing experience in Kerala."
+          }
+        ],
+        overview: {
+          columns: [
+            'Category',
+            'Per Person (Min 2 Pax)',
+            'Per Person (Min 4 Pax)',
+            'Per Person (Min 6 Pax)',
+            'Extra Adult',
+            'child without bed',
+            'Supplement Cost Per Person For  the Dates 30th Oct-10th Nov & 20th Dec – 05th Jan 2025',
+            'Dinner Cost Per Person',
+          ],
+          data: [
+            ["Standard", "15,536", "13,128", "11,969", "7,000", "5,000", "INR1950 Per Person for 30th Oct – 10th Nov & INR 2400 Per Person for 20th Dec– 05th Jan 2025", "4,500"],
+            ["Deluxe", "18,211", "15,803", "14,644", "8,300", "5,400", " INR 2350 Per Person for 30th Oct – 10th Nov & INR 2900 Per Person for 20th Dec– 05th Jan 2025", "4,700"],
+            ["Super Deluxe", "19,869", "17,462", "16,302", "9,020", "5,700", "INR 2500 Per Person for 30th Oct – 10th Nov & INR 3325 Per Person for 20th Dec– 05th Jan 20", "5,250"],
+            ["Superior", "23,133", "20,725", "19,566", "10,000", "7,200", " INR 2700 Per Person for 30th Oct – 10th Nov & INR 3950 Per Person for 20th Dec– 05th Jan 2025", "5,750"],
+          ],
+        },
+        hotel: {
+          columns: [
+            "Category",
+            "Kochi",
+            "Munnar",
+            "Thekkady",
+            "Alleppey",
+          ],
+          data: [
+            ["Standard", "Millennium Continental ( Standard A/c ) ", "Mist Inn Resort ( Valley View Balcony ) // Green Cove ( Premium Balcony ) // Green Mansion ( Valley View Balcony ) // The Breeze Resort ( Deluxe balcony )", "The Patio ( Deluxe ) // Aura Thekkady (Deluxe ) // Livinns Thekkady ( Deluxe )", "Pagoda Resort ( Deluxe ) // Arcadia Resort ( Deluxe ) "],
+            ["Deluxe", "Diana Height ( Deluxe ) // Broad bean (Deluxe ) ", "Aurum Munnar (Deluxe ) // Arbour Munnar ( Club ) // Peter Mount (Executive ) // Blossom Hill (Valley View Balcony )", " Periyar Mountain Palace ( Executive Balcony ) // Jungle Park ( Venus)", "Lakeway Resort ( Premium cottage ) // Venice Iva Residency (Deluxe )"],
+            ["Super Deluxe", " Grand Hotel ( Executive )// Jvk Park (Premium) ", "Cloud Castle (Premium ) // Munnar Queen ( Executive ) // Boulevard Resort( Iris ) ", "Periyar Mountain Palace ( Executive Balcony ) // Jungle Park ( Venus)", " Haveli Backwater Resort ( Royal Grand ) "],
+            ["Superior", " Grand Hotel ( Executive ) // Jvk Park ( Premium ", "Wolkenburg Resort & Spa ( Silver valley ) // Trivers Munnar ( Attic Suites )", "Casabella Resort ( Premium Cottage ) // Spice Lap (Heritage Deluxe ) ", "Deshadan Backwater Resort ( Lake View ) // Paloma Backwater Resort ( Lake View ) "],
+          ]
+        },
+        extraDetails: {
+          note: [
+            "At Munnar and Thekadey ac rooms will not provided due to Low temperature.",
+            " At hotel check inn time is 14:00 hrs and check out time is 12;00 noon.",
+            "At houseboat check inn time is 12:00 hrs and check out time is 9:00 AM.",
+            "Early check inn and late check out from hotel and houseboat is subject to rooms availability.",
+            "In A / C Deluxe houseboat ac will operational timing is 9: PM – 6: AM",
+            " All houseboats will be remain standdtill from 5: 30 PM – 8: AM due to Govt restrictions."
+          ],
+          tableHeading: "Houseboat Supplement Cost Per Person : Rates Valid till 30th March 2025",
+          columns: [
+            'Category',
+            'Houseboat type ',
+            '2 Pax',
+            '4 Pax',
+            '6 Pax',
+            'Extra bed',
+            'child without bed',
+          ],
+          data: [
+            ["Standard", "Deluxe", "4,200", "2,600", "2,316", "1,100", "800"],
+            ["Deluxe", "Deluxe", "4,000", "2,375", "2,000", "1,100", "800"],
+            ["Super Deluxe", "Deluxe", "3,100", "1,100", "900", "1,100", "800"],
+            ["Superior", "Premium", "4,000", "1,600", "1,100", "1,600", "1,000"]
+          ],
+          miscellaneousHeading: "Houseboat rates Increase for below Dates",
+          miscellaneous: [
+            "Pooja Holidays hike Oct 10 to 20 Oct 30%",
+            "Deepavali hike Oct 31 to 10 Nov 25%",
+            "Dec 14 to 23 Dec 20% hike",
+            "Dec 24 to 2 Jan One Bedroom Deluxe Rs 12500, Premium Rs 17500, Luxury Rs 20000, Ultra Luxury Rs 25000",
+            "In One Room only one extra Bed is possible due to the space"
+          ],
+          termsHeading: "Terms & Conditions",
+          terms: [
+            "Above rates are net and non-commissionable.",
+            "The package cost does not include air / rail fares, airport tax, entry fees to monuments, guide fees, visa charges, personal expenses like telephone calls, laundry, soft / hard drinks, meals, tips and camera fees"
+          ]
+        }
       },
       {
         id: 4,
-        title: "CPHI Milan 2024",
-        sid: "CPHI-Milan-2024",
+        title: "Andaman and Nicobar Islands",
+        type: "Domestic",
+        sid: "andaman-and-nicobar-islands",
         package: 'honeymoon tour',
         date: "8-10 Oct 2024",
         country: "France",
@@ -285,6 +719,175 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        description: "The Andaman and Nicobar Islands is a union territory of India comprising 572 islands, of which only 38 are inhabited. The islands are grouped into two main clusters: the northern Andaman Islands and the southern Nicobar Islands, separated by a 150 km wide channel.",
+        overview: {
+          title: "Below Rates are Per Person – Net & Non Commissionable",
+          subtitle: " Rates valid from 15th Sep 2024 – 10th Dec & From 16th Jan 31st March 2025",
+          columns: [
+            'Category',
+            'Per Person (Min 2 Pax)',
+            'Per Person (Min 4 Pax)',
+            'Per Person (Min 6 Pax)',
+            'Extra Adult',
+            '5-12 year without bed ',
+            '1-3 year',
+            'Dinner Charges',
+          ],
+          data: [
+            ["Deluxe", "22,889", "20,249", "19,369", "16,069", "13,209", "6,620", "5,025"],
+            ["Deluxe Plus", "25,859", "23,219", "22,449", "16,069", "13,209", "6,620", "5,245"],
+            ["Super Deluxe", "27,619", "24,979", "24,099", "17,389", "15,519", "6,620", "6,895"],
+            ["Super Deluxe Plus", "29,929", "27,399", "26,519", "19,259", "16,389", "6,620", "7,335"],
+            ["Superior", "35,209", "32,569", "31,799", "20,359", "17,499", "6,620", "7,335"],
+          ],
+        },
+        hotel: {
+          columns: [
+            "HOTEL Category",
+            "PortBlair",
+            "Havelock",
+            "NeilIsland",
+          ],
+          data: [
+            ["Deluxe", "J Hotel ( Deluxe ) // Driftwood (Deluxe ) // Haywizz( Deluxe )", " Nk Eco Resort (Deluxe ) // Radhakrishna Resort ( Deluxe ) // Blue Bird Resort ( Deluxe )", " Neil Banjara (Deluxe ) // Lakshmi Continental ( Deluxe ) // Save Green ( Deluxe )"],
+            ["Deluxe Plus", " The Mainak H & r ( Premium ) // Star Paradise ( Deluxe ) // Sr Castle ( Deluxe )", " Havelock Exotic ( Deluxe ) // Ile Bay Resort (Deluxe ) // White Coral ( Cottage )", "NK Eco Resort ( Deluxe ) // Coral Garden ( deluxe )"],
+            ["Super Deluxe", " Tsg Emerald ( Deluxe ) // Tsg Grand ( Deluxe ) // The Mainak H & R ( Executive )", " Tsg Blue ( Pool View ) // Haywizz ( Pool View ) // Holiday & Holiday Beach ( Studio )", "Aquays Resort ( Neil Plaza ) // Tsg Aura ( Sea Side Balcony )"],
+            ["Super Deluxe Plus", "The Mainak H & R ( Sea View ) // Mansha Regency ( Deluxe ) // Mansha Palace ( Deluxe )", " Aquay Resort ( Plaza ) // Sands Marina (Executive ) // Sea Hills (Bamboosaa )", " Aquays Resort ( Neil Plaza ) // Tsg Aura ( Sea Side Balcony )"],
+            ["Superior", " Lemon Tree (Superior ) // coral cove ( Executive )// Sea Hills (Deluxe Pre)", " Symphony Palms ( Garden ) // Aquay Resort ( Lagoon ) // Ocean Tree (Villa )", "Summer Sand ( Casa Air ) // Aquays Resort ( Vista ) "],
+          ]
+        },
+        itinerary: [
+          {
+            "title": "Day 01: Port Blair - Corbyn’s Cove Beach– Cellular Jail – Light & Sound Show",
+            "description": " Assistance on arrival at Veer Savarkar Airport, Port Blair and You will be taken to your hotel where you rest and relax. Then you proceed to Corbyn’s Cove Beach – one of the most picturesque, sandy, coconut-palm fringed beaches, seven kms away from Port Blair town is ideal for swimming and sun-basking.After that you visit the Cellular Jail, formerly known as Kala Pani, it was a colonial prison used by the British to deport political prisoners to this remote location. Later you attend the enthralling Light and Sound Show at Cellular Jail – where the heroic saga of the Indian freedom struggle is brought alive. Post completion of this trip, we drop you back at your hotel. Stay Overnight in Port Blair. Note: We will drop the guest at the parking area near Cellular Jail and from there the guest has to walk around 200 meter and return to the parking area after visiting the Jail and Light & Sound Show"
+          },
+          {
+            "title": "Day 02: Port Blair - Havelock Island Radhanagar Beach Trip",
+            "description": "As per the ferry schedule, board the ferry from Port Blair jetty and get transferred to Swaraj Dweep (Havelock Island). Havelock Island is famous for its entrancing white sandy beaches among the most beautiful beaches in Andaman. On reaching, get transferred to the hotels to complete the check-in. Enjoy your afternoon at the World Famous Radha Nagar Beach (Beach number 7) ‘Best Beach in Asia’. You will realize the reason for the same just in a few minutes after visiting this beach.Then you will be transferred to the hotel. Stay overnight in Havelock. Note: Ferry will be issued as per the availability of tickets. Sightseeing will be covered as per ferry timings."
+          },
+          {
+            "title": "Day 03: Havelock Island - Elephanta Beach",
+            "description": " After breakfast, start the journey to one of the most popular destinations in Havelock Island, due to its serenity and clear water, Elephanta Beach (Complementary Snorkeling by Boat association). Then you will be transferred to the hotel. Stay overnight in Havelock"
+          },
+          {
+            "title": "Day 04: Havelock Island – Neil Island Bharatpur Beach Laxmanpur Beach",
+            "description": " Post breakfast check out from the hotel and as per the schedule board a ferry from Havelock Island and get transferred to Shaheed Dweep (Neil Island) – of unexplored coral reefs, brilliant biodiversity, white sandy beaches with tropical forest. On arrival at Neil Island, our representative will receive and escort you to check-in to the hotel. Then you visit Bharatpur Beach, ideal for Snorkeling and glass bottom boat rides (for Extra cost).Later in the afternoon visit Laxmanpur Beach for magnificent sunset viewing. Evening is free or on your own. Stay overnight in Neil Island. Note: Ferry will be issued as per the availability of tickets. Sightseeing will be covered as per ferry timings"
+          },
+          {
+            "title": "Day 05: Neil Island Howrah Bridge – Port Blair",
+            "description": " Post breakfast check out from the hotel and visit Howrah Bridge, a natural rock formation. Here you can see the beautiful coral and underwater life. Then as per the schedule we drop you at Neil Jetty to board the ferry to Port Blair. Our representative will pick you up at Port Blair Jetty and drop you to the hotel. Stay overnight in Port Blair. Note: Ferry will be issued as per the availability of tickets. Sightseeing will be covered as per ferry timings."
+          },
+          {
+            "title": "Day 05: Drop To Airport",
+            "description": " After breakfast check out from the hotel and proceed to the airport to return home with  sweet memories of this exotic destination. Standard Check in time: 12 PM Standard Check out time: 9 AM Note: Early check-in and late check-out is subject to availability of rooms"
+          },
+        ],
+        inclusions: [
+          {
+            title: "",
+            content: "2 Nights Accommodation in Port Blair",
+          },
+          {
+            title: "",
+            content: " 2 Nights Accommodation in Havelock",
+          },
+          {
+            title: "",
+            content: " 1 Nights Accommodation in Neil Island",
+          },
+          {
+            title: "",
+            content: " Airport , Jetty & Hotel Transfers and Sightseeing as per the above-itinerary by AC Vehicle and not at disposal (01 vehicle)",
+          },
+          {
+            title: "",
+            content: "Daily Breakfast",
+          },
+          {
+            title: "",
+            content: "All kind of transport and luxury Taxes.",
+          },
+          {
+            title: "",
+            content: "Assistance at all arrival and departure points.",
+          },
+          {
+            title: "",
+            content: " All side Private Cruise charges Included – Port Blair – Neil – Havelock –Port blair.",
+          },
+          {
+            title: "",
+            content: "Port Blair – Havelock – Neil Island (MAK//Sea Link//Green Ocean//Aashi)",
+          },
+          {
+            title: "",
+            content: "Entry permits/Entry tickets/Boat tickets/Ferry tickets wherever required",
+          },
+          {
+            title: "",
+            content: "All Sightseeing & Transfer as per Itinerary",
+          },
+          {
+            title: "",
+            content: "Parking Charges.",
+          },
+        ],
+        exclusions: [
+          {
+            title: "",
+            content: " Any Airfare, Train fare, Overland Journey which is not mentioned in the Itinerary.",
+          },
+          {
+            title: "",
+            content: "Any Gala Dinner Charges on Xmas or New year Eve",
+          },
+          {
+            title: "",
+            content: " Any Medical/rescue evacuation due to mishaps.",
+          },
+          {
+            title: "",
+            content: " Any personal nature items like Laundry, bar bills, table bills, camera fee, tips or any other item",
+          },
+          {
+            title: "",
+            content: "Vehicle not at disposal at any of the islands.",
+          },
+          {
+            title: "",
+            content: "Any extra excursion or sightseeing apart from suggested tour itinerary",
+          },
+          {
+            title: "",
+            content: "Cost incidental to any change in the itinerary/ stay on account of flight cancellation due to bad weather, ill health, roadblocks and/or any factors beyond control ",
+          },
+        ],
+        extraDetails: {
+          miscellaneousHeading: "Supplement Water Sports Activities (if pre-booked)",
+          miscellaneous: [
+            " Scuba Diving : Rs.4500/- per head with photo, video and dive certificate.",
+            "Sea Walk : Rs.4500/- per head with photo",
+            "Snorkeling : Rs.1200/- per head",
+            "Andaman Dolphin : Rs.2350/- per head",
+            "Semi Submarine Coral Safari : Rs.2400/- per head",
+            "Glass Bottom Ride: Rs.600/- per head",
+            "Jet Ski : Rs.600/- per head",
+            "Banana Ride / Sofa Ride / Speed Boat : Rs.600/- per head "
+          ],
+          termsHeading: "General Conditions & Remarks",
+          terms: [
+            "Offered rates are Net and non-commissionable.",
+            " Confirmation will be subject to availability @ the time of reservation",
+            "Rates may change if traveling dates are changed.",
+            "We shall proceed with the holding/ confirmation and we would require 25% payment, 50% before 30 Days and balance before 10 Days of travel date",
+            "Tour program may be shuffled due to the inclement weather conditions and changes in Flight/ Ferry operations, which may incur extra charges.",
+            " In the case of cancellation of a trip, we shall process a refund as per policy of Hotel / Services, efforts deserve a service charge of 10 % of total cost of the package.",
+            "The vehicle used will be exclusive for guests but will not be at disposal.It will as per contract & will change every day and sector wise.",
+            "Mostly hotels in Andamans follow an early Check in/ Check Out time (07:30am 08: 30am) policy, early check in/ Late Check Out subject to availability and completely on hotel’s discretion.",
+            "All extras other than mentioned above are payable directly at hotel / service provider.",
+            "We do not provide standalone services such as only Hotels OR only transport OR any other service, do not insist us for price breakup."
+          ]
+        }
       },
       {
         id: 5,

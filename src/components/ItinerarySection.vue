@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="row" v-for="(day, index) in test" :key="index">
+        <div class="row" v-for="(day, index) in product.itinerary" :key="index">
             <div class="col-12 mb-4">
                 <div class="card">
                     <div class="card-header text-bg-light">
@@ -9,11 +9,12 @@
                     <div class="card-body">
                         <div class="row d-flex align-items-center" :class="{ 'flex-row-reverse': index % 2 !== 0 }">
                             <div class="col-md-4 mb-3 mb-md-0">
-                                <img :src="day.image" class="img-fluid rounded"
+                                <img v-if="day.image" :src="day.image" class="img-fluid rounded"
                                     style="width:250px; height:160px;object-fit: fill;" :alt="'Day ' + (index + 1)">
                             </div>
                             <div class="col-md-8">
-                                <h5 class="card-title text-start">{{ day.date }}</h5>
+                                <h5 class="card-title text-start">{{ day.title }}</h5>
+                                <h5 class="card-title text-start">{{ day.subtitle }}</h5>
                                 <p class="card-text text-start">{{ day.description }}</p>
                             </div>
                         </div>
@@ -25,6 +26,12 @@
 </template>
 <script>
 export default {
+    props: {
+        product: {
+            type: Object,
+            required: true
+        }
+    },
     data() {
         return {
             test: [

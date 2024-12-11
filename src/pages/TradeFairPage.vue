@@ -9,11 +9,7 @@
             <h1 class="text-center text-capitalize">{{ pageName }}</h1>
             <p class="text-center fs-1">₹ 9999/- <span class="text-decoration-line-through text-muted">₹
                     12000</span></p>
-            <div class="my-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ea laboriosam corporis
-                aspernatur velit voluptas minus obcaecati fugit ipsum. Iusto ducimus rem iste quibusdam modi atque! Sunt
-                sint reprehenderit dignissimos illum cumque possimus sit quia odio, officia eum? Exercitationem
-                blanditiis hic quasi, tenetur aliquam aliquid illo non reiciendis perspiciatis soluta!
-            </div>
+            <div class="my-4">{{ showPackage.description }}</div>
             <div class="d-none d-md-flex justify-content-center align-items-center gap-3">
                 <a href="/img/demo.pdf" download="file.pdf" class="btn w-25"
                     style="border:1px solid rgba(255, 162, 0, 1) !important;">
@@ -48,7 +44,7 @@
                 <h3 class="p-2 text-center my-4 cutout">
                     <span>{{ section.name }}</span>
                 </h3>
-                <component :is="section.component"></component>
+                <component :is="section.component" :product="showPackage"></component>
             </section>
         </div>
 
@@ -198,12 +194,14 @@
                 </div>
             </div>
         </div>
+
+
     </div>
 </template>
 
 <script>
-import TradeFairFGallerySection from "@/components/TradeFairFGallerySection.vue"
-import TradeFairTableSection from "@/components/TradeFairFlightSection.vue"
+import TradeHotelSection from "@/components/TradeHotelSection.vue"
+import TradeOverviewSection from "@/components/TradeOverviewSection.vue"
 import TradeFairTermsSection from "@/components/TradeFairTermsSection.vue"
 import TradeFairVisaSection from "@/components/TradeFairVisaSection.vue"
 import TradeFairExclusionSection from "@/components/TradeFairExclusionSection.vue"
@@ -214,8 +212,8 @@ import TradeDetailsSection from "@/components/TradeDetailsSection.vue"
 export default {
     name: "TradeFairPage",
     components: {
-        TradeFairFGallerySection,
-        TradeFairTableSection,
+        TradeHotelSection,
+        TradeOverviewSection,
         TradeFairTermsSection,
         TradeFairVisaSection,
         TradeFairExclusionSection,
@@ -235,15 +233,15 @@ export default {
             sections: [
                 { id: 'Details', name: 'Details', component: 'TradeDetailsSection' },
                 { id: 'Itinerary', name: 'Itinerary', component: 'ItinerarySection' },
-                { id: 'Hotel', name: 'Hotel', component: 'TradeFairFGallerySection' },
-                { id: 'Flight', name: 'Flight', component: 'TradeFairTableSection' },
+                { id: 'Hotel', name: 'Hotel', component: 'TradeHotelSection' },
+                { id: 'Flight', name: 'Flight', component: 'TradeOverviewSection' },
                 { id: 'Visa', name: 'Visa', component: 'TradeFairVisaSection' },
                 { id: 'Inclusion', name: 'Inclusion', component: 'TradeFairInclusionSection' },
                 { id: 'Exclusion', name: 'Exclusion', component: 'TradeFairExclusionSection' },
                 { id: 'TermCondition', name: 'Term', component: 'TradeFairTermsSection' }
             ],
             activeSection: '',
-            navbarDark: false
+            navbarDark: false,
         }
     },
     computed: {

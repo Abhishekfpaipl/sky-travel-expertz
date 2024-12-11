@@ -42,20 +42,7 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
+ 
 :root {
   --bg-primary: #014c75; 
   --bg-forth: rgba(255, 206, 86, 0.2);
