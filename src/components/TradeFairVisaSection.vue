@@ -1,52 +1,100 @@
 <template>
-  <div class="container mt-4 text-start">
-    <h5>Visa Application Requirements</h5>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <h5>(1) Passport</h5>
-        <p>Original passport with at least six months of remaining validity and with more than 2 blank visa pages, a
-          photocopy of the passport's data page and the photo page if it is separate. (If you apply multiple entry visa,
-          validity of your passport should cover the validity plus duration of stay on your visa)</p>
-      </li>
-      <li class="list-group-item">
-        <h5>(2) Visa Application Form and Photo</h5>
-        <p>Please complete the Visa Application Form online "application form", upload your electronic photo (click to
-          check the rules for photos), then print and sign the Visa Application Form. One actual photo (size 33x48mm in
-          color with white background as the rules required above) is also needed when walking in to submit your
-          application.</p>
-      </li>
-      <li class="list-group-item">
-        <h5>(3) Proof of legal status (applicable for those not applying for the visa in their country of citizenship)
-        </h5>
-        <p>If you are not applying for a visa in the country of your citizenship, you must provide the original and
-          photocopy of your valid certificates of residence, employment or student status, or other valid certificates
-          of legal stay provided by the relevant authorities of the country where the Visa Centre is located.</p>
-      </li>
-      <li class="list-group-item">
-        <h5>(4) Photocopy of previous Chinese passports or previous Chinese visas (applicable for those who were Chinese
-          citizens and have obtained foreign citizenship).</h5>
-        <ul>
-          <li>If you are applying for a Chinese visa for the first time, you should provide the last Chinese passport
-            held and a photocopy of its data page.</li>
-          <li>If you have obtained Chinese visas before and apply for a Chinese visa with a renewed foreign passport
-            that does not contain any Chinese visa, you should present the photocopy of the previous passport's data
-            page and the photo page if it is separate, as well as the previous Chinese visa page (If your name on the
-            current passport differs from that on the previous one, you must provide an official document of name
-            change).</li>
+  <div class="container-fluid px-0">
+    <div class="card border-primary mb-4">
+      <div class="card-header bg-primary text-white d-flex align-items-center">
+        <i class="bi bi-passport me-2"></i>
+        <h4 class="card-title mb-0">Visa Application Requirements</h4>
+      </div>
+      <div class="card-body p-0">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2">1</span>
+              <h5 class="mb-0">Passport</h5>
+            </div>
+            <p class="text-muted text-start">
+              <i class="bi bi-file-earmark-text me-2"></i>
+              Original passport with at least six months of remaining validity and with more than 2 blank visa pages,
+              a photocopy of the passport's data page and the photo page if it is separate.
+              <strong>(If applying for multiple entry visa, passport validity should cover visa validity plus duration
+                of stay)</strong>
+            </p>
+          </li>
+
+          <li class="list-group-item">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2">2</span>
+              <h5 class="mb-0">Visa Application Form and Photo</h5>
+            </div>
+            <p class="text-muted text-start">
+              <i class="bi bi-image me-2"></i>
+              Complete the Visa Application Form online, upload an electronic photo (check photo rules),
+              print and sign the form. Prepare one actual photo (33x48mm, color with white background)
+              for in-person submission.
+            </p>
+          </li>
+
+          <li class="list-group-item">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2">3</span>
+              <h5 class="mb-0">Proof of Legal Status</h5>
+            </div>
+            <p class="text-muted text-start">
+              <i class="bi bi-info-circle me-2"></i>
+              For applicants not applying in their country of citizenship:
+              Provide original and photocopy of valid certificates of residence, employment,
+              student status, or other legal stay documents from local authorities.
+            </p>
+          </li>
+
+          <li class="list-group-item">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2">4</span>
+              <h5 class="mb-0">Previous Chinese Passport/Visa Documentation</h5>
+            </div>
+            <div class="text-muted">
+              <p class="text-start">
+                <i class="bi bi-file-earmark-person me-2"></i>
+                For former Chinese citizens with foreign citizenship:
+              </p>
+              <ul class="ps-4">
+                <li class="text-start">First-time applicants: Provide last Chinese passport and its data page photocopy
+                </li>
+                <li class="text-start">Renewing with new passport: Submit previous passport's data page, photo page, and
+                  previous Chinese
+                  visa</li>
+                <li class="text-start">Name change: Include official name change documentation</li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="list-group-item">
+            <div class="d-flex align-items-center mb-2">
+              <span class="badge bg-primary me-2">5</span>
+              <h5 class="mb-0">Commercial/Trade Fair Invitation Documents</h5>
+            </div>
+            <div class="text-muted">
+              <p class="text-start">
+                <i class="bi bi-briefcase me-2"></i>
+                Invitation letter must include:
+              </p>
+              <ul class="list-group ps-4">
+                <li class="text-start">Complete applicant information (full name, gender, date of birth)</li>
+                <li class="text-start">Detailed visit information:
+                  <ul class="item-group">
+                    <li class="text-start">Purpose of visit</li>
+                    <li class="text-start">Arrival and departure dates</li>
+                    <li class="text-start">Places to be visited</li>
+                    <li class="text-start">Relationship with inviting party</li>
+                    <li class="text-start">Financial support details during stay</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
-      </li>
-      <li class="list-group-item">
-        <h5>(1) Documents concerning commercial activity issued by a trade partner in China, or trade fair invitation,
-          etc.</h5>
-        <p>The invitation letter should contain:</p>
-        <ul>
-          <li>a) Information of the applicant (incl. full name, gender, date of birth, etc.);</li>
-          <li>b) Details of the planned visit (incl. purpose of visit, arrival and departure dates, place(s) to be
-            visited, relationship between the applicant and the inviting party, details of any financial support to be
-            provided during the stay in China);</li>
-        </ul>
-      </li>
-    </ul>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,5 +105,17 @@ export default {
 </script>
 
 <style scoped>
-/* Add any custom styles here if needed */
+.card {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.badge {
+  min-width: 25px;
+  text-align: center;
+}
+
+ul ul {
+  list-style-type: disc;
+  color: #6c757d;
+}
 </style>

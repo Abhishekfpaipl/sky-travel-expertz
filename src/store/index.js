@@ -227,7 +227,7 @@ export default createStore({
         date: "19-21 Sept 2024",
         country: "India",
         price: "1,09,000",
-        image: "/img/services/1.jpg",
+        image: "/img/varanasi.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -235,82 +235,33 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        gallery: [
+          "/img/dubaicenter/1.png",
+          "/img/dubaicenter/2.png",
+          "/img/dubaicenter/3.png",
+        ],
         description: "Varanasi is a city in the northern Indian state of Uttar Pradesh dating to the 11th century B.C. Regarded as the spiritual capital of India, the city draws Hindu pilgrims who bathe in the Ganges River’s sacred waters and perform funeral rites. Along the city's winding streets are some 2,000 temples, including Kashi Vishwanath, the “Golden Temple,” dedicated to the Hindu god Shiva.",
         inclusions: [
-          {
-            title: "",
-            content: "2 Nights Accommodation in Varanasi",
-          },
-          {
-            title: "",
-            content: "1 Nights Accommodation in Prayagraj",
-          },
-          {
-            title: "",
-            content: "1 Night Accommodation in Ayodhya",
-          },
-          {
-            title: "",
-            content: "4 Breakfast & 4 Dinner",
-          },
-          {
-            title: "",
-            content: "Pick up & Drop Ex – Varanasi",
-          },
-          {
-            title: "",
-            content: "All transfers & Sightseeing by A/c Pvt Vehicle",
-          },
-          {
-            title: "",
-            content: "All toll tax, parking charges, driver charges, fuel cost inclusive",
-          },
+          "2 Nights Accommodation in Varanasi",
+          "1 Nights Accommodation in Prayagraj",
+          "1 Night Accommodation in Ayodhya",
+          "4 Breakfast & 4 Dinner",
+          "Pick up & Drop Ex – Varanasi",
+          "All transfers & Sightseeing by A/c Pvt Vehicle",
+          "All toll tax, parking charges, driver charges, fuel cost inclusive",
         ],
         exclusions: [
-          {
-            title: "",
-            content: "Any Airfare / Train Ticket",
-          },
-          {
-            title: "",
-            content: "Monument Entrance fee",
-          },
-          {
-            title: "",
-            content: "Cost for Supplementary service, Up-gradation Charges, Tour Guide, VIP Darshan etc",
-          },
-          {
-            title: "",
-            content: "Cost for personal expenses such as laundry, bottled water, soft drinks, incidentals & porter charges.",
-          },
-          {
-            title: "",
-            content: "Any kind of Tips for Driver",
-          },
-          {
-            title: "",
-            content: "Activity charges, Boat Ride, Tonga Ride, Rickshaw Ride, Auto Ride, etc.",
-          },
-          {
-            title: "",
-            content: "Lunch",
-          },
-          {
-            title: "",
-            content: "Anything not specifically mentioned under the head “Prices included”",
-          },
-          {
-            title: "",
-            content: "Room Heater Charges",
-          },
-          {
-            title: "",
-            content: "Tips, Insurance, Laundry, Phone Calls.",
-          },
-          {
-            title: "",
-            content: "Any Kind of Drinks (Alcoholic, Mineral, Aerated)",
-          },
+          "Any Airfare / Train Ticket",
+          "Monument Entrance fee",
+          "Cost for Supplementary service, Up-gradation Charges, Tour Guide, VIP Darshan etc",
+          "Cost for personal expenses such as laundry, bottled water, soft drinks, incidentals & porter charges.",
+          "Any kind of Tips for Driver",
+          "Activity charges, Boat Ride, Tonga Ride, Rickshaw Ride, Auto Ride, etc.",
+          "Lunch",
+          "Anything not specifically mentioned under the head “Prices included”",
+          "Room Heater Charges",
+          "Tips, Insurance, Laundry, Phone Calls.",
+          "Any Kind of Drinks (Alcoholic, Mineral, Aerated)",
         ],
         itinerary: [
           {
@@ -382,7 +333,7 @@ export default createStore({
         date: "19-21 Sept 2024",
         country: "India",
         price: "1,09,000",
-        image: "/img/services/2.png",
+        image: "/img/kashmir.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -390,102 +341,38 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        gallery: [
+          "/img/dubaicenter/1.png",
+          "/img/dubaicenter/5.png",
+          "/img/dubaicenter/6.png",
+        ],
         description: "Kashmir is the northernmost geographical region of the Indian subcontinent. Until the mid-19th century, the term 'Kashmir' denoted only the Kashmir Valley between the Great Himalayas and the Pir Panjal Range.",
         inclusions: [
-          {
-            title: "",
-            content: "03 Night Stay in Srinagar Hotel",
-          },
-          {
-            title: "",
-            content: "01 Night Stay in Houseboat at Dal Lake",
-          },
-          {
-            title: "",
-            content: "Welcome Drink on Arrival",
-          },
-          {
-            title: "",
-            content: "All Tolls, Driver Allowance, Parking and Service charges",
-          },
-          {
-            title: "",
-            content: "All Possible Transfers and Sightseeing as per itinerary on Disposal basis",
-          },
-          {
-            title: "",
-            content: "Cab for 2 Pax (Ac Toyota-Etios) & 4 Pax – 6 Pax (Ac Toyota-Innova)",
-          },
-          {
-            title: "",
-            content: "One Hour Boat/Shikara Ride in Famous Dallake",
-          },
-          {
-            title: "",
-            content: "Pick-up and Drop at Srinagar Airport",
-          },
-          {
-            title: "",
-            content: "Daily Breakfast & Dinner Only",
-          },
-          {
-            title: "",
-            content: "Well Trained, Driver cum Tour Guide",
-          },
+          "03 Night Stay in Srinagar Hotel",
+          "01 Night Stay in Houseboat at Dal Lake",
+          "Welcome Drink on Arrival",
+          "All Tolls, Driver Allowance, Parking and Service charges",
+          "All Possible Transfers and Sightseeing as per itinerary on Disposal basis",
+          "Cab for 2 Pax (Ac Toyota-Etios) & 4 Pax – 6 Pax (Ac Toyota-Innova)",
+          "One Hour Boat/Shikara Ride in Famous Dallake",
+          "Pick-up and Drop at Srinagar Airport",
+          "Daily Breakfast & Dinner Only",
+          "Well Trained, Driver cum Tour Guide",
         ],
         exclusions: [
-          {
-            title: "",
-            content: "Lunch @ INR 450/- (Only Veg-Meals) & INR-650/- (Both Veg & Non-Veg) (Price based on Per Person per Lunch)",
-          },
-          {
-            title: "",
-            content: "Garden and Monument Entry Fee @ Rs 500/P.P.",
-          },
-          {
-            title: "",
-            content: "Baisaran, Kashmir, Dnow & Dabyab Valley at Pahalgam (Pony/Horse) @ Rs 1500/P.P.",
-          },
-          {
-            title: "",
-            content: "Tuliyan Lake at Pahalgam (By Pony/Horse) @ Rs 2500/P.P.",
-          },
-          {
-            title: "",
-            content: "Aru valley, Betaab valley & Chandanwari at Pahalgam (Union Vehicle)@4000/Private-Cab",
-          },
-          {
-            title: "",
-            content: "Gondola ride tickets up to First Phase at Gulmarg @ 1000/P.P",
-          },
-          {
-            title: "",
-            content: "Gondola ride tickets both First & Second Phase at Gulmarg @ 2000/P.P",
-          },
-          {
-            title: "",
-            content: "Thajwas Glacier at Sonmarg (Pony/Horse) @ Rs 1500/P.P.",
-          },
-          {
-            title: "",
-            content: "Drang-Frozen Waterfall Sightseeing at",
-          },
-          {
-            title: "",
-            content: "Tangmarg by Union Vehicle @ INR-2500/- (Private based up to 08 Persons)",
-          },
-          {
-            title: "",
-            content: "Zero Point Sightseeing at Sonmarg by Union Vehicle @ INR-4500/- (Private basis & up to 08 Persons)",
-          },
-          {
-            title: "",
-            content: "Chain Vehicle From Gagangir to Sonmarg Vice Versa by Union Vehicle @ INR-3000/- (Private basis & up to 08 Persons)",
-          },
-          {
-            title: "",
-            content: "During Winter At the time of Heavy snowfally 4*4 jeep required to reach gulmarg from tanmarg , Supplement Cost @ 3000/- Private Cab.",
-          },
+          "Lunch @ INR 450/- (Only Veg-Meals) & INR-650/- (Both Veg & Non-Veg) (Price based on Per Person per Lunch)",
+          "Garden and Monument Entry Fee @ Rs 500/P.P.",
+          "Baisaran, Kashmir, Dnow & Dabyab Valley at Pahalgam (Pony/Horse) @ Rs 1500/P.P.",
+          "Tuliyan Lake at Pahalgam (By Pony/Horse) @ Rs 2500/P.P.",
+          "Aru valley, Betaab valley & Chandanwari at Pahalgam (Union Vehicle)@4000/Private-Cab",
+          "Gondola ride tickets up to First Phase at Gulmarg @ 1000/P.P",
+          "Gondola ride tickets both First & Second Phase at Gulmarg @ 2000/P.P",
+          "Thajwas Glacier at Sonmarg (Pony/Horse) @ Rs 1500/P.P.",
+          "Drang-Frozen Waterfall Sightseeing at",
+          "Tangmarg by Union Vehicle @ INR-2500/- (Private based up to 08 Persons)",
+          "Zero Point Sightseeing at Sonmarg by Union Vehicle @ INR-4500/- (Private basis & up to 08 Persons)",
+          "Chain Vehicle From Gagangir to Sonmarg Vice Versa by Union Vehicle @ INR-3000/- (Private basis & up to 08 Persons)",
+          "During Winter At the time of Heavy snowfally 4*4 jeep required to reach gulmarg from tanmarg , Supplement Cost @ 3000/- Private Cab.",
         ],
         itinerary: [
           {
@@ -552,7 +439,7 @@ export default createStore({
         date: "25-28 Sept 2024",
         country: "Japan",
         price: "1,20,000",
-        image: "/img/services/3.jpg",
+        image: "/img/kerala.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -560,48 +447,23 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
-        description:"Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals. Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife. National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers.",
+        gallery: [
+          "/img/dubaicenter/4.png",
+          "/img/dubaicenter/5.png",
+          "/img/dubaicenter/6.png",
+        ],
+        description: "Kerala, a state on India's tropical Malabar Coast, has nearly 600km of Arabian Sea shoreline. It's known for its palm-lined beaches and backwaters, a network of canals. Inland are the Western Ghats, mountains whose slopes support tea, coffee and spice plantations as well as wildlife. National parks like Eravikulam and Periyar, plus Wayanad and other sanctuaries, are home to elephants, langur monkeys and tigers.",
         inclusions: [
-          {
-            "title": "",
-            "content": "1Nights Accommodation in Cochin"
-          },
-          {
-            "title": "",
-            "content": "2 Nights Accommodation in Munnar"
-          },
-          {
-            "title": "",
-            "content": "1 Night Accommodation in Thekkady"
-          },
-          {
-            "title": "",
-            "content": "1 Night Accommodation in Alleppey"
-          },
-          {
-            "title": "",
-            "content": "Welcome Drink on Arrival"
-          },
-          {
-            "title": "",
-            "content": "Daily Breakfast"
-          },
-          {
-            "title": "",
-            "content": "Pick up & Drop Ex - Cochin"
-          },
-          {
-            "title": "",
-            "content": "All transfers & Sightseeing by A/c Pvt Vehicle"
-          },
-          {
-            "title": "",
-            "content": "All toll tax, parking charges, driver charges, fuel cost inclusive"
-          },
-          {
-            "title": "",
-            "content": "All Taxes Include"
-          }
+          "1Nights Accommodation in Cochin",
+          "2 Nights Accommodation in Munnar",
+          "1 Night Accommodation in Thekkady",
+          "1 Night Accommodation in Alleppey",
+          "Welcome Drink on Arrival",
+          "Daily Breakfast",
+          "Pick up & Drop Ex - Cochin",
+          "All transfers & Sightseeing by A/c Pvt Vehicle",
+          "All toll tax, parking charges, driver charges, fuel cost inclusive",
+          "All Taxes Include",
         ],
         itinerary: [
           {
@@ -711,13 +573,18 @@ export default createStore({
         date: "8-10 Oct 2024",
         country: "France",
         price: "1,13,000",
-        image: "/img/services/4.jpg",
+        image: "/img/andaman.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
           { icon: 'bi-globe', image: "img/travel/hotel.svg", name: 'hotel' },
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
+        ],
+        gallery: [
+          "/img/dubaicenter/1.png",
+          "/img/dubaicenter/5.png",
+          "/img/dubaicenter/6.png",
         ],
         description: "The Andaman and Nicobar Islands is a union territory of India comprising 572 islands, of which only 38 are inhabited. The islands are grouped into two main clusters: the northern Andaman Islands and the southern Nicobar Islands, separated by a 150 km wide channel.",
         overview: {
@@ -783,84 +650,27 @@ export default createStore({
           },
         ],
         inclusions: [
-          {
-            title: "",
-            content: "2 Nights Accommodation in Port Blair",
-          },
-          {
-            title: "",
-            content: " 2 Nights Accommodation in Havelock",
-          },
-          {
-            title: "",
-            content: " 1 Nights Accommodation in Neil Island",
-          },
-          {
-            title: "",
-            content: " Airport , Jetty & Hotel Transfers and Sightseeing as per the above-itinerary by AC Vehicle and not at disposal (01 vehicle)",
-          },
-          {
-            title: "",
-            content: "Daily Breakfast",
-          },
-          {
-            title: "",
-            content: "All kind of transport and luxury Taxes.",
-          },
-          {
-            title: "",
-            content: "Assistance at all arrival and departure points.",
-          },
-          {
-            title: "",
-            content: " All side Private Cruise charges Included – Port Blair – Neil – Havelock –Port blair.",
-          },
-          {
-            title: "",
-            content: "Port Blair – Havelock – Neil Island (MAK//Sea Link//Green Ocean//Aashi)",
-          },
-          {
-            title: "",
-            content: "Entry permits/Entry tickets/Boat tickets/Ferry tickets wherever required",
-          },
-          {
-            title: "",
-            content: "All Sightseeing & Transfer as per Itinerary",
-          },
-          {
-            title: "",
-            content: "Parking Charges.",
-          },
+          "2 Nights Accommodation in Port Blair",
+          "2 Nights Accommodation in Havelock",
+          "1 Nights Accommodation in Neil Island",
+          "Airport , Jetty & Hotel Transfers and Sightseeing as per the above-itinerary by AC Vehicle and not at disposal (01 vehicle)",
+          "Daily Breakfast",
+          "All kind of transport and luxury Taxes.",
+          "Assistance at all arrival and departure points.",
+          "All side Private Cruise charges Included – Port Blair – Neil – Havelock –Port blair.",
+          "Port Blair – Havelock – Neil Island (MAK//Sea Link//Green Ocean//Aashi)",
+          "Entry permits/Entry tickets/Boat tickets/Ferry tickets wherever required",
+          "All Sightseeing & Transfer as per Itinerary",
+          "Parking Charges.",
         ],
         exclusions: [
-          {
-            title: "",
-            content: " Any Airfare, Train fare, Overland Journey which is not mentioned in the Itinerary.",
-          },
-          {
-            title: "",
-            content: "Any Gala Dinner Charges on Xmas or New year Eve",
-          },
-          {
-            title: "",
-            content: " Any Medical/rescue evacuation due to mishaps.",
-          },
-          {
-            title: "",
-            content: " Any personal nature items like Laundry, bar bills, table bills, camera fee, tips or any other item",
-          },
-          {
-            title: "",
-            content: "Vehicle not at disposal at any of the islands.",
-          },
-          {
-            title: "",
-            content: "Any extra excursion or sightseeing apart from suggested tour itinerary",
-          },
-          {
-            title: "",
-            content: "Cost incidental to any change in the itinerary/ stay on account of flight cancellation due to bad weather, ill health, roadblocks and/or any factors beyond control ",
-          },
+          " Any Airfare, Train fare, Overland Journey which is not mentioned in the Itinerary.",
+          "Any Gala Dinner Charges on Xmas or New year Eve",
+          " Any Medical/rescue evacuation due to mishaps.",
+          " Any personal nature items like Laundry, bar bills, table bills, camera fee, tips or any other item",
+          "Vehicle not at disposal at any of the islands.",
+          "Any extra excursion or sightseeing apart from suggested tour itinerary",
+          "Cost incidental to any change in the itinerary/ stay on account of flight cancellation due to bad weather, ill health, roadblocks and/or any factors beyond control ",
         ],
         extraDetails: {
           miscellaneousHeading: "Supplement Water Sports Activities (if pre-booked)",
@@ -891,13 +701,14 @@ export default createStore({
       },
       {
         id: 5,
-        title: "CMEF China 2024",
-        sid: "CMEF-China-2024",
+        title: "Dubai",
+        type: "International",
+        sid: "dubai",
         package: 'visa services',
         date: "12-15 Oct 2024",
         country: "Germany",
         price: "1,00,000",
-        image: "/img/services/1.jpg",
+        image: "/img/dubai.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -905,16 +716,71 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        gallery: [
+          "/img/dubai/1.png",
+          "/img/dubai/2.png",
+          "/img/dubai/3.png",
+          "/img/dubai/4.png",
+          "/img/dubai/5.png",
+          "/img/dubai/6.png",
+        ],
+        description: "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.",
+        inclusions: [
+          " Nights accomodation in 5 / 4 hotel",
+          "Daily breakfast in hotel",
+          "Daily dinner in hotel",
+          "Airport - hotel - Airport Transfers",
+          "Daily Hotel - Fair ground - Hotel transfers",
+          "Dubai Visa charges",
+          "Overseas Medical Insurance",
+          "Experienced tour escort from the Company",
+          "All Taxes and GST except hotel UAE government charges which you have to pay directly to the hotel",
+        ],
+        itinerary: [
+          {
+            "title": "Day 01",
+            "description": " Depart from Delhi/Mumbai Arrive Dubai Transfer & Check-in to Hotel Dinner at hotel, Overnight at Hotel"
+          },
+          {
+            "title": "Day 02",
+            "description": "Breakfast at Hotel and then mend your Stall"
+          },
+          {
+            "title": "Day 03",
+            "description": "Breakfast at Hotel Attend GULFOOD 2025 Dinner at Hotel"
+          },
+          {
+            "title": "Day 04",
+            "description": "Breakfast at Hotel Attend GULFOOD Dinner at Hotel"
+          },
+          {
+            "title": "Day 05",
+            "description": "Breakfast at Hotel Attend GULFOOD Dinner at Hotel"
+          },
+          {
+            "title": "Day 06",
+            "description": "Breakfast at Hotel Attend GULFOOD Dinner at Hotel"
+          },
+          {
+            "title": "Day 07",
+            "description": "Breakfast at Hotel Attend GULFOOD Dinner at Hotel"
+          },
+          {
+            "title": "Day 08",
+            "description": "Breakfast at Hotel Check-out from Hotel Transfer to Airport Depart for India"
+          },
+        ]
       },
       {
         id: 6,
-        title: "ITMA ASIA & CITME 2024",
-        sid: "ITMA-ASIA-&-CITME-2024",
+        title: "Dubai World Trade Centre",
+        type: "International",
+        sid: "dubai-world-trade-center",
         package: 'other services',
         date: "14-18 Oct 2024",
         country: "USA",
         price: "1,06,000",
-        image: "/img/services/2.png",
+        image: "/img/dubaiWorld.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -922,16 +788,63 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        gallery: [
+          "/img/dubaicenter/1.png",
+          "/img/dubaicenter/2.png",
+          "/img/dubaicenter/3.png",
+          "/img/dubaicenter/4.png",
+          "/img/dubaicenter/5.png",
+          "/img/dubaicenter/6.png",
+        ],
+        description: "Dubai is a city and emirate in the United Arab Emirates known for luxury shopping, ultramodern architecture and a lively nightlife scene. Burj Khalifa, an 830m-tall tower, dominates the skyscraper-filled skyline. At its foot lies Dubai Fountain, with jets and lights choreographed to music. On artificial islands just offshore is Atlantis, The Palm, a resort with water and marine-animal parks.",
+        inclusions: [
+          "Return Air Fare on economy class (Ex Delhi)",
+          "05 Nights’ accommodation in 4* Grand Excelsior Hotel- Bur Dubai",
+          "Daily Breakfast in Hotel",
+          "Daily Indian Dinner in Hotel only",
+          "Airport - Hotel - Airport transfers by A.C.Coach",
+          "Overseas Medi - claim insurance",
+          "Visa fees included",
+          "An experienced tour escort from the company",
+          "All service charges and 18 % Taxes & GST For Ex.Ahmedabad, Chennai & Bangalore, prices are available on request.The package can be Customized."
+        ],
+        itinerary: [
+          {
+            "title": "Day 01: 26 JAN",
+            "description": "Depart from Delhi/Mumbai Arrive Dubai Transfer & Check-in to Hotel Dinner in hotel Overnight at Hotel "
+          },
+          {
+            "title": "Day 02: 27 JAN",
+            "description": "Breakfast at Hotel Attend ARAB HEALTH 2025 Dinner at hotel Overnight at Hotel"
+          },
+          {
+            "title": "Day 03: 28 JAN",
+            "description": "Breakfast at Hotel Attend ARAB HEALTH 2025 Dinner at Hotel"
+          },
+          {
+            "title": "Day 04: 29 JAN",
+            "description": " Breakfast at Hotel Attend ARAB HEALTH Dinner at Hotel"
+          },
+          {
+            "title": "Day 05: 30 JAN",
+            "description": "Breakfast at Hotel Attend ARAB HEALTH at Hotel"
+          },
+          {
+            "title": "Day 06: 31 JAN",
+            "description": "Breakfast at Hotel Check-out from Hotel Transfer to Airport Depart for India "
+          },
+        ]
       },
       {
         id: 7,
-        title: "Canton Fair China 2024",
-        sid: "Canton-Fair-China-2024",
+        title: "International Denatal-Schau Visitor Pack",
+        type: "International",
+        sid: "international-denatal-schau-visitor-pack",
         package: 'domestic tour',
         date: "15-19 23-27 Oct 2024",
         price: "1,15,000",
         country: "India",
-        image: "/img/services/3.jpg",
+        image: "/img/ids.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -939,16 +852,68 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        gallery: [
+          "/img/idsvisitor/1.png",
+          "/img/idsvisitor/2.png",
+          "/img/idsvisitor/3.png",
+          "/img/idsvisitor/4.png",
+          "/img/idsvisitor/5.png",
+          "/img/idsvisitor/6.png",
+        ],
+        description: "",
+        inclusions: [
+          "Return Airfare on economy class on Luftansa Airlines Ex. Delhi and Mumbai.",
+          "6 Nights accomodation in 4 Star hotel (12 minutes drive to Messe Cologne).",
+          "Daily breakfast in hotel.",
+          "Daily dinner in Indian restaurant",
+          "Airport - hotel - Airport Transfers",
+          "Daily Hotel - Fair ground - Hotel transfers.",
+          "Visa services. (taking appointment and all documentation part).",
+          "Overseas Medical Insurance.",
+          "Experienced tour escort from the company.",
+          "All Taxes and GST included."
+        ],
+        itinerary: [
+          {
+            "title": "Day 01",
+            "description": "Depart from Delhi/Mumbai Arrive Cologne Transfer & Check-in to Hotel Dinner at Indian restaurant, Overnight at Hotel"
+          },
+          {
+            "title": "Day 02",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 03",
+            "description": " Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 04",
+            "description": " Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 05",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 06",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 07",
+            "description": " Breakfast at Hotel Check-out from Hotel Transfer to Airport Depart for India"
+          },
+        ]
       },
       {
         id: 8,
-        title: "Fenestration Bau 2024",
-        sid: "Fenestration-Bau-2024",
+        title: "International Denatal-Schau Package",
+        type: "International",
+        sid: "international-denatal-schau-package",
         package: 'international tour',
         date: "16-19 Oct 2024",
         price: "1,07,000",
         country: "Germany",
-        image: "/img/services/4.jpg",
+        image: "/img/ids.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -956,16 +921,72 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
+        gallery: [
+          "/img/idspackage/1.png",
+          "/img/idspackage/2.png",
+          "/img/idspackage/3.png",
+          "/img/idspackage/4.png",
+          "/img/idspackage/5.png",
+          "/img/idspackage/6.png",
+        ],
+        description: "",
+        inclusions: [
+          "Return Airfare on economy class on Luftansa Airlines Ex. Delhi and Mumbai.",
+          "7 Nights accomodation in 4 Star hotel (12 minutes drive to Messe Cologne).",
+          "Daily breakfast in hotel.",
+          "Daily dinner in Indian restaurant",
+          "Airport - hotel - Airport Transfers",
+          "Daily Hotel - Fair ground - ground-Hotel transfers.",
+          "Visa services. (taking appointment and all documentation part).",
+          "Overseas Medical Insurance.",
+          "Experienced tour escort from the company.",
+          "All Taxes and GST included."
+        ],
+        itinerary: [
+          {
+            "title": "Day 01",
+            "description": "Depart from Delhi/Mumbai Arrive Cologne Transfer & Check-in to Hotel Dinner at Indian restaurant, Overnight at Hotel"
+          },
+          {
+            "title": "Day 02",
+            "description": "Breakfast at Hotel and then mend your Stall"
+          },
+          {
+            "title": "Day 03",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 04",
+            "description": " Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 05",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 06",
+            "description": " Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 07",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 08",
+            "description": "Breakfast at Hotel Check-out from Hotel Transfer to Airport Depart for India"
+          },
+        ]
       },
       {
         id: 9,
-        title: "Glasstec Dusseldorf 2024",
-        sid: "Glasstec-Dusseldorf-2024",
+        title: "VIETNAM",
+        type: "International",
+        sid: "vietanam",
         package: 'trade fair',
         date: "22-24 Oct 2024",
         price: "1,06,000",
         country: "USA",
-        image: "/img/services/1.jpg",
+        image: "/img/vietanam.png",
         icons: [
           { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
           { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
@@ -973,23 +994,61 @@ export default createStore({
           { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
           { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
         ],
-      },
-      {
-        id: 10,
-        title: "Medica Düsseldorf 2024",
-        sid: "Medica-Düsseldorf-2024",
-        package: 'trade fair',
-        date: "10-15 10-17 Nov 2024",
-        price: " 2,10,000",
-        country: "France",
-        image: "/img/services/2.png",
-        icons: [
-          { icon: 'bi-globe', image: "img/travel/flight.svg", name: 'flight' },
-          { icon: 'bi-globe', image: "img/travel/visa.svg", name: 'visa' },
-          { icon: 'bi-globe', image: "img/travel/hotel.svg", name: 'hotel' },
-          { icon: 'bi-globe', image: "img/travel/meal.svg", name: 'meal' },
-          { icon: 'bi-globe', image: "img/travel/sight.svg", name: 'Sight' },
+        gallery: [
+          "/img/vietnam/1.png",
+          "/img/vietnam/2.png",
+          "/img/vietnam/3.png",
+          "/img/vietnam/4.png",
+          "/img/vietnam/5.png",
+          "/img/vietnam/6.png",
         ],
+        description: "Vietnam is a Southeast Asian country known for its beaches, rivers, Buddhist pagodas and bustling cities. Hanoi, the capital, pays homage to the nation’s iconic Communist-era leader, Ho Chi Minh, via a huge marble mausoleum. Ho Chi Minh City (formerly Saigon) has French colonial landmarks, plus Vietnamese War history museums and the Củ Chi tunnels, used by Viet Cong soldiers.",
+        inclusions: [
+          "Return Airfare on economy class on Luftansa Airlines Ex. Delhi and Mumbai.",
+          "7 Nights accomodation in 4 Star hotel (12 minutes drive to Messe Cologne).",
+          "Daily breakfast in hotel.",
+          "Daily dinner in Indian restaurant",
+          "Airport - hotel - Airport Transfers",
+          "Daily Hotel - Fair ground - ground-Hotel transfers.",
+          "Visa services. (taking appointment and all documentation part).",
+          "Overseas Medical Insurance.",
+          "Experienced tour escort from the company.",
+          "All Taxes and GST included."
+        ],
+        itinerary: [
+          {
+            "title": "Day 01",
+            "description": "Depart from Delhi/Mumbai Arrive Cologne Transfer & Check-in to Hotel Dinner at Indian restaurant, Overnight at Hotel"
+          },
+          {
+            "title": "Day 02",
+            "description": "Breakfast at Hotel and then mend your Stall"
+          },
+          {
+            "title": "Day 03",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 04",
+            "description": " Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 05",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 06",
+            "description": " Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 07",
+            "description": "Breakfast at Hotel Attend IDS 2025 Dinner at Indian Restaurant"
+          },
+          {
+            "title": "Day 08",
+            "description": "Breakfast at Hotel Check-out from Hotel Transfer to Airport Depart for India"
+          },
+        ]
       },
     ],
     itinerary: [

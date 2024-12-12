@@ -70,12 +70,7 @@ export default {
                 //     id: 3,
                 //     name: 'Login',
                 //     link: '/product-list'
-                // },
-                {
-                    id: 4,
-                    name: 'Test',
-                    link: '/test'
-                },
+                // }, 
                 {
                     id: 4,
                     name: 'Contact Us',

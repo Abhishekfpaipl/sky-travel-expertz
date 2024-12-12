@@ -195,19 +195,19 @@
             </div>
         </div>
 
-
     </div>
 </template>
 
 <script>
+import TradeDetailsSection from "@/components/TradeDetailsSection.vue"
+import ItinerarySection from "@/components/ItinerarySection.vue"
+import NewGallerySection from "@/components/NewGallerySection.vue"
 import TradeHotelSection from "@/components/TradeHotelSection.vue"
 import TradeOverviewSection from "@/components/TradeOverviewSection.vue"
-import TradeFairTermsSection from "@/components/TradeFairTermsSection.vue"
 import TradeFairVisaSection from "@/components/TradeFairVisaSection.vue"
-import TradeFairExclusionSection from "@/components/TradeFairExclusionSection.vue"
 import TradeFairInclusionSection from "@/components/TradeFairInclusionSection.vue"
-import ItinerarySection from "@/components/ItinerarySection.vue"
-import TradeDetailsSection from "@/components/TradeDetailsSection.vue"
+import TradeFairExclusionSection from "@/components/TradeFairExclusionSection.vue"
+import TradeFairTermsSection from "@/components/TradeFairTermsSection.vue"
 // import TestComp from "@/components/TestComp.vue"
 export default {
     name: "TradeFairPage",
@@ -220,6 +220,7 @@ export default {
         TradeFairInclusionSection,
         ItinerarySection,
         TradeDetailsSection,
+        NewGallerySection,
         // TestComp,
     },
     data() {
@@ -233,12 +234,19 @@ export default {
             sections: [
                 { id: 'Details', name: 'Details', component: 'TradeDetailsSection' },
                 { id: 'Itinerary', name: 'Itinerary', component: 'ItinerarySection' },
+                { id: 'Gallery', name: 'Gallery', component: 'NewGallerySection' },
                 { id: 'Hotel', name: 'Hotel', component: 'TradeHotelSection' },
-                { id: 'Flight', name: 'Flight', component: 'TradeOverviewSection' },
+                { id: 'Overview', name: 'Overview', component: 'TradeOverviewSection' },
                 { id: 'Visa', name: 'Visa', component: 'TradeFairVisaSection' },
                 { id: 'Inclusion', name: 'Inclusion', component: 'TradeFairInclusionSection' },
                 { id: 'Exclusion', name: 'Exclusion', component: 'TradeFairExclusionSection' },
                 { id: 'TermCondition', name: 'Term', component: 'TradeFairTermsSection' }
+            ],
+            awards: [
+                "/img/services/1.jpg",
+                "/img/services/2.png",
+                "/img/services/3.jpg",
+                "/img/services/4.jpg",
             ],
             activeSection: '',
             navbarDark: false,
