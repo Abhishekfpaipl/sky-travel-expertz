@@ -1,12 +1,12 @@
 <template>
-    <div class="" style="padding-top: 66px;">
+    <div class="">
 
         <div class="" style="background-image: url('/img/trade-bg.svg')">
             <div class="py-5" style="background-color: var(--bg-forth)">
                 <h1 class="text-center fw-bold">Contact Us</h1>
             </div>
         </div>
-        <div class="container bg-white rounded-top-5" style="margin-top: -40px;" v-observe>
+        <div class="container " v-observe>
             <div class="row p-3">
                 <div class="col-12 pt-4 text-center">
                     <form @submit.prevent="submitQuery()" class="mt-4 row g-3 needs-validation" novalidate>

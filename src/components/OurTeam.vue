@@ -1,5 +1,5 @@
 <template>
-    <div class="py-3">
+    <div class="my-5">
         <div class="container">
             <div class="py-2 mb-5">
                 <h1 class="text-center text-capitalize">{{ title }}</h1>

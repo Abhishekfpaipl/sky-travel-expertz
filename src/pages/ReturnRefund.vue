@@ -1,11 +1,11 @@
 <template>
-    <div style="padding-top:66px">
+    <div >
         <div class="" style="background-image: url('/img/trade-bg.svg')">
             <div class="py-5" style="background-color: var(--bg-forth)">
                 <h1 class="fw-bold">Cancellation & Refund</h1>
             </div>
         </div>
-        <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;">
+        <div class="container py-5 " >
             <div class="card border-0">
                 <div class="card-body text-start my-5">
                     <h1 class="text-center mb-4">Payment, Cancellation, and Refund Policies</h1>

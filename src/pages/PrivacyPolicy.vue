@@ -1,17 +1,16 @@
 <template>
-    <div style="padding-top:66px">
+    <div >
         <div class="" style="background-image: url('/img/trade-bg.svg')">
             <div class="py-5" style="background-color: var(--bg-forth)">
                 <h1 class="fw-bold">Privacy Policy</h1>
             </div>
         </div>
-        <div class="container py-5 rounded-top-5 bg-white" style="margin-top: -40px;">
+        <div class="container py-5 " >
             <div class="row justify-content-center">
                 <div class="col-12">
                     <div class="card border-0">
-                        <div class="card-body my-5 text-start">
-                            <h1 class="text-center mb-4">Privacy Policy</h1>
-                            <p><strong>Effective Date:</strong> [Insert Effective Date]</p>
+                        <div class="card-body my-5 text-start"> 
+                            <p><strong>Effective Date:</strong> Dec 2024</p>
 
                             <section>
                                 <h2>Our Commitment to Your Privacy</h2>

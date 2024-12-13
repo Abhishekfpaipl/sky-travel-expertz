@@ -12,7 +12,7 @@
     </div> -->
     <div class="container">
         <!-- Domestic Trades -->
-        <h3 class="mt-4">Domestic Trades</h3>
+        <h3 class="mt-4">Domestic Tour</h3>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4 d-flex align-items-center">
             <div class="col my-0" v-for="(fair, index) in domesticTrades" :key="index">
                 <router-link :to="'/trade-detail/' + fair.sid"
@@ -45,7 +45,7 @@
         </div>
 
         <!-- International Trades -->
-        <h3 class="mt-4">International Trades</h3>
+        <h3 class="mt-4">International Tour</h3>
         <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-1 my-4 d-flex align-items-center">
             <div class="col my-0" v-for="(fair, index) in internationalTrades" :key="index">
                 <router-link :to="'/trade-detail/' + fair.sid"
